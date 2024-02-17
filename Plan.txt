@@ -1,9 +1,0 @@
-Home page - header,image+msg,sport accesseries-all ,customer review-all, footer 
-
-Registration Page and sign page - Customer registration form  it will create user profile,orders, history, cart, Place an order
-				- My Orders,Cart,Wishlist
-Shop Admin page - Supplier list + item supplied + ordered item, Item list, Customer list + order +trasactioin+ profile+cart 
-Supplier -  Profile + item supplied - History
-
-Shop - Item List
-Supplier - basic information, suppleid item data - History
