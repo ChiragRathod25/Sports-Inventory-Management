@@ -6,6 +6,15 @@
     --Dark:#265073; /*Navy*/
 }
 
+/*global class declaration*/
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
 *{
     margin:0;
     padding:0;
@@ -14,12 +23,12 @@
 body *{
     /* border : 2px solid black; */
 }
-body{
+body {
     min-height: 150vh;
     max-width: 100%;
     display: flex;
-    flex-direction: column; 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-direction: column; 
     background-color:#ECF4D6;
 }
 
@@ -27,6 +36,7 @@ header,footer{
     display: inline-block;
     width: 100%;
     position: sticky;
+    z-index: 999;
 }
 header{
     padding: 1.2rem;

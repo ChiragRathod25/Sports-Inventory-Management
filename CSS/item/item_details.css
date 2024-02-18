@@ -1,0 +1,53 @@
+
+#item-choice{
+    /* border: 2px solid black; */
+    width: 100%;
+    margin: 3rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.choice-box{
+    /* border: 2px solid black; */
+    min-width:400px;
+    min-height: 150px;
+    padding: 1rem;
+    gap: 2rem;  
+    justify-content: flex-start;
+    align-items: flex-start ;
+    overflow: auto;
+}
+.choice-box .right{
+    gap: 1rem;
+}
+.left ,.right{
+        /* border:2px solid black; */
+        width: 50%;
+}
+.choice-box .left .img-container img{
+    position: relative  ;
+    width:100%;
+}
+.item-head{
+    gap:1rem;
+}
+.shopping-section button{
+    height: 35px;
+    border: 2px solid black;
+    width: 50%;
+    border-radius: 15px;
+    font-size: inherit;
+    font-weight: bold;
+}
+.buttons{
+    gap: 0.3rem;
+}
+.shopping-section button:hover{
+    cursor: pointer;
+    background-color: var(--Medium-dark);
+    color: var(--light);
+    border:none;
+}
