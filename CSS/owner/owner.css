@@ -1,68 +1,79 @@
-body {
-    margin: 0;
-    padding: 0;
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
     background-color: #ECF4D6;
-}
-
-.main {
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
-
-#left-section {
-    position: absolute;
-    padding: 0px;
-    background-color: #73c0f4;
-    height: 100%;
-    width: 20%;
     border: 2px solid black;
     border-radius: 10px;
-}
-
-#right-section {
-    position: absolute;
-    left: 20%;
-    margin-left: 5px;
-    background-color: bisque;
-    width: 80%;
-    height: 100%;
-    margin-right: 50px;
-    border: 2px solid black;
-    border-radius: 10px;
-}
-
-.left_side_list {
-    margin-top: 30px;
-    list-style-type: none;
-    position: relative;
+    flex-direction: column;
     justify-content: center;
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.left_side_list li a {
-    display: flex;
-    align-items: center;
+.nav ul li {
+    padding: 8px 16px;
     text-decoration: none;
+    
+    color: #8f4f06;
+}
+
+.nav ul li:hover {
+    border:2px solid #8f4f06; 
+    border-radius: 0 30px;
+    background-color: #73c0f4;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #8f4f06;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
-    color: #8f4f06;
-    padding: 10px 30px ;
-    height: 50px;
+    display: block;
     transition: .5s ease;
     border-radius: 0 30px;
-    margin-right: 20px;
+    margin: 10px;
 }
 
-.left_side_list li a:hover {
-    background: #728ca3; 
+.dropdown {
+    position: relative;
+        /* position: absolute; */
 }
 
-.left_side_list li {
-    margin-top: 20px;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ECF4D6;
+    border:2px solid #8f4f06; 
+    border-radius: 0 30px;
+    left: 200px;
+    top:0;
+    min-width: 250px;
+    z-index: 1;
 }
 
-#help {
-    margin-left: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
+.dropdown:hover .dropdown-content {
+    display: block;
 }
+
+.dropdown-content a {
+    padding: 8px 16px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #73c0f4;
+}
+
+.dropdown-content {
+    animation: fadeIn 0.3s ease-in-out;
+}
+

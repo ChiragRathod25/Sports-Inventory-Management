@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
     <link rel="stylesheet" href="../../CSS/owner/owner.css">
-    <title>Owner</title>
 </head>
-
 <body>
-    <div class="main">
-        <nav id="left-section">
-            <ul class="left_side_list">
+    <div class="sidebar">
+        <div class="nav">
+            <ul>
                 <li><a href="#">Account</a></li>
-                <li><a href="#">Customer</a></li>
-                <li><a href="#">Iteam</a></li>
-                <li><a href="#">Contect Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Customer</a>
+                    <div class="dropdown-content">
+                        <a href="#">Add Customer</a>
+                        <a href="#">Update Customer</a>
+                        <a href="#">Remove Customer</a>
+                        <a href="#">Customer List</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Item</a>
+                    <div class="dropdown-content">
+                        <a href="#">Add Item</a>
+                        <a href="#">Update Item</a>
+                        <a href="#">Remove Item</a>
+                        <a href="#">Item List</a>
+                    </div>
+                </li>
+                <li><a href="#">Contact Us</a></li>
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">Help</a></li>
+                <li><a href="#">Get Help</a></li>
             </ul>
-        </nav>
-        <div id="right-section">2
         </div>
     </div>
 </body>
-
 </html>
