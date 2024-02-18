@@ -37,3 +37,7 @@
     color: var(--light);
     border:none;
 }
+.shopping-section button a{
+    text-decoration: none;
+    color: inherit;
+}
