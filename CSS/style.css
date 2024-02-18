@@ -102,9 +102,19 @@ h2{
     padding: 1.5rem 0.4rem;
 }
 #main_footer_container ul *{
-    margin: 0.2rem;
+    margin: 0.2rem 0;
     list-style: none;
     text-decoration: none;
+}
+#main_footer_container ul li a{
+    color: var(--light);
+    padding: 0.3rem;
+}
+#main_footer_container ul li a:hover{
+    color: black;
+    border: 1px solid var(--Medium);
+    background-color:var(--Medium);
+    border-radius: 10px;
 }
 #main_footer_container *{
     display: flex;
