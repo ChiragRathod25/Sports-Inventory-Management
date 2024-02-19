@@ -1,11 +1,14 @@
+/* 
 .sidebar {
     height: 100%;
-    width: 200px;
+    width: 25%;
     position: absolute;
+    margin-top: 500px;
+    margin-bottom: 500px;
     display: flex;
     top: 0;
     left: 0;
-    background-color: #ECF4D6;
+    background-color: #E6eff3;
     border: 2px solid black;
     border-radius: 10px;
     flex-direction: column;
@@ -43,7 +46,7 @@
 
 .dropdown {
     position: relative;
-        /* position: absolute; */
+        /* position: absolute;
 }
 
 .dropdown-content {
@@ -76,3 +79,197 @@
 .dropdown-content {
     animation: fadeIn 0.3s ease-in-out;
 }
+
+.section{
+    position:absolute;
+    margin-top: 500px;
+    margin-bottom: 500px;
+    margin-left: 26%;
+    width: 75%;
+    height: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-color: #E6eff3;
+    border: 2px solid black;
+    border-radius: 10px;
+    flex-direction: column;
+}
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* margin-top: 50px; 
+    margin-left: 40%;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#section_heading{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 50px;
+}
+#about_user{
+    margin-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#Deshboard_heading{
+    margin-left: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#graph{
+    display: flex;
+    margin-left: 350px;
+    width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#table{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    margin-left: 350px;
+    margin-top: 30px;
+    width: 500px;
+    border-radius: 10px;
+    background: #E6eff3;
+}  */
+
+#section{
+    /* border: 2px solid black;*/
+    height: 100%; 
+    margin-top: 5px;
+    display: flex;
+}
+#sidebar{
+    display: flex;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 2px;
+    height: 80%;
+    background-color: #265073;
+}
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul li {
+    padding: 8px 16px;
+    text-decoration: none;
+    
+    color: #8f4f06;
+}
+
+.nav ul li:hover {
+    border:2px solid #8f4f06; 
+    border-radius: 0 30px;
+    background-color: #73c0f4;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #8f4f06;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    display: block;
+    width: 110px;
+    text-align: center;
+    transition: .5s ease;
+    border-radius: 5px;
+    background-color: #ECF4D6;
+    margin: 10px;
+}
+
+.dropdown {
+    position: relative;
+        /* position: absolute; */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #265073;
+    border:2px solid #8f4f06; 
+    border-radius: 3px;
+    left: 160px;
+    top:50px;
+    /* width: 200px; */
+    /* min-width: 250px; */
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    /* padding: 8px 16px; */
+    display: block;
+    width: 300px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #73c0f4;
+}
+
+.dropdown-content {
+    animation: fadeIn 0.3s ease-in-out;
+}
+.section{
+    display: flex;
+    top: 0;
+    left: 0;
+    background-color: #E6eff3;
+    border: 2px solid black;
+    border-radius: 10px;
+    flex-direction: column;
+}
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* margin-top: 50px; */
+    margin-left: 40%;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#section_heading{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 50px;
+}
+#about_user{
+    margin-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#Deshboard_heading{
+    margin-left: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#graph{
+    display: flex;
+    margin-left: 350px;
+    width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#table{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    margin-left: 350px;
+    margin-top: 30px;
+    width: 500px;
+    border-radius: 10px;
+    background: #E6eff3;
+} 
