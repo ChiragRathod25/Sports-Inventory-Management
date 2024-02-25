@@ -10,6 +10,7 @@
     --Medium-dark: #2d9596;
     --Dark: #265073;
     /*Navy*/
+    --button:#3a7af5;
 }
 
 /*global class declaration*/
@@ -119,7 +120,7 @@ h2 {
     text-align: center;
     width: 100%;
     color: var(--Dark);
-    
+
     text-wrap: nowrap;
     font-weight: 700;
     font-size: large;
@@ -267,7 +268,6 @@ h2 {
 }
 
 
-
 /* //new updated css */
 /* Shop by category section  */
 section {
@@ -276,16 +276,19 @@ section {
     min-height: 50vh;
     padding: 0.5rem 02rem;
 }
+
 ::-webkit-scrollbar {
     width: 10px;
-  }
-.shop-category{
-    gap: 2rem;
-    overflow:scroll;
-    /* scrollbar-width:none; */
-    
 }
-.shop-category h2{
+
+.shop-category {
+    gap: .5rem;
+    overflow: scroll;
+    /* scrollbar-width:none; */
+
+}
+
+.shop-category h2 {
     text-align: left;
 }
 
@@ -295,34 +298,148 @@ section {
     /* display: flex;
     flex-direction: row; */
 }
-.shop-category figcaption{
+
+.shop-category figcaption {
     width: inherit;
     text-align: center;
 }
+
 .shop-category img {
     width: auto;
-    height: 250px;
-    border-radius: 10px;  
+    height: 200px;
+    border-radius: 10px;
 }
+
 .shop-category img:hover {
     transform: scale(1.03);
     transition-duration: 0.5s;
 }
 
 /* GOAT Stories section  */
-#Stories div{
+#Stories {
+    gap: 0.5rem;
+}
+
+#Stories div {
     /* display: grid; */
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    
+
 }
+
 #Stories img {
     width: auto;
     height: 250px;
     border-radius: 10px;
 }
-#Stories img:hover{
+
+#Stories img:hover {
     transform: scale(1.03);
     transition-duration: 0.5s;
+}
+
+/*Intro section css*/
+#intro {
+    gap: 1.3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#intro h2 {
+    /* color: var(--Dark); */
+    font-size: 5rem;
+    line-height: 5.1rem;
+    text-align: left;
+}
+
+.container h2 span{
+    /* color: black; */
+    font-weight:900;
+   
+}
+
+#intro div button {
+    word-wrap: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 190px;
+    height: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    color: white;
+    background-color: var(--button);
+    border: 1px solid var(--button);
+}
+
+#intro div button:hover {
+    cursor: pointer;
+    /* text-decoration: underline; */
+    transform: scale(1.03);
+    transition-duration: 0.2s;
+}
+
+#intro div p {
+    font-size: 22px;
+}
+.sub-container{
+    gap: 0.1rem;
+}
+
+/* recommmended-item list css */
+#recommended-item-list h2{
+    text-align: left;
+}
+.main-container{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.item-container{
+    width: 350px;
+    padding: 1rem;
+    min-height: 400px;
+
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid black; */
+
+}
+.item-container img{
+    width: 260px;
+    height: 260px;
+}
+.item-container div{
+    
+    justify-content: center;
+}
+.item-container .title-price{
+
+}
+.title-price h3{
+    line-height: 1.1;
+}
+.item-container .cart-buy{
+    gap: 0.5rem;
+    width: 100%;
+}
+.cart-buy *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+    font-size: 14px;
+    border: 2px solid var(--button);
+    background-color:var(--button);
+    color: white;
+}
+.title-price div *{
+    color: var(--dark);
+    font-weight: bold;
+}
+.cart-buy button:hover{
+    cursor: pointer;
 }
