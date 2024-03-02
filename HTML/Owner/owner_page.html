@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
       rel="stylesheet">
-  <link rel="java-Script" src="../../JS/Owner/dash_board.js">
   <link rel="stylesheet" href="../../CSS/owner/owner.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet"
@@ -21,16 +20,9 @@
   <div class="grid-container">
     <!--Header Start-->
     <header class="flex-row">
-      <div class="menu-icon" onclick="opensidebar()">
-        <span class="material-symbols-outlined">
-          menu
-          </span>
-      </div>
       <div class="header-left">
-        <span class="logo">
-          <img src="../../CSS/logos/logo4.jpeg" alt="">
-        </span>
-        <span class="material-symbols-outlined">
+        <input type="search" placeholder="search..." class="search"/>
+        <span class="material-symbols-outlined ">
           search
           </span>
       </div>
@@ -45,40 +37,16 @@
             <img src="../../CSS/owner/pro_pic.jpeg" alt="">
           </span>
       </div>
-      <!-- <div class="logo">
-        <img src="../../CSS/logos/logo4.jpeg" alt="">
-      </div> -->
-      <!-- <div class="right-search-login flex-column">
-        <div class="account-cart flex-row">
-          <span class="material-symbols-outlined">
-            shopping_bag
-          </span>
-          <span>cart</span>
-          <span class="material-symbols-outlined">
-            person
-          </span>
-          <span>
-            Account
-          </span>
-        </div>
-        <div class="search-website">
-          <input type="text" name="search" id="search" placeholder="search...">
-
-        </div>
-      </div> -->
     </header>
     <!--Header End-->
     <!--Sidebar Start-->
     <aside id="sidebar">
       <div class="sidebar-title">
         <div class="sidebar-logo">
-          <span class="material-symbols-outlined">
-            inventory
-            </span>Hit Inventory
+          <span class="logo">
+            <img src="../../CSS/logos/logo4.jpeg" alt="">
+          </span>Hit Inventory
         </div>
-        <span class="material-symbols-outlined" onclick="closeSidebar()">
-          close
-          </span>
       </div>
       <ul class="sidebar-list">
         <li class="sidebar-list-item">
@@ -116,46 +84,61 @@
     <!--Sidebar End-->
 
     <!--Main-Container Strat-->
-    <main class="main-container"></main>
+    <main class="main-container">
+      <div class="main-title">
+        <p class="font-weight-bold">DASHBOARD</p>
+      </div>
+      <div class="four-box">
+        <div class="box">
+          <div class="box-inner">
+            <p class="text-primary">PRODUCTS</p>
+            <span class="material-symbols-outlined text-blue">
+              inventory_2
+              </span>
+          </div>
+          <span class="text-primary font-weight-bold">249</span>
+        </div>
+        <div class="box">
+          <div class="box-inner">
+            <p class="text-primary">PURCHASE ORDERS</p>
+              <span class="material-icons-outlined text-orange">add_shopping_cart</span>
+          </div>
+          <span class="text-primary font-weight-bold">83</span>
+        </div>
+        <div class="box">
+          <div class="box-inner">
+            <p class="text-primary">SALES ORDERS</p>
+            <span class="material-icons-outlined text-green">shopping_cart</span>
+          </div>
+          <span class="text-primary font-weight-bold">79</span>
+        </div>
+
+        <div class="box">
+          <div class="box-inner">
+            <p class="text-primary">INVENTORY ALERTS</p>
+            <span class="material-icons-outlined text-red">notification_important</span>
+          </div>
+          <span class="text-primary font-weight-bold">56</span>
+        </div>
+      </div>
+      <div class="charts" >
+        <div class="chart-box">
+          <p class="chart-title">Top 5 Products</p>
+          <div id="bar-chart"></div>
+        </div>
+        <div class="chart-box">
+          <p class="chart-title">Purchase and Sales Orders</p>
+          <div id="area-chart"></div>
+        </div>
+      </div>
+    </main>
     <!--Main-Container End-->
   </div>
   <!--Grid-Container End-->
-
-  <!-- Footer Start-->
-  <!-- <footer>
-    <div id="main_footer_container">
-      <div class="section1">
-        <h4>Get to know Us</h4>
-        <ul>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#"> Terms & Condition</a></li>
-        </ul>
-      </div>
-      <div class="section2">
-        <h4>Contect Us</h4>
-        <ul>
-          <li class="section1"><a href="#"> Facebook</a></li>
-          <li class="section1"><a href="#"> Twitter</a></li>
-          <li class="section1"><a href="#"> Instagram</a></li>
-        </ul>
-      </div>
-      <div class="section3">
-        <ul>
-          <li>
-            <h4>Let us Help you</h4>
-          </li>
-          <li>
-            <a href="#">Your Account</a>
-          </li>
-          <li>
-            <a href="#">Sitemap</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </footer> -->
-  <!--Footer Start -->
+  <!--Script-->
+  <!--ApexCharts-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.46.0/apexcharts.min.js"></script>
+  <script src="../../JS/Owner/dash_board.js"></script>
 </body>
 
 </html>
