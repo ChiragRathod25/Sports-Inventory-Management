@@ -124,7 +124,7 @@ h2 {
 
 .logo {
     /* background-color: black; */
-    background-image: url('../CSS/logos/logo4.jpeg');
+    background-image: url('../logos/logo4.jpeg');
     min-width: 60px;
     height: auto;
     border-radius: 50%;
