@@ -1,249 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Listed Items</title>
-    <link rel="stylesheet" href="../../CSS/item/item-listed.css">
-    <link rel="stylesheet" href="../../CSS/style.css">
-    <link rel="stylesheet" href="../../CSS/header-footer.css">
-</head>
+    <link rel="stylesheet" href="../../CSS/item/item-listed.css" />
+    <link rel="stylesheet" href="../../CSS/style.css" />
+    <link rel="stylesheet" href="../../CSS/header-footer.css" />
+  </head>
 
-<body>
-
+  <body>
     <header class="flex-row">
-        <div class="logo">
-          <!-- <img src="../CSS/logos/logo4.jpeg" alt=""> -->
-        </div>
-        <div class="navbar">
-          <nav id="nav">
-            <ul id="navlist">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Team Sports</a>
-                <ul id="dropdown">
-                  <li><a href="#">Cricket</a></li>
-                  <li><a href="#">Football</a></li>
-                  <li><a href="#">Vollyball</a></li>
-                  <li><a href="#">Basketball</a></li>
-                  <li><a href="#">Hawkey</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Rocket Sports</a>
-                <ul id="dropdown">
-                  <li><a href="#">Badminton</a></li>
-                  <li><a href="#">Tennis</a></li>
-                  <li><a href="#">Table Tennis</a></li>
-                  <li><a href="#">Squash</a></li>
-                  <li><a href="#">Hawkey</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Other Sports</a>
-                <ul id="dropdown">
-                  <li><a href="#">Chess</a></li>
-                  <li><a href="#">Carrom</a></li>
-                  <li><a href="#">Skating</a></li>
-                  <li><a href="#">Boxing</a></li>
-                  <li><a href="#">Swimming</a></li>
-                </ul>
-              </li>
-    
-              <li><a href="#">Top Brands</a>
-                <ul id="dropdown">
-                  <li><a href="#">SG</a></li>
-                  <li><a href="#">Puma</a></li>
-                  <li><a href="#">Adidas</a></li>
-                  <li><a href="#">Nivia</a></li>
-                  <li><a href="#">Wilson</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Guide</a></li>
-              <!-- <li><a href="#">Contact us</a></li> -->
-            </ul>
-          </nav>
-        </div>
-        <div class="right-search-login flex-column">
-          <div class="account-cart flex-row">
-            <span class="material-symbols-outlined">
-              shopping_bag
-            </span>
-            <span>cart</span>
-            <span class="material-symbols-outlined">
-              person
-            </span>
-            <span>
-              Account
-              <!-- <a href="../HTML/Registration and Login/sports_login.html">Login</a> -->
-            </span>
-          </div>
-          <div class="search-website">
-            <input type="text" name="search" id="search" placeholder="search...">
-    
-          </div>
-        </div>
-      </header>
+      <div class="logo">
+        <!-- <img src="../CSS/logos/logo4.jpeg" alt=""> -->
+      </div>
+      <div class="navbar">
+        <nav id="nav">
+          <ul id="navlist">
+            <li><a href="#">Home</a></li>
+            <li>
+              <a href="#">Team Sports</a>
+              <ul id="dropdown">
+                <li><a href="#">Cricket</a></li>
+                <li><a href="#">Football</a></li>
+                <li><a href="#">Vollyball</a></li>
+                <li><a href="#">Basketball</a></li>
+                <li><a href="#">Hawkey</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Rocket Sports</a>
+              <ul id="dropdown">
+                <li><a href="#">Badminton</a></li>
+                <li><a href="#">Tennis</a></li>
+                <li><a href="#">Table Tennis</a></li>
+                <li><a href="#">Squash</a></li>
+                <li><a href="#">Hawkey</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Other Sports</a>
+              <ul id="dropdown">
+                <li><a href="#">Chess</a></li>
+                <li><a href="#">Carrom</a></li>
+                <li><a href="#">Skating</a></li>
+                <li><a href="#">Boxing</a></li>
+                <li><a href="#">Swimming</a></li>
+              </ul>
+            </li>
 
-    <br>
-    <hr>
+            <li>
+              <a href="#">Top Brands</a>
+              <ul id="dropdown">
+                <li><a href="#">SG</a></li>
+                <li><a href="#">Puma</a></li>
+                <li><a href="#">Adidas</a></li>
+                <li><a href="#">Nivia</a></li>
+                <li><a href="#">Wilson</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Guide</a></li>
+            <!-- <li><a href="#">Contact us</a></li> -->
+          </ul>
+        </nav>
+      </div>
+      <div class="right-search-login flex-column">
+        <div class="account-cart flex-row">
+          <span class="material-symbols-outlined"> shopping_bag </span>
+          <span>cart</span>
+          <span class="material-symbols-outlined"> person </span>
+          <span>
+            Account
+            <!-- <a href="../HTML/Registration and Login/sports_login.html">Login</a> -->
+          </span>
+        </div>
+        <div class="search-website">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="search..."
+          />
+        </div>
+      </div>
+    </header>
+
+    <br />
+    <hr />
     <h2>Listed Items</h2>
-    <hr>
+    <hr />
     <section class="item-list flex-row">
-
-        <div class="choice-box flex-column" id="option1">
-            <div class="item-head flex-column">
-                <h2>Reebook Blaze Kashmir willow cricket bat</h2>
-                <img src="bat.jpg" alt="">
-                <h4>Price : Rs. 525</h4>
-            </div>
-            <div class="shopping-section flex-column">
-                <div>
-                    <span>Quantity : </span>
-                    <select name="quantity" id="quantity">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                    </select>
-                </div>
-                <br>
-                <div class="buttons flex-column">
-                        <br>
-                        <button type="button">Buy Now</button>
-                        <br>
-                        <button type="button">Add to cart</button>
-                        <br>
-                        <button type="button"><a href="item-details.html">View More Information</a></button>
-                </div>
-            </div>
-
+      <div class="choice-box flex-column" id="option1">
+        <div class="item-head flex-column">
+          <h2>Reebook Blaze Kashmir willow cricket bat</h2>
+          <img src="bat.jpg" alt="" />
+          <h4>Price : Rs. 525</h4>
         </div>
-        <div class="choice-box flex-column" id="option1">
-            <div class="item-head flex-column">
-                <h2>Reebook Blaze Kashmir willow cricket bat</h2>
-                <img src="bat.jpg" alt="">
-                <h4>Price : Rs. 525</h4>
-            </div>
-            <div class="shopping-section flex-column">
-                <div>
-                    <span>Quantity : </span>
-                    <select name="quantity" id="quantity">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                    </select>
-                </div>
-                <br>
-                <div class="buttons flex-column">
-                        <br>
-                        <button type="button">Buy Now</button>
-                        <br>
-                        <button type="button">Add to cart</button>
-                        <br> <button type="button"><a href="item-details.html">View More Information</a></button>
-                </div>
-            </div>
-
+        <div class="shopping-section flex-column">
+          <div>
+            <span>Quantity : </span>
+            <select name="quantity" id="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <br />
+          <div class="buttons flex-column">
+            <br />
+            <button type="button">Buy Now</button>
+            <br />
+            <button type="button">Add to cart</button>
+            <br />
+            <button type="button">
+              <a href="item-details.html">View More Information</a>
+            </button>
+          </div>
         </div>
-        <div class="choice-box flex-column" id="option1">
-            <div class="item-head flex-column">
-                <h2>Reebook Blaze Kashmir willow cricket bat</h2>
-                <img src="bat.jpg" alt="">
-                <h4>Price : Rs. 525</h4>
-            </div>
-            <div class="shopping-section flex-column">
-                <div>
-                    <span>Quantity : </span>
-                    <select name="quantity" id="quantity">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                    </select>
-                </div>
-                <br>
-                <div class="buttons flex-column">
-                        <br>
-                        <button type="button">Buy Now</button>
-                        <br>
-                        <button type="button">Add to cart</button>
-                        <br>
-                        <button type="button"><a href="item-details.html">View More Information</a></button>
-                </div>
-            </div>
-
+      </div>
+      <div class="choice-box flex-column" id="option1">
+        <div class="item-head flex-column">
+          <h2>Reebook Blaze Kashmir willow cricket bat</h2>
+          <img src="bat.jpg" alt="" />
+          <h4>Price : Rs. 525</h4>
         </div>
-        <div class="choice-box flex-column" id="option1">
-            <div class="item-head flex-column">
-                <h2>Reebook Blaze Kashmir willow cricket bat</h2>
-                <img src="bat.jpg" alt="">
-                <h4>Price : Rs. 525</h4>
-            </div>
-            <div class="shopping-section flex-column">
-                <div>
-                    <span>Quantity : </span>
-                    <select name="quantity" id="quantity">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                    </select>
-                </div>
-                <br>
-                <div class="buttons flex-column">
-                        <br>
-                        <button type="button">Buy Now</button>
-                        <br>
-                        <button type="button">Add to cart</button>
-                        <br>
-                        <button type="button"><a href="item-details.html">View More Information</a></button>
-                </div>
-            </div>
-
+        <div class="shopping-section flex-column">
+          <div>
+            <span>Quantity : </span>
+            <select name="quantity" id="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <br />
+          <div class="buttons flex-column">
+            <br />
+            <button type="button">Buy Now</button>
+            <br />
+            <button type="button">Add to cart</button>
+            <br />
+            <button type="button">
+              <a href="item-details.html">View More Information</a>
+            </button>
+          </div>
         </div>
-
+      </div>
+      <div class="choice-box flex-column" id="option1">
+        <div class="item-head flex-column">
+          <h2>Reebook Blaze Kashmir willow cricket bat</h2>
+          <img src="bat.jpg" alt="" />
+          <h4>Price : Rs. 525</h4>
+        </div>
+        <div class="shopping-section flex-column">
+          <div>
+            <span>Quantity : </span>
+            <select name="quantity" id="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <br />
+          <div class="buttons flex-column">
+            <br />
+            <button type="button">Buy Now</button>
+            <br />
+            <button type="button">Add to cart</button>
+            <br />
+            <button type="button">
+              <a href="item-details.html">View More Information</a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="choice-box flex-column" id="option1">
+        <div class="item-head flex-column">
+          <h2>Reebook Blaze Kashmir willow cricket bat</h2>
+          <img src="bat.jpg" alt="" />
+          <h4>Price : Rs. 525</h4>
+        </div>
+        <div class="shopping-section flex-column">
+          <div>
+            <span>Quantity : </span>
+            <select name="quantity" id="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <br />
+          <div class="buttons flex-column">
+            <br />
+            <button type="button">Buy Now</button>
+            <br />
+            <button type="button">Add to cart</button>
+            <br />
+            <button type="button">
+              <a href="item-details.html">View More Information</a>
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
-   
-    <footer>
-        <div id="main_footer_container">
-          <div class="section1">
-            <h4>Get to know Us</h4>
-            <ul>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#"> Terms & Condition</a></li>
-            </ul>
-          </div>
-          <div class="section2">
-            <h4>Contect Us</h4>
-            <ul>
-              <li class="section1"><a href="#"> Facebook</a></li>
-              <li class="section1"><a href="#"> Twitter</a></li>
-              <li class="section1"><a href="#"> Instagram</a></li>
-            </ul>
-          </div>
-          <div class="section3">
-            <ul>
-              <li>
-                <h4>Let us Help you</h4>
-              </li>
-              <li>
-                <a href="#">Your Account</a>
-              </li>
-              <li>
-                <a href="#">Sitemap</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
-</body>
 
+    <footer>
+      <div id="main_footer_container">
+        <div class="section1">
+          <h4>Get to know Us</h4>
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#"> Terms & Condition</a></li>
+          </ul>
+        </div>
+        <div class="section2">
+          <h4>Contect Us</h4>
+          <ul>
+            <li class="section1"><a href="#"> Facebook</a></li>
+            <li class="section1"><a href="#"> Twitter</a></li>
+            <li class="section1"><a href="#"> Instagram</a></li>
+          </ul>
+        </div>
+        <div class="section3">
+          <ul>
+            <li>
+              <h4>Let us Help you</h4>
+            </li>
+            <li>
+              <a href="#">Your Account</a>
+            </li>
+            <li>
+              <a href="#">Sitemap</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
