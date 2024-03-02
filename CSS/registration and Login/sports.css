@@ -9,6 +9,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background: #ECF4D6;
+    /*  */
 }
 
 .wrapper {
@@ -111,8 +112,8 @@ body {
 }
 
 .wrapperreg {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     width: 750px;
     background: #E6EFF3;
     color: #fff;
