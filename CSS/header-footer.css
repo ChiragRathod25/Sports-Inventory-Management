@@ -1,4 +1,5 @@
-
+@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0);
+@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0);
 /* header and footer design  */
 header,
 footer {
@@ -36,6 +37,7 @@ header>.logo>img {
 h2 {
     text-align: center;
 }
+
 
 #nav {
     width: 100%;
@@ -119,6 +121,17 @@ h2 {
     display: block;
 }
 
+
+.logo {
+    /* background-color: black; */
+    background-image: url('../CSS/logos/logo4.jpeg');
+    min-width: 60px;
+    height: auto;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
 .right-search-login {
     justify-content: space-evenly;
     transform: scale(1.1);
@@ -137,6 +150,8 @@ h2 {
 .account-cart span:hover{
     cursor: pointer;
 }
+
+
 /* footer css */
 #main_footer_container {
     display: flex;
