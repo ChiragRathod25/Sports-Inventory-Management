@@ -6,29 +6,86 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <title>Sports Inventory Management</title>
 </head>
 
 <body>
-  <header>
-    <nav id="nav">
-      <ul id="navlist">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Category</a>
-          <ul id="dropdown">
-            <li><a href="#">Tech & Gadgets</a></li>
-            <li><a href="#">Training Aids</a></li>
-            <li><a href="#">Equipment</a></li>
-            <li><a href="#">Accessories</a></li>
-          </ul>
-        </li>
-        <li><a href="../HTML/Registration and Login/sports_login.html">Login</a></li>
-        <li><a href="#">Contact us</a></li>
-      </ul>
-    </nav>
+  <header class="flex-row">
+    <div class="logo">
+      <img src="../CSS/logos/logo4.jpeg" alt="">
+    </div>
+    <div class="navbar">
+      <nav id="nav">
+        <ul id="navlist">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Team Sports</a>
+            <ul id="dropdown">
+              <li><a href="#">Cricket</a></li>
+              <li><a href="#">Football</a></li>
+              <li><a href="#">Vollyball</a></li>
+              <li><a href="#">Basketball</a></li>
+              <li><a href="#">Hawkey</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Rocket Sports</a>
+            <ul id="dropdown">
+              <li><a href="#">Badminton</a></li>
+              <li><a href="#">Tennis</a></li>
+              <li><a href="#">Table Tennis</a></li>
+              <li><a href="#">Squash</a></li>
+              <li><a href="#">Hawkey</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Other Sports</a>
+            <ul id="dropdown">
+              <li><a href="#">Chess</a></li>
+              <li><a href="#">Carrom</a></li>
+              <li><a href="#">Skating</a></li>
+              <li><a href="#">Boxing</a></li>
+              <li><a href="#">Swimming</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Top Brands</a>
+            <ul id="dropdown">
+              <li><a href="#">SG</a></li>
+              <li><a href="#">Puma</a></li>
+              <li><a href="#">Adidas</a></li>
+              <li><a href="#">Nivia</a></li>
+              <li><a href="#">Wilson</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Guide</a></li>
+          <!-- <li><a href="#">Contact us</a></li> -->
+        </ul>
+      </nav>
+    </div>
+    <div class="right-search-login flex-column">
+      <div class="account-cart flex-row">
+        <span class="material-symbols-outlined">
+          shopping_bag
+        </span>
+        <span>cart</span>
+        <span class="material-symbols-outlined">
+          person
+        </span>
+        <span>
+          Account
+          <!-- <a href="../HTML/Registration and Login/sports_login.html">Login</a> -->
+        </span>
+      </div>
+      <div class="search-website">
+        <input type="text" name="search" id="search" placeholder="search...">
+
+      </div>
+    </div>
   </header>
-  <section id="vision">
+  <!-- <section id="vision">
     <div id="vision_container">
       <div class="image">
         <img
@@ -40,19 +97,15 @@
           Our Vision
         </h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id at perferendis eius facere reprehenderit error.
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum ratione quibusdam iste aperiam, eum dicta
-          dolor minima totam, eligendi in velit saepe accusamus facilis. Id sunt neque culpa officia nihil sed
-          voluptates ab laudantium unde sequi eaque eius placeat ipsa tenetur quaerat, voluptatibus debitis in quod
-          adipisci tempora magni. Perferendis.
+          Hello ! THis is narendra modi. I am a regular customer of this shop. Vision and mission of this shop is really good and i recommend everyone for sports.
         </p>
       </div>
     </div>
-  </section>
-  <hr>
-  <h2>Customer Review</h2>
-  <hr>
-  <section id="customer_review">
+  </section> -->
+  <!-- <hr> -->
+  <!-- <h2>Customer Review</h2>
+  <hr> -->
+  <!-- <section id="customer_review">
     <div id="main_customer_review">
 
       <div class="review_box">
@@ -110,7 +163,390 @@
           saepe quam voluptatibus a praesentium laudantium ex odit!</div>
       </div>
     </div>
+  </section> -->
+
+  <section id="intro">
+    <div class="container">
+      <h2>
+        WORK HARD</br>
+        UNTIL YOU <span>WIN</span>
+      </h2>
+      <div class="flex-column sub-contai">
+        <p>
+          Unloack your Potential...
+        </p>
+        <button type="button">Shop Now</button>
+      </div>
+    </div>
   </section>
+<hr>
+  <section id="item-list" class="flex-column">
+    <h2>
+      <!-- recommended-item-list -->
+      Top Selling Items
+    </h2>
+    <div class="main-container flex-row">
+      <div class="item-container flex-column">
+        <img src="../CSS/Home Page/Recommended Item/cricket-gloves.jpg" alt="">
+        <div class="star flex-row">
+          <span class="material-symbols-outlined">
+        
+          star_rate
+        </span><span class="material-symbols-outlined">
+          star_rate
+        </span><span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate_half
+        </span>
+      </div>
+      <div class="title-price flex-column">
+        <h3>
+          Aello X Cricket Batting Gloves pro standard...
+        </h3>
+        <div>
+          &#x20B9 420
+          <del>&#x20B9 669 </del>
+        </div>
+      </div>
+      <div class="cart-buy flex-column">
+        <button type="button">Add to Cart<span class="material-symbols-outlined">
+            add_shopping_cart
+          </span></button>
+        <button type="button">Buy Now</button>
+      </div>
+    </div>
+      <div class="item-container flex-column">
+        <img src="../CSS/Home Page/Recommended Item/shoes.jpg" alt="">
+        <div class="star flex-row">
+         <span class="material-symbols-outlined">
+          star_rate
+        </span><span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate_half
+        </span>
+      </div>
+      <div class="title-price flex-column">
+        <h3>
+         Adidas R(XTHRAX) series Rapid shoes...
+        </h3>
+        <div>
+          &#x20B9 1999
+          <del>&#x20B9 3999 </del>
+        </div>
+      </div>
+      <div class="cart-buy flex-column">
+        <button type="button">Add to Cart<span class="material-symbols-outlined">
+            add_shopping_cart
+          </span></button>
+        <button type="button">Buy Now</button>
+      </div>
+    </div>
+      <div class="item-container flex-column">
+        <img src="../CSS/Home Page/Recommended Item/shutter.avif" alt="">
+        <div class="star flex-row">
+          <span class="material-symbols-outlined">
+        
+          star_rate
+        </span><span class="material-symbols-outlined">
+          star_rate
+        </span><span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate_half
+        </span>
+      </div>
+      <div class="title-price flex-column">
+        <h3>
+          Aello X Cricket Batting Gloves pro standard...
+        </h3>
+        <div>
+          &#x20B9 420
+          <del>&#x20B9 669 </del>
+        </div>
+      </div>
+      <div class="cart-buy flex-column">
+        <button type="button">Add to Cart<span class="material-symbols-outlined">
+            add_shopping_cart
+          </span></button>
+        <button type="button">Buy Now</button>
+      </div>
+    </div>
+    
+  </div>
+  </section>
+<hr>
+  <section id="item-list" class="flex-column">
+    <h2>
+      Cricket
+    </h2>
+    <div class="main-container flex-row">
+      <div class="item-container flex-column">
+        <img src="../CSS/Home Page/Cricket/cricket-kit.jpg" alt="">
+        <div class="star flex-row">
+          <span class="material-symbols-outlined">
+          star_rate
+        </span><span class="material-symbols-outlined">
+          star_rate
+        </span><span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate_half
+        </span>
+      </div>
+      <div class="title-price flex-column">
+        <h3>
+          Nivia X Cricket Kit pro standard...
+        </h3>
+        <div>
+          &#x20B9 7999
+          <del>&#x20B9 10999 </del>
+        </div>
+      </div>
+      <div class="cart-buy flex-column">
+        <button type="button">Add to Cart<span class="material-symbols-outlined">
+            add_shopping_cart
+          </span></button>
+        <button type="button">Buy Now</button>
+      </div>
+    </div>
+      <div class="item-container flex-column">
+        <img src="../CSS/Home Page/Cricket/pink-Ball.jpg" alt="">
+        <div class="star flex-row">
+         <span class="material-symbols-outlined">
+          star_rate
+        </span><span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate_half
+        </span>
+      </div>
+      <div class="title-price flex-column">
+        <h3>
+         SG Pink ball (Australia) version...
+        </h3>
+        <div>
+          &#x20B9 1999
+          <del>&#x20B9 2599 </del>
+        </div>
+      </div>
+      <div class="cart-buy flex-column">
+        <button type="button">Add to Cart<span class="material-symbols-outlined">
+            add_shopping_cart
+          </span></button>
+        <button type="button">Buy Now</button>
+      </div>
+    </div>
+      <div class="item-container flex-column">
+        <img src="../CSS/Home Page/Cricket/cricket-helmet.jpg" alt="">
+        <div class="star flex-row">
+          <span class="material-symbols-outlined">
+        
+          star_rate
+        </span><span class="material-symbols-outlined">
+          star_rate
+        </span><span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate_half
+        </span>
+      </div>
+      <div class="title-price flex-column">
+        <h3>
+          AEO X Cricket Batting Helmet Metal Build standard...
+        </h3>
+        <div>
+          &#x20B9 5999
+          <del>&#x20B9 7999 </del>
+        </div>
+      </div>
+      <div class="cart-buy flex-column">
+        <button type="button">Add to Cart<span class="material-symbols-outlined">
+            add_shopping_cart
+          </span></button>
+        <button type="button">Buy Now</button>
+      </div>
+    </div>
+  </div>
+  </section>
+<hr>
+  <section id="item-list" class="flex-column">
+    <h2>
+      Badminton
+    </h2>
+    <div class="main-container flex-row">
+      <div class="item-container flex-column">
+        <img src="../CSS/Home Page/Badminton/badminton-shuttlecock.jpg" alt="">
+        <div class="star flex-row">
+         <span class="material-symbols-outlined">
+          star_rate
+        </span><span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate_half
+        </span>
+      </div>
+      <div class="title-price flex-column">
+        <h3>
+         Pink villa shuttlecock (12 shuttlecock...
+        </h3>
+        <div>
+          &#x20B9 799
+          <del>&#x20B9 1699 </del>
+        </div>
+      </div>
+      <div class="cart-buy flex-column">
+        <button type="button">Add to Cart<span class="material-symbols-outlined">
+            add_shopping_cart
+          </span></button>
+        <button type="button">Buy Now</button>
+      </div>
+    </div>
+      <div class="item-container flex-column">
+        <img src="../CSS/Home Page/Badminton/badminton-kit.jpg" alt="">
+        <div class="star flex-row">
+          <span class="material-symbols-outlined">
+          star_rate
+        </span><span class="material-symbols-outlined">
+          star_rate
+        </span><span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate_half
+        </span>
+      </div>
+      <div class="title-price flex-column">
+        <h3>
+          Vega Neo badminton portable kit ...
+        </h3>
+        <div>
+          &#x20B9 17999
+          <del>&#x20B9 21999 </del>
+        </div>
+      </div>
+      <div class="cart-buy flex-column">
+        <button type="button">Add to Cart<span class="material-symbols-outlined">
+            add_shopping_cart
+          </span></button>
+        <button type="button">Buy Now</button>
+      </div>
+    </div>
+      <div class="item-container flex-column">
+        <img src="../CSS/Home Page/Badminton/badminton-string.jpg" alt="">
+        <div class="star flex-row">
+          <span class="material-symbols-outlined">
+          star_rate
+        </span><span class="material-symbols-outlined">
+          star_rate
+        </span><span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate
+        </span>
+        <span class="material-symbols-outlined">
+          star_rate_half
+        </span>
+      </div>
+      <div class="title-price flex-column">
+        <h3>
+          Alpha star badminton string Build standard...
+        </h3>
+        <div>
+          &#x20B9 999
+          <del>&#x20B9 1299 </del>
+        </div>
+      </div>
+      <div class="cart-buy flex-column">
+        <button type="button">Add to Cart<span class="material-symbols-outlined">
+            add_shopping_cart
+          </span></button>
+        <button type="button">Buy Now</button>
+      </div>
+    </div>
+  </div>
+  </section>
+<hr>
+  <section class="shop-category">
+    <h2>
+      Shop by Category
+    </h2>
+    <div class="flex-row">
+      <div class=" box"><img src="../CSS/Home Page/shop-Category/cricket.jpg" alt="">
+        <figcaption>Cricket</figcaption>
+      </div>
+      <div class="box"><img src="../CSS/Home Page/shop-Category/Basketball.jpg" alt="">
+        <figcaption>Basketball</figcaption>
+      </div>
+      <div class="box"><img src="..//CSS/Home Page/shop-Category/football.jpg" alt="">
+        <figcaption>Football</figcaption>
+      </div>
+      <div class="box"><img src="../CSS/Home Page/shop-Category/squash.jpg" alt="">
+        <figcaption>Squash</figcaption>
+      </div>
+      <div class="box"><img src="../CSS/Home Page/shop-Category/tableTennis.jpg" alt="">
+        <figcaption>Table Tennis</figcaption>
+      </div>
+      <div class="box"><img src="../CSS/Home Page/shop-Category/Tennis.jpg" alt="">
+        <figcaption>Tennis</figcaption>
+      </div>
+    </div>
+  </section>
+<hr>
+  <section id="Stories">
+    <h2>
+      GOAT Stories
+    </h2>
+    <div class="flex-row">
+      <div class="box"><img src="../CSS/Home Page/GOAT-stories/pv.avif" alt="">
+      </div>
+      <div class=" box"><img src="../CSS/Home Page/GOAT-stories/rohit.webp" alt="">
+      </div>
+      <div class="box"><img src="../CSS/Home Page/GOAT-stories/niraj.jpg" alt="">
+      </div>
+      <div class="box"><img src="../CSS/Home Page/GOAT-stories/sachin.jfif" alt="">
+      </div>
+      <div class="box"><img src="../CSS/Home Page/GOAT-stories/sunil.jpg" alt="">
+      </div>
+      <div class="box"><img src="../CSS/Home Page/GOAT-stories/virat.jpg" alt="">
+      </div>
+    </div>
+  </section>
+  <hr>
+
   <footer>
     <div id="main_footer_container">
       <div class="section1">

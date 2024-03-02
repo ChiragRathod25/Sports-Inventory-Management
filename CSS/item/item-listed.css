@@ -1,0 +1,43 @@
+.item-list{
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.choice-box{
+    border: 2px solid var(--light);
+    width:400px;
+    min-height: 150px;
+    padding: 1rem;
+    border: 0.5px solid var(--Medium);
+    background-color: var(--Medium);
+    border-radius: 15px;
+    /* gap: 2rem; */
+}
+.choice-box:hover{
+    transform: scale(1.03);
+    transition-duration: 0.3s;
+}
+.choice-box .item-head img{
+    height: 275px;
+}
+.item-head{
+    gap:1rem;
+}
+.shopping-section button{
+    height: 35px;
+    border: none;
+    border-radius: 15px;
+    font-size: inherit;
+    font-weight: bold;
+}
+.shopping-section button:hover{
+    cursor: pointer;
+    background-color: var(--Medium-dark);
+    color: var(--light);
+    border:none;
+}
+.shopping-section button a{
+    text-decoration: none;
+    color: inherit;
+}
