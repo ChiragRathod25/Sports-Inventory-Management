@@ -1,257 +1,81 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Bar</title>
-    <link rel="stylesheet" href="../../CSS/style.css">
-    <link rel="stylesheet" href="../../CSS/owner/owner.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../CSS/style.css">
+  <title>Shop dashboard</title>
 </head>
-
 <body>
-    <header>
-        <nav id="nav">
-          <ul id="navlist">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Category</a>
-              <ul id="dropdown">
-                <li><a href="#">Tech & Gadgets</a></li>
-                <li><a href="#">Training Aids</a></li>
-                <li><a href="#">Equipment</a></li>
-                <li><a href="#">Accessories</a></li>
-              </ul>
-            </li>
-            <li><a href="../HTML/Registration and Login/sports_login.html">Login</a></li>
-            <li><a href="#">Contact us</a></li>
-          </ul>
-        </nav>
-    </header>
-    <div id="section">
-        <div id="sidebar">
-            <div class="nav">
-                <ul>
-                    <li><a href="#">Account</a></li>
-                    <li class="dropdown">
-                        <a href="#">Customer</a>
-                        <div class="dropdown-content">
-                            <a href="#">Add Customer</a>
-                            <a href="#">Update Customer</a>
-                            <a href="#">Remove Customer</a>
-                            <a href="#">Customer List</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">Item</a>
-                        <div class="dropdown-content">
-                            <a href="#">Add Item</a>
-                            <a href="#">Update Item</a>
-                            <a href="#">Remove Item</a>
-                            <a href="#">Item List</a>
-                        </div>
-                    </li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Get Help</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- <div class="section">
-            <h2 id="section_heading">Hello Bird!</h2>
-            <div class="profile-photo">
-                <img src="../Owner/bird-8287451_1920.jpg" alt="Profile Photo">
-            </div>
-            <p id="about_user">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati excepturi a vitae eligendi repellat delectus suscipit sint ea, reiciendis quibusdam voluptatum iste at maxime illum est, aspernatur voluptatibus temporibus dolorum?
-            </p>
-            <h2 id="Deshboard_heading">My Deshboard</h2>
-            <img id="graph" src="graph-163712_1280.jpg" alt="graph"/>
-        <div id="table">
-            <table border="1">
-                <tr>
-                    <td>Total item sold : </td>
-                    <td>1988</td>
-                </tr>
-                <tr>
-                    <td>Expenses</td>
-                    <td>100000</td>
-                </tr>
-                <tr>
-                    <td>Assets</td>
-                    <td>300000</td>
-                </tr>
-                <tr>
-                    <td>Investment</td>
-                    <td>4000000</td>
-                </tr>
-            </table>
-        </div>
-    </div> -->
+  <header class="flex-row">
+    <div class="logo">
+      <img src="../../CSS/logos/logo4.jpeg" alt="">
     </div>
-    <footer>
-        <div id="main_footer_container">
-          <div class="section1">
-            <h4>Get to know Us</h4>
-            <ul>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#"> Terms & Condition</a></li>
+    <div class="navbar">
+      <nav id="nav">
+        <ul id="navlist">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Team Sports</a>
+            <ul id="dropdown">
+              <li><a href="#">Cricket</a></li>
+              <li><a href="#">Football</a></li>
+              <li><a href="#">Vollyball</a></li>
+              <li><a href="#">Basketball</a></li>
+              <li><a href="#">Hawkey</a></li>
             </ul>
-          </div>
-          <div class="section2">
-            <h4>Contect Us</h4>
-            <ul>
-              <li class="section1"><a href="#"> Facebook</a></li>
-              <li class="section1"><a href="#"> Twitter</a></li>
-              <li class="section1"><a href="#"> Instagram</a></li>
+          </li>
+          <li><a href="#">Rocket Sports</a>
+            <ul id="dropdown">
+              <li><a href="#">Badminton</a></li>
+              <li><a href="#">Tennis</a></li>
+              <li><a href="#">Table Tennis</a></li>
+              <li><a href="#">Squash</a></li>
+              <li><a href="#">Hawkey</a></li>
             </ul>
-          </div>
-          <div class="section3">
-            <ul>
-              <li>
-                <h4>Let us Help you</h4>
-              </li>
-              <li>
-                <a href="#">Your Account</a>
-              </li>
-              <li>
-                <a href="#">Sitemap</a>
-              </li>
+          </li>
+          <li><a href="#">Other Sports</a>
+            <ul id="dropdown">
+              <li><a href="#">Chess</a></li>
+              <li><a href="#">Carrom</a></li>
+              <li><a href="#">Skating</a></li>
+              <li><a href="#">Boxing</a></li>
+              <li><a href="#">Swimming</a></li>
             </ul>
-          </div>
-        </div>
-      </footer>
-</body>
+          </li>
 
+          <li><a href="#">Top Brands</a>
+            <ul id="dropdown">
+              <li><a href="#">SG</a></li>
+              <li><a href="#">Puma</a></li>
+              <li><a href="#">Adidas</a></li>
+              <li><a href="#">Nivia</a></li>
+              <li><a href="#">Wilson</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Guide</a></li>
+          <!-- <li><a href="#">Contact us</a></li> -->
+        </ul>
+      </nav>
+    </div>
+    <div class="right-search-login flex-column">
+      <div class="account-cart flex-row">
+        <span class="material-symbols-outlined">
+          shopping_bag
+        </span>
+        <span>cart</span>
+        <span class="material-symbols-outlined">
+          person
+        </span>
+        <span>
+          Account
+          <!-- <a href="../HTML/Registration and Login/sports_login.html">Login</a> -->
+        </span>
+      </div>
+      <div class="search-website">
+        <input type="text" name="search" id="search" placeholder="search...">
+
+      </div>
+    </div>
+  </header>
+</body>
 </html>
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Bar</title>
-    <link rel="stylesheet" href="../../CSS/owner/owner.css">
-    <link rel="stylesheet" href="../../CSS/style.css">
-</head>
-
-<body>
-    <header>
-        <nav id="nav">
-          <ul id="navlist">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Category</a>
-              <ul id="dropdown">
-                <li><a href="#">Tech & Gadgets</a></li>
-                <li><a href="#">Training Aids</a></li>
-                <li><a href="#">Equipment</a></li>
-                <li><a href="#">Accessories</a></li>
-              </ul>
-            </li>
-            <li><a href="../HTML/Registration and Login/sports_login.html">Login</a></li>
-            <li><a href="#">Contact us</a></li>
-          </ul>
-        </nav>
-      </header>
-    <div id="main">
-        <div class="sidebar">
-            <div class="nav">
-                <ul>
-                    <li><a href="#">Account</a></li>
-                    <li class="dropdown">
-                        <a href="#">Customer</a>
-                        <div class="dropdown-content">
-                            <a href="#">Add Customer</a>
-                            <a href="#">Update Customer</a>
-                            <a href="#">Remove Customer</a>
-                            <a href="#">Customer List</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">Item</a>
-                        <div class="dropdown-content">
-                            <a href="#">Add Item</a>
-                            <a href="#">Update Item</a>
-                            <a href="#">Remove Item</a>
-                            <a href="#">Item List</a>
-                        </div>
-                    </li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Get Help</a></li>
-                </ul>
-            </div>
-        </div>
-        <div id="rifht">
-
-        </div>
-        <div class="section">
-            <h2 id="section_heading">Hello Bird!</h2>
-            <div class="profile-photo">
-                <img src="../Owner/bird-8287451_1920.jpg" alt="Profile Photo">
-            </div>
-            <p id="about_user">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati excepturi a vitae eligendi repellat delectus suscipit sint ea, reiciendis quibusdam voluptatum iste at maxime illum est, aspernatur voluptatibus temporibus dolorum?
-            </p>
-            <h2 id="Deshboard_heading">My Deshboard</h2>
-            <img id="graph" src="graph-163712_1280.jpg" alt="graph"/>
-        <div id="table">
-            <table border="1">
-                <tr>
-                    <td>Total item sold : </td>
-                    <td>1988</td>
-                </tr>
-                <tr>
-                    <td>Expenses</td>
-                    <td>100000</td>
-                </tr>
-                <tr>
-                    <td>Assets</td>
-                    <td>300000</td>
-                </tr>
-                <tr>
-                    <td>Investment</td>
-                    <td>4000000</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <footer>
-        <div id="main_footer_container">
-          <div class="section1">
-            <h4>Get to know Us</h4>
-            <ul>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#"> Terms & Condition</a></li>
-            </ul>
-          </div>
-          <div class="section2">
-            <h4>Contect Us</h4>
-            <ul>
-              <li class="section1"><a href="#"> Facebook</a></li>
-              <li class="section1"><a href="#"> Twitter</a></li>
-              <li class="section1"><a href="#"> Instagram</a></li>
-            </ul>
-          </div>
-          <div class="section3">
-            <ul>
-              <li>
-                <h4>Let us Help you</h4>
-              </li>
-              <li>
-                <a href="#">Your Account</a>
-              </li>
-              <li>
-                <a href="#">Sitemap</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
-</body>
-
-</html> -->
