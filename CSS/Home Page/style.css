@@ -114,11 +114,23 @@ section {
 
 /*Intro section css*/
 #intro {
+  width: 90%;
+  min-height: 70vh;
+  align-self: center;
   gap: 1.3rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
-
+#intro .container{
+  gap: 2rem ;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+}
+#intro div img{
+  width: inherit;
+  
+}
 #intro h2 {
   font-size: 5rem;
   line-height: 5.1rem;
@@ -147,7 +159,6 @@ section {
 
 #intro div button:hover {
   cursor: pointer;
-
   transform: scale(1.03);
   transition-duration: 0.2s;
 }
@@ -155,8 +166,9 @@ section {
 #intro div p {
   font-size: 22px;
 }
-.sub-container {
-  gap: 0.1rem;
+#intro .container .sub-container {
+  gap: 1rem;
+  padding: 1rem;
 }
 
 /* recommmended-item list css */
@@ -180,8 +192,11 @@ section {
   /* border: 2px solid black; */
 }
 .item-container img {
-  width: 260px;
+  width: 90%;
+  aspect-ratio: 1/1;
+  object-fit:fill;
   height: 260px;
+  /* mix-blend-mode:normal; */
 }
 .item-container div {
   justify-content: center;
