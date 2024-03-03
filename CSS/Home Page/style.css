@@ -117,30 +117,33 @@ section {
   width: 90%;
   min-height: 70vh;
   align-self: center;
-  gap: 1.3rem;
+  gap:3.7rem;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
-#intro .container{
-  gap: 2rem ;
+#intro .container {
+  gap: 2rem;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: inherit;
 }
-#intro div img{
+#intro div img {
   width: inherit;
-  
+  animation: rotate-Y 10s infinite;
 }
-#intro h2 {
-  font-size: 5rem;
-  line-height: 5.1rem;
+
+
+#intro .container h2 {
+  font-size: 5.5rem;
+  line-height: 5.5rem;
   text-align: left;
+  white-space: nowrap; 
+  position: relative;
+  animation:bottom-up 1s forwards; 
 }
-
-.container h2 span {
-  font-weight: 900;
+#intro .container div{
+  animation:bottom-up 1s forwards; ;
 }
-
 #intro div button {
   word-wrap: none;
   font-weight: bold;
@@ -163,12 +166,14 @@ section {
   transition-duration: 0.2s;
 }
 
-#intro div p {
-  font-size: 22px;
-}
 #intro .container .sub-container {
+  justify-content: flex-start;
   gap: 1rem;
   padding: 1rem;
+}
+#intro .container .sub-container p {
+  font-weight: bold;
+  font-size: 26px;
 }
 
 /* recommmended-item list css */
@@ -194,7 +199,7 @@ section {
 .item-container img {
   width: 90%;
   aspect-ratio: 1/1;
-  object-fit:fill;
+  object-fit: fill;
   height: 260px;
   /* mix-blend-mode:normal; */
 }
@@ -224,4 +229,23 @@ section {
 }
 .cart-buy button:hover {
   cursor: pointer;
+}
+
+/* keyframes  */
+@keyframes rotate-Y {
+  0%,10%,20%,30%,40%,60%{
+    transform: rotateY(0);
+  }
+  50%{
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes bottom-up {
+  0% {
+    transform: translateY(90%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
