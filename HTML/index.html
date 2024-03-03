@@ -19,25 +19,28 @@
       <nav id="nav">
         <ul id="navlist">
           <li><a href="/HTML/">Home</a></li>
-          <li><a href="#">Team Sports</a>
+          <li>
+            <a href="#">Team Sports</a>
             <ul id="dropdown">
-              <li><a href="./Team Sports/cricket.html">Cricket</a></li>
-              <li><a href="./Team Sports/football.html">Football</a></li>
-              <li><a href="#">Vollyball</a></li>
+              <li><a href="/HTML/Team Sports/cricket.html">Cricket</a></li>
+              <li><a href="/HTML/Team Sports/football.html">Football</a></li>
+              <li><a href="">Vollyball</a></li>
               <li><a href="#">Basketball</a></li>
               <li><a href="#">Hawkey</a></li>
             </ul>
           </li>
-          <li><a href="#">Racket Sports</a>
+          <li>
+            <a href="#">Racket Sports</a>
             <ul id="dropdown">
-              <li><a href="./Team Sports/Badminton.html">Badminton</a></li>
+              <li><a href="/HTML/Team Sports/Badminton.html">Badminton</a></li>
               <li><a href="#">Tennis</a></li>
               <li><a href="#">Table Tennis</a></li>
               <li><a href="#">Squash</a></li>
               <li><a href="#">Hawkey</a></li>
             </ul>
           </li>
-          <li><a href="#">Other Sports</a>
+          <li>
+            <a href="#">Other Sports</a>
             <ul id="dropdown">
               <li><a href="#">Chess</a></li>
               <li><a href="#">Carrom</a></li>
@@ -47,7 +50,8 @@
             </ul>
           </li>
 
-          <li><a href="#">Top Brands</a>
+          <li>
+            <a href="#">Top Brands</a>
             <ul id="dropdown">
               <li><a href="#">SG</a></li>
               <li><a href="#">Puma</a></li>
@@ -63,23 +67,42 @@
     </div>
     <div class="right-search-login flex-column">
       <div class="account-cart flex-row">
-        <span class="material-symbols-outlined">
-          shopping_bag
-        </span>
-        <span>cart</span>
-        <span class="material-symbols-outlined">
-          person
-        </span>
-        <span>
-          Account
-          <!-- <a href="../HTML/Registration and Login/sports_login.html">Login</a> -->
-        </span>
+        <div class="cart flex-row">
+          <span class="material-symbols-outlined"> shopping_bag </span>
+          <span>cart</span>
+        </div>
+        <div class="person flex-row">
+          <ul>
+            <li>
+              <div class="flex-row">
+                <span class="material-symbols-outlined"> person </span>
+                <span> Account </span>
+              </div>
+              <ul class="log-sign">
+                <li>
+                  <a href="/HTML/Registration and Login/cust_login.html"
+                    >Log in</a
+                  >
+                </li>
+                <li>
+                  <a href="/HTML/Registration and Login/cust_reg.html">Sign Up</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="search-website">
-        <input type="text" name="search" id="search" placeholder="search...">
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="search..."
+        />
       </div>
     </div>
   </header>
+
   
   <section id="intro" class="flex-row">
     <div class="container flex-column">
