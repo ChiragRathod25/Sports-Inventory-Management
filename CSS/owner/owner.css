@@ -69,6 +69,7 @@ body {
     padding-left: 10px;
     font-size: 20px;
     width: 200px;
+    outline: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .header-left>span{
