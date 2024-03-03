@@ -1,22 +1,22 @@
-let sidebarOpen=false;
-let sidebar=document.getElementById("sidebar");
+// let sidebarOpen=false;
+// let sidebar=document.getElementById("sidebar");
 
-function openSidebar()
-{
-    if(!sidebarOpen){
-        sidebar.classList.add("sidebar-responsive");
-        sidebarOpen=true;
-    }
-}
+// function openSidebar()
+// {
+//     if(!sidebarOpen){
+//         sidebar.classList.add("sidebar-responsive");
+//         sidebarOpen=true;
+//     }
+// }
 
-function closeSidebar()
-{
-    if(sidebar)
-    {
-        sidebar.classList.remove("sidebar-responsive");
-        sidebarOpen=false;
-    }
-}
+// function closeSidebar()
+// {
+//     if(sidebar)
+//     {
+//         sidebar.classList.remove("sidebar-responsive");
+//         sidebarOpen=false;
+//     }
+// }
 let barChartOptions = {
     series: [{
       data: [10,8,6,4,2]
