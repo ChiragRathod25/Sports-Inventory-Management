@@ -127,6 +127,7 @@ section {
   align-items: flex-start;
   width: inherit;
 }
+
 #intro div img {
   width: inherit;
   animation: rotate-Y 10s infinite;
@@ -184,7 +185,6 @@ section {
 .main-container {
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 1rem;
   padding: 0 2rem;
   /* border: 1px solid black; */
 }
@@ -224,7 +224,7 @@ section {
   color: white;
 }
 .title-price div * {
-  color: var(--dark);
+  color: var(--Dark);
   font-weight: bold;
 }
 .cart-buy button:hover {
@@ -233,10 +233,10 @@ section {
 
 /* keyframes  */
 @keyframes rotate-Y {
-  0%,10%,20%,30%,40%,60%{
+  10%,20%,30%,40%,60%{
     transform: rotateY(0);
   }
-  50%{
+  0%,50%{
     transform: rotateY(180deg);
   }
 }

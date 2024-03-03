@@ -4,9 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="../../CSS/registration and Login/cust_login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Cust_login</title>
+    <title>Customer Login</title>
+    
+  <link rel="stylesheet" href="../CSS/Home Page/style.css">
+  <link rel="stylesheet" href="../CSS/Home Page/header-footer.css">
 </head>
 <body>
+    <header class="flex-row">
+        <div class="logo">
+          <!-- <img src="../CSS/logos/logo4.jpeg" alt=""> -->
+        </div>
+        <div class="navbar">
+          <nav id="nav">
+            <ul id="navlist">
+              <li><a href="/HTML/">Home</a></li>
+              <li><a href="#">Team Sports</a>
+                <ul id="dropdown">
+                  <li><a href="./Team Sports/cricket.html">Cricket</a></li>
+                  <li><a href="./Team Sports/football.html">Football</a></li>
+                  <li><a href="#">Vollyball</a></li>
+                  <li><a href="#">Basketball</a></li>
+                  <li><a href="#">Hawkey</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Racket Sports</a>
+                <ul id="dropdown">
+                  <li><a href="./Team Sports/Badminton.html">Badminton</a></li>
+                  <li><a href="#">Tennis</a></li>
+                  <li><a href="#">Table Tennis</a></li>
+                  <li><a href="#">Squash</a></li>
+                  <li><a href="#">Hawkey</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Other Sports</a>
+                <ul id="dropdown">
+                  <li><a href="#">Chess</a></li>
+                  <li><a href="#">Carrom</a></li>
+                  <li><a href="#">Skating</a></li>
+                  <li><a href="#">Boxing</a></li>
+                  <li><a href="#">Swimming</a></li>
+                </ul>
+              </li>
+    
+              <li><a href="#">Top Brands</a>
+                <ul id="dropdown">
+                  <li><a href="#">SG</a></li>
+                  <li><a href="#">Puma</a></li>
+                  <li><a href="#">Adidas</a></li>
+                  <li><a href="#">Nivia</a></li>
+                  <li><a href="#">Wilson</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Guide</a></li>
+              <!-- <li><a href="#">Contact us</a></li> -->
+            </ul>
+          </nav>
+        </div>
+        <div class="right-search-login flex-column">
+          <div class="account-cart flex-row">
+            <span class="material-symbols-outlined">
+              shopping_bag
+            </span>
+            <span>cart</span>
+            <span class="material-symbols-outlined">
+              person
+            </span>
+            <span>
+              Account
+              <!-- <a href="../HTML/Registration and Login/sports_login.html">Login</a> -->
+            </span>
+          </div>
+          <div class="search-website">
+            <input type="text" name="search" id="search" placeholder="search...">
+          </div>
+        </div>
+      </header>
+
     <div class="container" id="container">
         <div class="form-container sign-in">
             <form>
@@ -28,5 +101,39 @@
             </div>
         </div>
     </div>
+    <footer>
+        <div id="main_footer_container">
+          <div class="section1">
+            <h4>Get to know Us</h4>
+            <ul>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#"> Terms & Condition</a></li>
+            </ul>
+          </div>
+          <div class="section2">
+            <h4>Contect Us</h4>
+            <ul>
+              <li class="section1"><a href="#"> Facebook</a></li>
+              <li class="section1"><a href="#"> Twitter</a></li>
+              <li class="section1"><a href="#"> Instagram</a></li>
+            </ul>
+          </div>
+          <div class="section3">
+            <ul>
+              <li>
+                <h4>Let us Help you</h4>
+              </li>
+              <li>
+                <a href="#">Your Account</a>
+              </li>
+              <li>
+                <a href="#">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      
 </body>
 </html>
