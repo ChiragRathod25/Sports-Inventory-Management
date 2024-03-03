@@ -29,10 +29,10 @@ header>* {
 
 }
 
-header>.logo>img {
-    max-width: 70px;
-    border-radius: 50%;
-}
+/* header>.logo>img { */
+    /* max-width: 70px; */
+    /* border-radius: 50%; */
+/* } */
 
 h2 {
     text-align: center;
@@ -125,7 +125,8 @@ h2 {
 .logo {
     /* background-color: black; */
     background-image: url('../logos/logo4.jpeg');
-    min-width: 60px;
+    width: 10%;
+    aspect-ratio: 1/1;
     height: auto;
     border-radius: 50%;
     background-size: cover;
@@ -133,7 +134,9 @@ h2 {
 }
 
 .right-search-login {
-    justify-content: space-evenly;
+    padding: 5px;
+    gap: 0.3rem;
+    justify-content: space-around;
     transform: scale(1.1);
 }
 
