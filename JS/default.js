@@ -5,7 +5,7 @@ console.log('inside loaded');
 const repoName='/Sports-Inventory-Management';
 for(let i=0;i<addRootRapo.length;i++){
     let val=addRootRapo[i].getAttribute('href');
-    if(val==='#'){
+    if(val=='#'){
         continue;
     }
     val=repoName+val;
