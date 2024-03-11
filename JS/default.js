@@ -1,5 +1,10 @@
 if(window.location.href.includes('chiragrathod25.github.io')){
-    const base=document.createElement('base');
-    base.setAttribute('href','https://chiragrathod25.github.io/Sports-Inventory-Management');
-    document.querySelector('head').appendChild(base)
+const addRootRepo=document.querySelectorAll('a');
+const repoName='/Sports-Inventory-Management'
+for(let i=0;i<addRootRepo.length; ++i){
+let val=addRootRepo[i].getAttribute('href');
+val repoName+val;
+addRootRepo[i].setAttribute('href', val)
+}
+
 }
