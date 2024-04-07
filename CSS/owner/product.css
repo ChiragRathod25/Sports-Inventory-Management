@@ -9,7 +9,7 @@
 .tbl{
     border-collapse: collapse;
     box-shadow: 0 10px 10px -4px rgba(0,0,0.2,0.5);
-    width: 1000px;
+    width: 1200px;
 }
 .tbl{
     border: 2px solid rgb(109, 70, 70);
@@ -25,12 +25,14 @@
 .remove span{
     border: 1px solid black;
     border-radius: 5px;
+    cursor: pointer;
 }
 .add-btn{
     font-size: 20px;
-    margin-top: 10px;
+    padding: 10px;
+    margin-top: 20px;
     border: 2px solid rgb(109, 70, 70);
     border-radius: 10px;
-    background-color: rgb(102, 102, 154);
+    background-color: rgb(163, 163, 226);
     cursor: pointer;
 }
