@@ -22,21 +22,20 @@ class Header extends HTMLElement {
           <li>
             <a href="#">Racket Sports</a>
             <ul id="dropdown">
-              <li><a href="/HTML/Team Sports/Badminton.html">Badminton</a></li>
-              <li><a href="#">Tennis</a></li>
-              <li><a href="#">Table Tennis</a></li>
-              <li><a href="#">Squash</a></li>
-              <li><a href="#">Hawkey</a></li>
+              <li><a href="/HTML/Racket Sports/Badminton.html">Badminton</a></li>
+              <li><a href="/HTML/Racket Sports/Tennis.html">Tennis</a></li>
+              <li><a href="/HTML/Racket Sports/tableTennis.html">Table Tennis</a></li>
+              <li><a href="/HTML/Racket Sports/squash.html">Squash</a></li>
             </ul>
           </li>
           <li>
             <a href="#">Other Sports</a>
             <ul id="dropdown">
-              <li><a href="#">Chess</a></li>
-              <li><a href="#">Carrom</a></li>
-              <li><a href="#">Skating</a></li>
-              <li><a href="#">Boxing</a></li>
-              <li><a href="#">Swimming</a></li>
+              <li><a href="/HTML/Other Sports/chess.html">Chess</a></li>
+              <li><a href="/HTML/Other Sports/carrom.html">Carrom</a></li>
+              <li><a href="/HTML/Other Sports/skating.html">Skating</a></li>
+              <li><a href="/HTML/Other Sports/boxing.html">Boxing</a></li>
+              <li><a href="/HTML/Other Sports/swimming.html">Swimming</a></li>
             </ul>
           </li>
 
