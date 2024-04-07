@@ -1,35 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS/registration and Login/cust_reg.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Cust_login</title>
-</head>
-<body>
-    <div class="container" id="container">
-        <div class="form-container sign-up">
-            <form>
-                <h1>Create Account</h1>
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
-                <textarea name="address" class="address" cols="30" rows="3" placeholder="Address"></textarea>
-                <input type="text" placeholder="User Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button>Sign Up</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Registration</title>
+
+    <link rel="stylesheet" href="../../CSS/Home Page/header-footer.css" />
+    <link rel="stylesheet" href="../../CSS/Home Page/style.css" />
+    <link
+      rel="stylesheet"
+      href="../../CSS/registration and Login/cust_reg.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <my-header></my-header>
+
+    <section>
+      <section class="form">
+        <div class="container" id="container">
+          <div class="form-container sign-up">
+            <form action="../../PHP/Registration and Login/userRegistration.php" onsubmit="return validateForm(this)" method="post">
+              <h1>Create Account</h1>
+              <input type="text" placeholder="First Name" id="fname" />
+              <input type="text" placeholder="Last Name" id="lname" />
+              <textarea id="address" name="address" class="address" cols="30" rows="3" placeholder="Address"></textarea>
+              <input type="text" name="mobileNumber" id="mobileNumber" placeholder="Mobile Number">
+              <input type="text" placeholder="User Name" id="username" />
+            <input type="email" placeholder="Email" id="email" />
+            <input type="password" placeholder="Password" id="password" />
+            
+            <!-- <input type="checkbox" onclick="togglePasswordVisibility()">
+            <script>
+                function togglePasswordVisibility() {
+                    var passwordInput = document.getElementById("password");
+                    if (passwordInput.type === "password") {
+                        passwordInput.type = "text";
+                    } else {
+                        passwordInput.type = "password";
+                    }
+                }
+
+            </script> -->
+              <button>Sign Up</button>
             </form>
-        </div>
-        <div class="right-container">
+          </div>
+          <div class="right-container">
             <div class="right">
-                <div class="right-panel right-right">
-                    <h1>Hello!</h1>
-                    <p>Already Have An Account</p>
-                    <a href="../../HTML/Registration and Login/cust_login.html"><button id="login">Sign In</button></a>
-                </div>
+              <div class="right-panel right-right">
+                <h1>Hello!</h1>
+                <p>Already Have An Account</p>
+                <a href="/HTML/Registration and Login/cust_login.html"
+                  ><button id="login">Sign In</button></a
+                >
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</body>
+      </section>
+    </section>
+
+    <my-footer> </my-footer>
+  </body>
+
+  <script src="../../JS/Registration and Login/registrationValidatation.js"></script>
+  <script src="../../JS/headerFooter.js"></script>
+  <script src="../../JS/default.js"></script>
 </html>
