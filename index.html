@@ -11,99 +11,7 @@
   </head>
 
 <body>
-  <header class="flex-row">
-    <div class="logo">
-      <!-- <img src="../CSS/logos/logo4.jpeg" alt=""> -->
-    </div>
-    <div class="navbar">
-      <nav id="nav">
-        <ul id="navlist">
-          <li><a href="/HTML/">Home</a></li>
-          <li>
-            <a href="#">Team Sports</a>
-            <ul id="dropdown">
-              <li><a href="./HTML/Team Sports/cricket.html">Cricket</a></li>
-              <li><a href="./HTML/Team Sports/football.html">Football</a></li>
-              <li><a href="">Vollyball</a></li>
-              <li><a href="#">Basketball</a></li>
-              <li><a href="#">Hawkey</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Racket Sports</a>
-            <ul id="dropdown">
-              <li><a href="./HTML/Team Sports/Badminton.html">Badminton</a></li>
-              <li><a href="#">Tennis</a></li>
-              <li><a href="#">Table Tennis</a></li>
-              <li><a href="#">Squash</a></li>
-              <li><a href="#">Hawkey</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Other Sports</a>
-            <ul id="dropdown">
-              <li><a href="#">Chess</a></li>
-              <li><a href="#">Carrom</a></li>
-              <li><a href="#">Skating</a></li>
-              <li><a href="#">Boxing</a></li>
-              <li><a href="#">Swimming</a></li>
-            </ul>
-          </li>
-
-          <li>
-            <a href="#">Top Brands</a>
-            <ul id="dropdown">
-              <li><a href="#">SG</a></li>
-              <li><a href="#">Puma</a></li>
-              <li><a href="#">Adidas</a></li>
-              <li><a href="#">Nivia</a></li>
-              <li><a href="#">Wilson</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Guide</a></li>
-          <!-- <li><a href="#">Contact us</a></li> -->
-        </ul>
-      </nav>
-    </div>
-    <div class="right-search-login flex-column">
-      <div class="account-cart flex-row">
-        <div class="cart flex-row">
-          <span class="material-symbols-outlined"> shopping_bag </span>
-          <span>cart</span>
-        </div>
-        <div class="person flex-row">
-          <ul>
-            <li>
-              <div class="flex-row">
-                <span class="material-symbols-outlined"> person </span>
-                <span> Account </span>
-              </div>
-              <ul class="log-sign">
-                <li>
-                  <a href="./HTML/Registration and Login/cust_login.html"
-                    >Log in</a
-                  >
-                </li>
-                <li>
-                  <a href="./HTML/Registration and Login/cust_reg.html">Sign Up</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="search-website">
-        <input
-          type="text"
-          name="search"
-          id="search"
-          placeholder="search..."
-        />
-      </div>
-    </div>
-  </header>
-
-  
+    <my-header></my-header>
   <section id="intro" class="flex-row">
     <div class="container flex-column">
       <h2 id="workhard-quote">
@@ -131,8 +39,7 @@
       <div class="item-container flex-column">
         <img src="./CSS/Home Page/Recommended Item/cricket-gloves.jpg" alt="">
         <div class="star flex-row">
-          <span class="material-symbols-outlined">
-        
+          <span class="material-symbols-outlined">   
           star_rate
         </span><span class="material-symbols-outlined">
           star_rate
@@ -231,7 +138,8 @@
   </div>
   </section>
 <hr>
-  <!-- <section id="item-list" class="flex-column">
+<!--
+  <section id="item-list" class="flex-column">
     <h2>
       Cricket
     </h2>
@@ -336,8 +244,10 @@
     </div>
   </div>
   </section>
-<hr> -->
-  <!-- <section id="item-list" class="flex-column">
+<hr> 
+
+
+   <section id="item-list" class="flex-column">
     <h2>
       Badminton
     </h2>
@@ -441,8 +351,8 @@
     </div>
   </div>
   </section>
-<hr> -->
-  
+<hr> 
+-->
 <section class="shop-category">
     <h2>
       Shop by Category
@@ -490,41 +400,63 @@
   </section>
   <hr>
 
-  <footer>
-    <div id="main_footer_container">
-      <div class="section1">
-        <h4>Get to know Us</h4>
-        <ul>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#"> Terms & Condition</a></li>
-        </ul>
+  <section id="reviews" class="flex-row">
+    <h2>Customer Reviews</h2>
+    <div class="review-card">
+      <p>"I am extremely satisfied with the quality of the products and the prompt delivery. Highly recommended!"</p>
+      <p>- Rajesh Kumar</p>
+    </div>
+    <div class="review-card">
+      <p>"The customer service provided by this company is exceptional. They went above and beyond to assist me with my queries. Will definitely be a returning customer!"</p>
+      <p>- Priya Sharma</p>
+    </div>
+    <div class="review-card">
+      <p>"I have been a loyal customer for years and I have never been disappointed. The products are top-notch and the prices are unbeatable. Keep up the great work!"</p>
+      <p>- Sanjay Patel</p>
+    </div>
+    <div class="review-card">
+      <p>"I recently made a purchase and I am extremely happy with my experience. The website is user-friendly and the checkout process was seamless. Will definitely recommend to my friends!"</p>
+      <p>- Aishwarya Singh</p>
+    </div>
+    <!-- Add more reviews as needed -->
+  </section>
+
+  <section id="contact-us" class="flex-row">
+    <div>
+      
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <div class="contact-item">
+        <span class="material-icons">location_on</span>
+        <p>29, Tulsi Appartment, Opposite satyam sports,Surat, India</p>
       </div>
-      <div class="section2">
-        <h4>Contect Us</h4>
-        <ul>
-          <li class="section1"><a href="#"> Facebook</a></li>
-          <li class="section1"><a href="#"> Twitter</a></li>
-          <li class="section1"><a href="#"> Instagram</a></li>
-        </ul>
+      <div class="contact-item">
+        <span class="material-icons">phone</span>
+        <p>+91 98752 23785</p>
       </div>
-      <div class="section3">
-        <ul>
-          <li>
-            <h4>Let us Help you</h4>
-          </li>
-          <li>
-            <a href="#">Your Account</a>
-          </li>
-          <li>
-            <a href="#">Sitemap</a>
-          </li>
-        </ul>
+      <div class="contact-item">
+        <span class="material-icons">email</span>
+        <p>info@htsports.com</p>
       </div>
     </div>
-  </footer>
-  
+    </div>
+    <div class="contact-form flex-column">
+      
+    <h2>Send Message</h2>
+    <form class="flex-column">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+
+ <my-footer></my-footer>
 </body>
+
+<script src="./JS/headerFooter.js"></script>
 <script src="./JS/default.js"></script>
 
 </html>
