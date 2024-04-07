@@ -231,6 +231,88 @@ section {
   cursor: pointer;
 }
 
+/*Contact Us CSS*/
+
+#contact-us{
+  align-self: center;
+  width: 80%;
+}
+#contact-us>div{
+  min-width: 50%;
+}
+.contact-form>form{
+  gap: 1rem;
+  padding: 1rem;
+}
+.contact-form > form > input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.contact-form > form > textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.contact-form > form > button[type="submit"] {
+  width: 20%;
+  padding: 10px 20px;
+  background-color: var(--button);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form > form > button[type="submit"]:hover {
+  background-color: var(--button);
+  scale: 1.03;
+}
+
+
+/*Customer Review Section*/
+#reviews {
+  background-color: #f9f9f9;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#reviews h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.review-card {
+  border: 1px solid var(--button);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  box-sizing: border-box;
+}
+
+.review-card p:first-child {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.review-card p:last-child {
+  text-align: right;
+  color: var(--button);
+}
+
 /* keyframes  */
 @keyframes rotate-Y {
   10%,20%,30%,40%,60%{
