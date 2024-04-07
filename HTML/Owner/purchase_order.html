@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="../../../CSS/owner/owner.css">
-    <link rel="stylesheet" href="../../../CSS/owner/category/Jerseys_and_Kits.css">
+    <link rel="stylesheet" href="../../CSS/owner/purchase_order.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <title>Hockey Accessories</title>
+    <title>Purchase Order</title>
 </head>
 
 <body>
@@ -87,63 +87,124 @@
         <main class="main-container">
             <!-- MAIN CONTAINER -->
             <div class="container">
-                <h1 class="table-title">Hockey Accessories</h1>
+                <h1 class="table-title">Pending Orders</h1>
                 <table class="tbl">
                     <tr class="header">
-                        <th>Id</th>
+                        <th>No</th>
+                        <th>GSTIN</th>
                         <th>Name</th>
-                        <th>Description</th>
-                        <th>Purchase Price</th>
-                        <th>Selling Price</th>
-                        <th>Date Of Purchase</th>
-                        <th>Stock Quantity</th>
+                        <th>Supplied Item Id</th>
+                        <th>Supplied Quantity</th>
+                        <th>Unit Cost</th>
+                        <th>Contract Start Date</th>
+                        <th>Contract End Date</th>
+                        <th>Address</th>
+                        <th>Phone Number</th>
+                        <th>Email Id</th>
                         <th>Remove</th>
                     </tr>
                     <tbody>
                         <tr>
-                            <td>HA001</td>
-                            <td>Hockey Stick Tape</td>
-                            <td>High-quality cloth tape for grip and protection on hockey sticks.</td>
-                            <td>5</td>
-                            <td>8</td>
-                            <td>2023-08-01</td>
-                            <td>100</td>
+                            <td>1</td>
+                            <td>22AAAAA0000A1Z5</td>
+                            <td>Himanshu Parmar</td>
+                            <td>BAT001</td>
+                            <td>05</td>
+                            <td>570</td>
+                            <td>29-02-2022</td>
+                            <td>04-05-2024</td>
+                            <td>A. M. Naik, Mota Bazzar, V. V. Nagar</td>
+                            <td>8160599527</td>
+                            <td>himu9333@gmail.com</td>
                             <td class="remove"><span class="material-symbols-outlined text-blue">
                                     delete
                                 </span></td>
                         </tr>
                         <tr>
-                            <td>HA002</td>
-                            <td>Hockey Stick Wax</td>
-                            <td>Specialized wax for improving puck control and reducing friction on hockey sticks.</td>
-                            <td>8</td>
+                            <td>2</td>
+                            <td>22BBBBB0000B1Y6</td>
+                            <td>Anita Singh</td>
+                            <td>BAT002</td>
+                            <td>08</td>
+                            <td>650</td>
+                            <td>15-04-2022</td>
+                            <td>25-06-2024</td>
+                            <td>Jayanagar, Bangalore</td>
+                            <td>9876543210</td>
+                            <td>anita.singh@gmail.com</td>
+                            <td class="remove"><span class="material-symbols-outlined text-blue">
+                                    delete
+                                </span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>22CCCCC0000C1X7</td>
+                            <td>Ajay Gupta</td>
+                            <td>BAT003</td>
                             <td>12</td>
-                            <td>2023-08-05</td>
-                            <td>80</td>
-                            <td class="remove"><span class="material-symbols-outlined text-blue">
-                                    delete
-                                </span></td>
-                        </tr>
-                        <tr>
-                            <td>HA003</td>
-                            <td>Hockey Skate Guards</td>
-                            <td>Protective covers for hockey skates to prevent damage during transportation and storage.</td>
-                            <td>15</td>
-                            <td>20</td>
-                            <td>2023-07-20</td>
-                            <td>50</td>
+                            <td>480</td>
+                            <td>20-03-2022</td>
+                            <td>19-05-2024</td>
+                            <td>Malviya Nagar, Jaipur</td>
+                            <td>8765432109</td>
+                            <td>ajay.gupta@gmail.com</td>
                             <td class="remove"><span class="material-symbols-outlined text-blue">
                                     delete
                                 </span></td>
                         </tr>
                     </tbody>
                 </table>
-                <button class="add-btn">Add product</button>
-                <div class="back-btn-container">
-                    <span class="material-symbols-outlined">
-                        arrow_back
-                    </span><a href="../../Owner/category.html"><button class="back-btn">Back</button></a>
-                </div>
+                <h1 class="table-title">Completed Orders</h1>
+                <table class="tbl">
+                    <tr class="header">
+                        <th>No</th>
+                        <th>GSTIN</th>
+                        <th>Name</th>
+                        <th>Supplied Item Id</th>
+                        <th>Supplied Quantity</th>
+                        <th>Unit Cost</th>
+                        <th>Contract Start Date</th>
+                        <th>Contract End Date</th>
+                        <th>Address</th>
+                        <th>Phone Number</th>
+                        <th>Email Id</th>
+                        <th>Remove</th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>22DDDDD0000D1Z8</td>
+                            <td>Ramesh Kumar</td>
+                            <td>GLV001</td>
+                            <td>15</td>
+                            <td>420</td>
+                            <td>10-05-2022</td>
+                            <td>09-07-2024</td>
+                            <td>Koramangala, Bangalore</td>
+                            <td>7654321098</td>
+                            <td>ramesh.kumar@gmail.com</td>
+                            <td class="remove"><span class="material-symbols-outlined text-blue">
+                                    delete
+                                </span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>22EEEEE0000E1Y9</td>
+                            <td>Veena Gupta</td>
+                            <td>SHO002</td>
+                            <td>20</td>
+                            <td>300</td>
+                            <td>05-06-2022</td>
+                            <td>04-08-2024</td>
+                            <td>Mulund, Mumbai</td>
+                            <td>8765432109</td>
+                            <td>veena.gupta@gmail.com</td>
+                            <td class="remove"><span class="material-symbols-outlined text-blue">
+                                    delete
+                                </span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </main>
         <!--Main-Container End-->

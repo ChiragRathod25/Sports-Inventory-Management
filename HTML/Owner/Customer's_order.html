@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="../../../CSS/owner/owner.css">
-    <link rel="stylesheet" href="../../../CSS/owner/category/Jerseys_and_Kits.css">
+    <link rel="stylesheet" href="../../CSS/owner/purchase_order.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <title>Protective Gear</title>
+    <title>Customer's Orders</title>
 </head>
 
 <body>
@@ -87,63 +87,124 @@
         <main class="main-container">
             <!-- MAIN CONTAINER -->
             <div class="container">
-                <h1 class="table-title">Protective Gear</h1>
+                <h1 class="table-title">Pending Orders</h1>
                 <table class="tbl">
                     <tr class="header">
+                        <th>No</th>
                         <th>Id</th>
                         <th>Name</th>
-                        <th>Description</th>
-                        <th>Purchase Price</th>
-                        <th>Selling Price</th>
-                        <th>Date Of Purchase</th>
-                        <th>Stock Quantity</th>
+                        <th>Order Id</th>
+                        <th>Order Amount</th>
+                        <th>Order Date</th>
+                        <th>Address</th>
+                        <th>Phone Number</th>
+                        <th>Email Id</th>
                         <th>Remove</th>
                     </tr>
                     <tbody>
                         <tr>
-                            <td>PG001</td>
-                            <td>Shock Doctor Ultra Pro Mouthguard</td>
-                            <td>Highly protective mouthguard with shock-absorbing technology.</td>
-                            <td>20</td>
-                            <td>30</td>
-                            <td>2023-08-01</td>
-                            <td>50</td>
+                            <td>1</td>
+                            <td>POI001</td>
+                            <td>Rahul Sharma</td>
+                            <td>ORD123</td>
+                            <td>5000</td>
+                            <td>2024-04-07</td>
+                            <td>New Delhi</td>
+                            <td>9876543210</td>
+                            <td>rahul.sharma@gmail.com</td>
                             <td class="remove"><span class="material-symbols-outlined text-blue">
                                     delete
                                 </span></td>
                         </tr>
                         <tr>
-                            <td>PG002</td>
-                            <td>Bauer Supreme S29 Elbow Pads</td>
-                            <td>Elbow pads with superior protection and comfort for hockey players.</td>
-                            <td>40</td>
-                            <td>60</td>
-                            <td>2023-08-05</td>
-                            <td>40</td>
+                            <td>2</td>
+                            <td>POI002</td>
+                            <td>Priya Patel</td>
+                            <td>ORD124</td>
+                            <td>7000</td>
+                            <td>2024-04-06</td>
+                            <td>Mumbai</td>
+                            <td>8765432109</td>
+                            <td>priya.patel@gmail.com</td>
                             <td class="remove"><span class="material-symbols-outlined text-blue">
                                     delete
                                 </span></td>
                         </tr>
                         <tr>
-                            <td>PG003</td>
-                            <td>Cascade LX Women's Lacrosse Headgear</td>
-                            <td>Headgear designed specifically for female lacrosse players with enhanced visibility and protection.</td>
-                            <td>60</td>
-                            <td>80</td>
-                            <td>2023-07-20</td>
-                            <td>30</td>
+                            <td>3</td>
+                            <td>POI003</td>
+                            <td>Akash Aachary</td>
+                            <td>ORD125</td>
+                            <td>3000</td>
+                            <td>2024-04-05</td>
+                            <td>Jaipur</td>
+                            <td>7654321098</td>
+                            <td>akash.singh@gmail.com</td>
                             <td class="remove"><span class="material-symbols-outlined text-blue">
                                     delete
                                 </span></td>
                         </tr>
                     </tbody>
                 </table>
-                <button class="add-btn">Add product</button>
-                <div class="back-btn-container">
-                    <span class="material-symbols-outlined">
-                        arrow_back
-                    </span><a href="../../Owner/category.html"><button class="back-btn">Back</button></a>
-                </div>
+                <h1 class="table-title">Completed Orders</h1>
+                <table class="tbl">
+                    <tr class="header">
+                        <th>No</th>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Order Id</th>
+                        <th>Order Amount</th>
+                        <th>Order Date</th>
+                        <th>Address</th>
+                        <th>Phone Number</th>
+                        <th>Email Id</th>
+                        <th>Remove</th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>COI001</td>
+                            <td>Ananya Gupta</td>
+                            <td>ORD126</td>
+                            <td>6000</td>
+                            <td>2024-04-07</td>
+                            <td>Bangalore</td>
+                            <td>9876543210</td>
+                            <td>ananya.gupta@gmail.com</td>
+                            <td class="remove"><span class="material-symbols-outlined text-blue">
+                                    delete
+                                </span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>COI002</td>
+                            <td>Rajesh Khanna</td>
+                            <td>ORD127</td>
+                            <td>4000</td>
+                            <td>2024-04-06</td>
+                            <td>Chennai</td>
+                            <td>8765432109</td>
+                            <td>rajesh.khanna@gmail.com</td>
+                            <td class="remove"><span class="material-symbols-outlined text-blue">
+                                    delete
+                                </span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>COI003</td>
+                            <td>Shreya Sharma</td>
+                            <td>ORD128</td>
+                            <td>3500</td>
+                            <td>2024-04-05</td>
+                            <td>Pune</td>
+                            <td>7654321098</td>
+                            <td>shreya.sharma@gmail.com</td>
+                            <td class="remove"><span class="material-symbols-outlined text-blue">
+                                    delete
+                                </span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </main>
         <!--Main-Container End-->
