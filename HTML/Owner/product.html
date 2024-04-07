@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="../../CSS/owner/owner.css">
+    <link rel="stylesheet" href="../../CSS/owner/product.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Product</title>
+</head>
+
+<body>
+    <!--Grid-Container Strat-->
+    <div class="grid-container">
+        <!--Header Start-->
+        <header class="flex-row">
+            <div class="header-left">
+                <input type="search" placeholder="search..." class="search" />
+                <span class="material-symbols-outlined ">
+                    search
+                </span>
+            </div>
+            <div class="header-right">
+                <span class="material-symbols-outlined">
+                    account_circle
+                </span>
+                <span class="material-symbols-outlined">
+                    notifications
+                </span>
+                <span class="pro-pic">
+                    <img src="../../CSS/owner/pro_pic.jpeg" alt="">
+                </span>
+            </div>
+        </header>
+        <!--Header End-->
+        <!--Sidebar Start-->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-logo">
+                    <span class="logo">
+                        <img src="../../CSS/logos/logo4.jpeg" alt="">
+                    </span>Hit Inventory
+                </div>
+            </div>
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">
+                        bar_chart_4_bars
+                    </span>Dashboard
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">
+                        category
+                    </span>Products
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">
+                        inventory_2
+                    </span>Inventory
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">
+                        add_shopping_cart
+                    </span>Purchase Orders
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">
+                        add_shopping_cart
+                    </span>Sales Order
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">
+                        settings
+                    </span>Setting
+                </li>
+            </ul>
+        </aside>
+        <!--Sidebar End-->
+
+        <!--Main-Container Strat-->
+        <main class="main-container">
+            <!-- MAIN CONTAINER -->
+            <div class="container">
+                <h1 class="table-title">Available Products</h1>
+                <table class="tbl">
+                    <tr class="header">
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Action</th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>PRO001</td>
+                            <td>Cricket Bat</td>
+                            <td>Sports</td>
+                            <td>Professional Grade Bat</td>
+                            <td class="remove"><span class="material-symbols-outlined text-blue">
+                                delete
+                                </span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="add-btn">Add product</button>
+            </div>
+        </main>
+        <!--Main-Container End-->
+    </div>
+    <!--Grid-Container End-->
+    <!--Script-->
+    <script src="../../JS/Owner/dash_board.js"></script>
+    <script src="../../JS/Owner/product.js"></script>
+</body>
+
+</html>
