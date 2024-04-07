@@ -125,9 +125,9 @@ h2 {
 }
 
 
-.logo {
+.logo-img {
     /* background-color: black; */
-    background-image: url('../logos/logo4.jpeg');
+    background-image: url('/CSS/logos/logo4.jpeg');
     width: 10%;
     aspect-ratio: 1/1;
     height: auto;

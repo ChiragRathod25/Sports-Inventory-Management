@@ -2,7 +2,7 @@ class Header extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <header class="flex-row">
-    <div class="logo">
+    <div class="logo-img">
       <!-- <img src="../CSS/logos/logo4.jpeg" alt=""> -->
     </div>
     <div class="navbar">

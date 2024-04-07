@@ -6,6 +6,10 @@ if (window.location.href.includes("chiragrathod25.github.io")|| window.location.
   for (let i = 0; i < addRootRapo.length; i++)  {
     let val = addRootRapo[i].getAttribute("href");
     console.log('not changed')
+    if(val.includes('..//')){
+      console.log('true');
+      console.log(val)
+    }
     if (val != "" || val != "#") {
       val = repoName + val;
       addRootRapo[i].setAttribute("href", val);
