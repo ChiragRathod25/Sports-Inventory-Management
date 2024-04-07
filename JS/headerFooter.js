@@ -104,9 +104,9 @@ class Footer extends HTMLElement {
           <div class="section1">
             <h4>Get to know Us</h4>
             <ul>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#"> Terms & Condition</a></li>
+              <li><a href="/HTML/aboutUs.html">About us</a></li>
+              <li><a href="/HTML/privacyPolicy.html">Privacy Policy</a></li>
+              <li><a href="/HTML/termsAndCondition.html"> Terms & Condition</a></li>
             </ul>
           </div>
           <div class="section2">
@@ -126,7 +126,7 @@ class Footer extends HTMLElement {
                 <a href="#">Your Account</a>
               </li>
               <li>
-                <a href="#">Sitemap</a>
+                <a href="/HTML/sitemap.html">Sitemap</a>
               </li>
             </ul>
           </div>
