@@ -16,7 +16,7 @@ class Header extends HTMLElement {
               <li><a href="/HTML/Team Sports/football.html">Football</a></li>
               <li><a href="/HTML/Team Sports/vollyball.html">Vollyball</a></li>
               <li><a href="/HTML/Team Sports/basketball.html">Basketball</a></li>
-              <li><a href="/HTML/Team Sports/hawkey.html">Hawkey</a></li>
+              <li><a href="/HTML/Team Sports/Hawkey.html">Hawkey</a></li>
             </ul>
           </li>
           <li>
