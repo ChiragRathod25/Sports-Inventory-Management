@@ -8,12 +8,9 @@
 }
 .tbl{
     border-collapse: collapse;
+    background-color:  #ffffff;
     box-shadow: 0 10px 10px -4px rgba(0,0,0.2,0.5);
-<<<<<<< HEAD
-    width: 1000px;
-=======
     width: 1200px;
->>>>>>> e40fcbd5e57048da717320f4e58b1565cd50c938
 }
 .tbl{
     border: 2px solid rgb(109, 70, 70);
@@ -29,24 +26,14 @@
 .remove span{
     border: 1px solid black;
     border-radius: 5px;
-<<<<<<< HEAD
-}
-.add-btn{
-    font-size: 20px;
-    margin-top: 10px;
-    border: 2px solid rgb(109, 70, 70);
-    border-radius: 10px;
-    background-color: rgb(102, 102, 154);
-=======
     cursor: pointer;
 }
-.add-btn{
-    font-size: 20px;
+
+.container h1{
+    background-color:  #ffffff;
     padding: 10px;
-    margin-top: 20px;
-    border: 2px solid rgb(109, 70, 70);
-    border-radius: 10px;
-    background-color: rgb(163, 163, 226);
->>>>>>> e40fcbd5e57048da717320f4e58b1565cd50c938
-    cursor: pointer;
-}
+     box-shadow: 0 10px 10px -4px rgba(0,0,0.2,0.5);
+     border: 1px solid #d2d2d3;
+     border-left: 7px solid #246dec;
+     border-radius: 5px;
+ }
