@@ -2,6 +2,27 @@
     display: flex;
     justify-content: space-around;
 }
+.container ul{
+   background-color:  #ffffff;
+    width: 200px;
+    box-shadow: 0 10px 10px -4px rgba(0,0,0.2,0.5);
+    border: 1px solid #d2d2d3;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+.container ul:first-child{
+    border-left: 7px solid #246dec;
+}
+
+.container ul:nth-child(2){
+    border-left: 7px solid #f5b74f;
+}
+.container ul:nth-child(3){
+    border-left: 7px solid #367952;
+}
+.container ul:nth-child(4){
+    border-left: 7px solid #cc3c43;
+}
 .container li a{
     text-decoration: none;
     color: rgb(130, 66, 109);

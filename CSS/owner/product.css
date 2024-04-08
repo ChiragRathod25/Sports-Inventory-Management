@@ -10,10 +10,17 @@
     border-collapse: collapse;
     box-shadow: 0 10px 10px -4px rgba(0,0,0.2,0.5);
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1200px;
 =======
     width: 1000px;
 >>>>>>> a2f593facba5b94027d47fb2ba08997e652265a7
+=======
+    width: 1000px;
+=======
+    width: 1200px;
+>>>>>>> e40fcbd5e57048da717320f4e58b1565cd50c938
+>>>>>>> ed2d5e1b59c92b04d288b31adf1be7d9a8158f64
 }
 .tbl{
     border: 2px solid rgb(109, 70, 70);
@@ -30,6 +37,17 @@
     border: 1px solid black;
     border-radius: 5px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+.add-btn{
+    font-size: 20px;
+    margin-top: 10px;
+    border: 2px solid rgb(109, 70, 70);
+    border-radius: 10px;
+    background-color: rgb(102, 102, 154);
+=======
+>>>>>>> ed2d5e1b59c92b04d288b31adf1be7d9a8158f64
     cursor: pointer;
 }
 .add-btn{
@@ -39,6 +57,7 @@
     border: 2px solid rgb(109, 70, 70);
     border-radius: 10px;
     background-color: rgb(163, 163, 226);
+<<<<<<< HEAD
 =======
 }
 .add-btn{
@@ -48,5 +67,8 @@
     border-radius: 10px;
     background-color: rgb(102, 102, 154);
 >>>>>>> a2f593facba5b94027d47fb2ba08997e652265a7
+=======
+>>>>>>> e40fcbd5e57048da717320f4e58b1565cd50c938
+>>>>>>> ed2d5e1b59c92b04d288b31adf1be7d9a8158f64
     cursor: pointer;
 }
