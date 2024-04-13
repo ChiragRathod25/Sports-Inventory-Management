@@ -2,7 +2,7 @@
 $server="localhost";
 $username="root";
 $password="Sports@Inv2937";
-$database = "sports-inventory-management";
+$database = "Sports-Inventory-Management";
 
 $connect=mysqli_connect($server,$username,$password,$database);
 if(!$connect){
