@@ -12,47 +12,34 @@
 <body>
     <my-header></my-header>
     <section>
-      <section class="form">
-        <div class="container" id="container">
-          <div class="form-container sign-up">
-            <form action="../../PHP/Registration and Login/userRegistration.php" onsubmit="return validateForm(this)" method="post">
-              <h1>Create Account</h1>
-              <input name="fname" type="text" placeholder="First Name" id="fname" />
-              <input name="lname" type="text" placeholder="Last Name" id="lname" />
-              <textarea id="address" name="address" class="address" cols="30" rows="3" placeholder="Address"></textarea>
-              <input type="text" name="mobileNumber" id="mobileNumber" placeholder="Mobile Number">
-              <input name="username" type="text" placeholder="User Name" id="username" />
-            <input name="email" type="email" placeholder="Email" id="email" />
-            <input name="password" type="password" placeholder="Password" id="password" />
-            
-            <!-- <input type="checkbox" onclick="togglePasswordVisibility()">
-            <script>
-                function togglePasswordVisibility() {
-                    var passwordInput = document.getElementById("password");
-                    if (passwordInput.type === "password") {
-                        passwordInput.type = "text";
-                    } else {
-                        passwordInput.type = "password";
-                    }
-                }
-
-            </script> -->
-              <button>Sign Up</button>
-            </form>
-          </div>
-          <div class="right-container">
-            <div class="right">
-              <div class="right-panel right-right">
-                <h1>Hello!</h1>
-                <p>Already Have An Account</p>
-                <a href="/HTML/Registration and Login/cust_login.html"
-                  ><button id="login">Sign In</button></a
-                >
-              </div>
+        <section class="form">
+            <div class="container" id="container">
+                <div class="form-container sign-up">
+                    <form id="registrationForm">
+                        <h1>Create Account</h1>
+                        <input name="fname" type="text" placeholder="First Name" id="fname" />
+                        <input name="lname" type="text" placeholder="Last Name" id="lname" />
+                        <textarea id="address" name="address" class="address" cols="30" rows="3" placeholder="Address"></textarea>
+                        <input type="text" name="mobileNumber" id="mobileNumber" placeholder="Mobile Number">
+                        <input name="username" type="text" placeholder="User Name" id="username" />
+                        <input name="email" type="email" placeholder="Email" id="email" />
+                        <input name="password" type="password" placeholder="Password" id="password" />
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
+                <div class="right-container">
+                    <div class="right">
+                        <div class="right-panel right-right">
+                            <h1>Hello!</h1>
+                            <p>Already Have An Account</p>
+                            <a href="/HTML/Registration and Login/cust_login.html"
+                            ><button id="login">Sign In</button></a
+                            >
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
     </section>
     <my-footer> </my-footer>
 
