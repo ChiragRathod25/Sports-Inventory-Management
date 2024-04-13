@@ -4,7 +4,7 @@ session_start();
 $server = "localhost";
 $username = "root";
 $password = "Sports@Inv2937";
-$database = "sport-inventory-management-shop";
+$database = "Sports-Inventory-Management";
 
 $connect = mysqli_connect($server, $username, $password, $database);
 if (!$connect) {
@@ -18,12 +18,10 @@ $sqlquery = "SELECT * FROM customer WHERE customer_id = '$username' AND password
 $result = mysqli_query($connect, $sqlquery);
 
 if (mysqli_num_rows($result) == 1) {
-    // Username and password match, redirect to the account page
     header("Location: account_page.php");
     exit();
 } else {
-    // Username and password do not match, redirect back to the login page with an error message
-    header("Location: cust_login.html?error=1");
+    header("Location: cust_login.php?error=Invalid username and password");
     exit();
 }
 

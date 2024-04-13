@@ -45,6 +45,7 @@
 
     <script>
         document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            validateForm(this);
             event.preventDefault();
             var form = this;
             var formData = new FormData(form);
