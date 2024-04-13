@@ -1,12 +1,13 @@
 <?php
-$servername = "4.156.24.161";
+$servername = "localhost";
 $username = "root";
 $password = "Sports@Inv2937";
 $dbname = "Sports-Inventory-Management";
+$port=3306;
+
 
 // Create connection
-$conn = new mysqli($servername, 
-	$username, $password, $dbname);
+$con = mysqli_connect($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
