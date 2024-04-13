@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "sports-inventory-management";
+$dbname = "sport-inventory-management-shop";
 
 // Create connection
 $conn = new mysqli($servername, 
@@ -23,8 +23,11 @@ if ($conn->connect_error) {
         $username = $_REQUEST['username'];
         $email = $_REQUEST['email'];
         $password =  $_REQUEST['password'];
-$sqlquery = "INSERT INTO user (first_name, last_name, address, Mobile_number, username, email, password) VALUES 
-	('$first_name', '$last_name', '$address', '$mobileNumber', '$username', '$email', '$password')";
+// $sqlquery = "INSERT INTO user (first_name, last_name, address, Mobile_number, username, email, password) VALUES 
+// 	('$first_name', '$last_name', '$address', '$mobileNumber', '$username', '$email', '$password')";
+
+$sqlquery ="INSERT INTO customer (customer_id, first_name, last_name, address, phone_number, username, email, password) VALUES 
+('$first_name', '$last_name', '$address', '$mobileNumber', '$username', '$email', '$password')";
 
 if ($conn->query($sqlquery) === TRUE) {
 	echo "record inserted successfully";

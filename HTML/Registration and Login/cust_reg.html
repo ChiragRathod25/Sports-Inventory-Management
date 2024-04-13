@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Customer Registration</title>
 
-    <link rel="stylesheet" href="../../CSS/Home Page/header-footer.css" />
-    <link rel="stylesheet" href="../../CSS/Home Page/style.css" />
+    <link rel="stylesheet" href="/sport/CSS/Home Page/header-footer.css" />
+    <link rel="stylesheet" href="CSS/Home Page/style.css" />
     <link
       rel="stylesheet"
-      href="../../CSS/registration and Login/cust_reg.css"
+      href="/sport/CSS/registration and Login/cust_reg.css"
     />
     <link
       rel="stylesheet"
@@ -23,7 +23,7 @@
       <section class="form">
         <div class="container" id="container">
           <div class="form-container sign-up">
-            <form action="../../PHP/Registration and Login/userRegistration.php" onsubmit="return validateForm(this)" method="post">
+            <form action="/sport/PHP/Registration_and_Login/register.php" method="post" onsubmit="return validateForm(this)">
               <h1>Create Account</h1>
               <input name="fname" type="text" placeholder="First Name" id="fname" />
               <input name="lname" type="text" placeholder="Last Name" id="lname" />
@@ -32,19 +32,6 @@
               <input name="username" type="text" placeholder="User Name" id="username" />
             <input name="email" type="email" placeholder="Email" id="email" />
             <input name="password" type="password" placeholder="Password" id="password" />
-            
-            <!-- <input type="checkbox" onclick="togglePasswordVisibility()">
-            <script>
-                function togglePasswordVisibility() {
-                    var passwordInput = document.getElementById("password");
-                    if (passwordInput.type === "password") {
-                        passwordInput.type = "text";
-                    } else {
-                        passwordInput.type = "password";
-                    }
-                }
-
-            </script> -->
               <button>Sign Up</button>
             </form>
           </div>
