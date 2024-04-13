@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="../../CSS/Home Page/header-footer.css" />
   <link rel="stylesheet" href="../../CSS/registration and Login/cust_login.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
 </head>
 
 <body>
@@ -19,13 +18,12 @@
     <section class="form">
       <div class="container" id="container">
         <div class="form-container sign-in">
-          <form onsubmit="return validateForm(this)" method="post">
+          <form action="../../PHP/Registration_and_Login/login.php" method="post">
             <h1>Sign In</h1>
-            <input type="text" placeholder="User Name" id="username" />
-            <input type="User Name" placeholder="Email" id="email" />
-            <input type="password" placeholder="Password" id="password" />
+            <input type="text" placeholder="User Name" name="username" id="username" />
+            <input type="password" placeholder="Password" name="password" id="password" />
             <a href="#">Forget Your Password?</a>
-            <button>Sign In</button>
+            <button type="submit">Sign In</button>
           </form>
         </div>
         <div class="right-container">
@@ -39,7 +37,6 @@
         </div>
       </div>
     </section>
-
   </section>
   <my-footer></my-footer>
 </body>
