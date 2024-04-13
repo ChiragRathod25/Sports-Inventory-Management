@@ -25,12 +25,15 @@ $address = $_POST['address']; // Added this line
 // $sql = "INSERT INTO user (First_name, Last_name, Address, Mobile_number, Username, Email, Password) VALUES (fname, lname, address, mobileNumber, username, email, password)";
 
 
+
 $sql = "INSERT INTO user (First_name, Last_name, Address, Username, Email, Password) VALUES (?, ?, ?, ?, ?, ?)";
 
 
 $stmt = $conn->prepare($sql);
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-$stmt->bind_param("sssssss", $fname, $lname, $address, $mobileNumber, $username, $email, $hashedPassword);
+
+
+$stmt->bind_param("ssssss", $fname, $lname, $address, $username, $email, $hashedPassword);
 
 
 if ($stmt->execute()) {
