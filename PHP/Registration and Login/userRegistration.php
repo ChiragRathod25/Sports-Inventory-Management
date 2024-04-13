@@ -18,14 +18,14 @@ $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $username = $_POST['username'];
 $email = $_POST['email'];
-$mobileNumber = $_POST['mobileNumber'];
+// $mobileNumber = $_POST['mobileNumber'];
 $password = $_POST['password'];
 $address = $_POST['address']; // Added this line
 // Prepare an insert statement
 // $sql = "INSERT INTO user (First_name, Last_name, Address, Mobile_number, Username, Email, Password) VALUES (fname, lname, address, mobileNumber, username, email, password)";
 
 
-$sql = "INSERT INTO user (First_name, Last_name, Address, Mobile_number, Username, Email, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO user (First_name, Last_name, Address, Username, Email, Password) VALUES (?, ?, ?, ?, ?, ?)";
 
 
 $stmt = $conn->prepare($sql);
