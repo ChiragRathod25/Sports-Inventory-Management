@@ -1,3 +1,24 @@
+<?php
+$server="localhost";
+$username="root";
+$password="Sports@Inv2937";
+$database = "sports-inventory-management";
+
+$connect=mysqli_connect($server,$username,$password,$database);
+if(!$connect){
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Fetch data from the database
+$sql = "SELECT * FROM customer";
+$result = mysqli_query($connect, $sql);
+
+// Function to escape special characters in HTML
+function escape($string) {
+    return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +27,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../../CSS/owner/owner.css">
-    <link rel="stylesheet" href="../../CSS/owner/product.css">
+    <link rel="stylesheet" href="../../CSS/owner/Customer.css">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -14,7 +35,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <title>Product</title>
+    <title>Customer</title>
 </head>
 
 <body>
@@ -54,33 +75,33 @@
                 <li class="sidebar-list-item">
                     <span class="material-symbols-outlined">
                         bar_chart_4_bars
-                    </span>Dashboard
+                    </span><a href="/HTML/Owner/owner_page.html">Dashboard</a>
                 </li>
                 <li class="sidebar-list-item">
                     <span class="material-symbols-outlined">
                         category
-                    </span>Products
+                    </span><a href="/HTML/Owner/category.html">Category</a>
                 </li>
                 <li class="sidebar-list-item">
                     <span class="material-symbols-outlined">
-                        inventory_2
-                    </span>Inventory
-                </li>
-                <li class="sidebar-list-item">
-                    <span class="material-symbols-outlined">
-                        add_shopping_cart
-                    </span>Purchase Orders
+                        account_box
+                    </span><a href="/HTML/Owner/Customer.html">Customers</a>
                 </li>
                 <li class="sidebar-list-item">
                     <span class="material-symbols-outlined">
                         add_shopping_cart
-                    </span>Sales Order
+                    </span><a href="/HTML/Owner/purchase_order.html">Purchase Orders</a>
                 </li>
                 <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">
+                        add_shopping_cart
+                    </span><a href="/HTML/Owner/Customer's_order.html">Customer's Orders</a>
+                </li>
+                <!-- <li class="sidebar-list-item">
                     <span class="material-symbols-outlined">
                         settings
                     </span>Setting
-                </li>
+                </li> -->
             </ul>
         </aside>
         <!--Sidebar End-->
@@ -89,38 +110,49 @@
         <main class="main-container">
             <!-- MAIN CONTAINER -->
             <div class="container">
-                <h1 class="table-title">Available Products</h1>
+                <h1 class="table-title">Customers</h1>
                 <table class="tbl">
                     <tr class="header">
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Category</th>
-                        <th>Description</th>
-                        <th>Action</th>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Address</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Remove</th>
                     </tr>
                     <tbody>
-                        <tr>
-                            <td>PRO001</td>
-                            <td>Cricket Bat</td>
-                            <td>Sports</td>
-                            <td>Professional Grade Bat</td>
-                            <td class="remove"><span class="material-symbols-outlined text-blue">
-                                delete
-                                </span></td>
-                        </tr>
+                        <?php
+                        if (mysqli_num_rows($result) > 0) {
+                            $counter = 1;
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                echo "<tr>";
+                                echo "<td>" . escape($row["customer_id"]) . "</td>";
+                                echo "<td>" . escape($row["first_name"]) . "</td>";
+                                echo "<td>" . escape($row["last_name"]) . "</td>";
+                                echo "<td>" . escape($row["address"]) . "</td>";
+                                echo "<td>" . escape($row["phone_number"]) . "</td>";
+                                echo "<td>" . escape($row["email"]) . "</td>";
+                                echo "<td>" . escape($row["password"]) . "</td>";
+                                echo "<td class='remove'><span class='material-symbols-outlined text-blue'>delete</span></td>";
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "<tr><td colspan='8'>No customers found</td></tr>";
+                        }
+                        ?>
                     </tbody>
                 </table>
-                <button class="add-btn">Add product</button>
             </div>
         </main>
         <!--Main-Container End-->
     </div>
     <!--Grid-Container End-->
-    <!--Script-->
-    <script src="../../JS/Owner/dash_board.js"></script>
-    <script src="../../JS/Owner/product.js"></script>
 </body>
+
 
 <script src="../../JS/headerFooter.js"></script>
 <script src="../../JS/default.js"></script>
+
 </html>

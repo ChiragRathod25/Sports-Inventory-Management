@@ -10,7 +10,7 @@
     border-collapse: collapse;
     background-color:  #ffffff;
     box-shadow: 0 10px 10px -4px rgba(0,0,0.2,0.5);
-    width: 1200px;
+    width: 1100px;
 }
 .tbl{
     border: 2px solid rgb(109, 70, 70);
@@ -34,6 +34,6 @@
     padding: 10px;
      box-shadow: 0 10px 10px -4px rgba(0,0,0.2,0.5);
      border: 1px solid #d2d2d3;
-     border-left: 7px solid #246dec;
+     border-bottom: 7px solid #246dec;
      border-radius: 5px;
  }

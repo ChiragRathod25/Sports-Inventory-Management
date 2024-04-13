@@ -1,24 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Registration</title>
-
     <link rel="stylesheet" href="../../CSS/Home Page/header-footer.css" />
     <link rel="stylesheet" href="../../CSS/Home Page/style.css" />
-    <link
-      rel="stylesheet"
-      href="../../CSS/registration and Login/cust_reg.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-  </head>
-  <body>
+    <link rel="stylesheet" href="../../CSS/registration and Login/cust_reg.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
     <my-header></my-header>
-
     <section>
       <section class="form">
         <div class="container" id="container">
@@ -28,7 +20,7 @@
               <input name="fname" type="text" placeholder="First Name" id="fname" />
               <input name="lname" type="text" placeholder="Last Name" id="lname" />
               <textarea id="address" name="address" class="address" cols="30" rows="3" placeholder="Address"></textarea>
-              <!-- <input type="text" name="mobileNumber" id="mobileNumber" placeholder="Mobile Number"> -->
+              <input type="text" name="mobileNumber" id="mobileNumber" placeholder="Mobile Number">
               <input name="username" type="text" placeholder="User Name" id="username" />
             <input name="email" type="email" placeholder="Email" id="email" />
             <input name="password" type="password" placeholder="Password" id="password" />
@@ -62,11 +54,33 @@
         </div>
       </section>
     </section>
-
     <my-footer> </my-footer>
-  </body>
 
-  <script src="../../JS/Registration and Login/registrationValidatation.js"></script>
-  <script src="../../JS/headerFooter.js"></script>
-  <script src="../../JS/default.js"></script>
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var form = this;
+            var formData = new FormData(form);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "../../PHP/Registration_and_Login/register.php", true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var response = xhr.responseText;
+                    if (response === "success") {
+                        alert("Account created successfully!");
+                        form.reset();
+                    } else if (response === "not_available") {
+                        alert("This username is not available.");
+                    } else {
+                        alert("Error: " + response);
+                    }
+                }
+            };
+            xhr.send(formData);
+        });
+    </script>
+    <script src="../../JS/Registration and Login/registrationValidatation.js"></script>
+    <script src="../../JS/headerFooter.js"></script>
+    <script src="../../JS/default.js"></script>
+</body>
 </html>
