@@ -1,8 +1,8 @@
 <?php
 $server="localhost";
 $username="root";
-$password="";
-$database = "sport-inventory-management-shop";
+$password="Sports@Inv2937";
+$database = "sports-inventory-management";
 
 $connect=mysqli_connect($server,$username,$password,$database);
 if(!$connect){
