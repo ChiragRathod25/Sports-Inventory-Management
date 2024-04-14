@@ -29,15 +29,57 @@ $sql = "SELECT * FROM customer";
     
     <link rel="stylesheet" href="../../CSS/Home Page/style.css" />
     <link rel="stylesheet" href="../../CSS/Home Page/header-footer.css" />
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+}
+
+#brandForm {
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+}
+
+#brandForm label {
+    display: block;
+    margin-bottom: 5px 0;
+}
+
+#brandForm input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#brandForm button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px ;
+}
+
+#brandForm button:hover {
+    background-color: #0056b3;
+}
+</style>
 </head>
 <body>
-    <my-header>
-    </my-header>
-    <section>
-    
-    <!-- New Brand Add -->
-     <form method="POST" id="brandForm">
-        <label for="brandName">Brand Name:</label>
+<my-header>
+</my-header>
+<section>
+
+<!-- New Brand Add -->
+<form method="POST" id="brandForm">
+<label for="brandName">Brand Name:</label>
         <input type="text" name="brandName" id="brandName" required>
         <button type="submit">Submit</button>
     </form>

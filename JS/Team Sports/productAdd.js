@@ -19,10 +19,11 @@ var specificationId = 0;
 document.getElementById("addSpecification").addEventListener("click", function() {
     var container = document.getElementById("specificationsContainer");
     var div = document.createElement("div");
-    div.innerHTML = '<label for="specification_name' + specificationId + '">Specification Name:</label>' +
-                    '<input type="text" id="specification_name' + specificationId + '" name="specifications[' + specificationId + '][name]">' +
+    div.innerHTML = '<div>'+'<label for="specification_name' + specificationId + '">Specification Name:</label>' +
+                    '<input type="text" id="specification_name' + specificationId + '" name="specifications[' + specificationId + '][name]">' +' </div><div class=flex-column>'+
                     '<label for="value' + specificationId + '">  Value:</label>' +
-                    '<input type="text" id="value' + specificationId + '" name="specifications[' + specificationId + '][value]">';
+                    '<input type="text" id="value' + specificationId + '" name="specifications[' + specificationId + '][value]">'+'</div>';
+                    div.setAttribute('class', 'flex-row');
     container.appendChild(div);
     specificationId++;
 });

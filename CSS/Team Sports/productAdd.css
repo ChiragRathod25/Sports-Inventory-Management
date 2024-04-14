@@ -4,7 +4,7 @@ body {
 }
 
 #productAddForm {
-    width: 500px;
+    width: 40%;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -14,7 +14,7 @@ body {
 
 #productAddForm label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 5px 0;
 }
 
 #productAddForm input[type="text"],
@@ -23,10 +23,11 @@ body {
 #productAddForm textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
+
 
 #productAddForm button {
     padding: 10px 20px;
@@ -35,8 +36,13 @@ body {
     background-color: #007BFF;
     color: white;
     cursor: pointer;
+    margin-bottom: 5px ;
 }
 
 #productAddForm button:hover {
     background-color: #0056b3;
 }
+#specificationsContainer>div{
+    gap: 10px;
+}
+
