@@ -1,0 +1,49 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#productAddForm {
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+}
+
+#productAddForm label {
+    display: block;
+    margin-bottom: 5px 0;
+}
+
+#productAddForm input[type="text"],
+#productAddForm input[type="file"],
+#productAddForm input[type="number"],
+#productAddForm select,
+#productAddForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+
+#productAddForm button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px ;
+}
+
+#productAddForm button:hover {
+    background-color: #0056b3;
+}
+#specificationsContainer>div{
+    gap: 10px;
+}
+
