@@ -90,11 +90,13 @@ $sports=mysqli_query($connect,$sql);
         <label for="description">Description:</label>
         <textarea id="description" name="description"></textarea>
        
+        <label for="image">Images of Product : </label>
+        <input type="file" id="image" name="image[]" accept="image/*" multiple>
+        
         <div id="specificationsContainer" class="flex-column"></div>
         <button type="button" id="addSpecification">Add Specification</button>
-        
-       
-        <button type="submit">Submit</button>
+            
+        <button type="submit" id="submit">Submit</button>
 
     </form>
     </section>
@@ -105,6 +107,9 @@ $sports=mysqli_query($connect,$sql);
 
 <script src="../../JS/headerFooter.js"></script>
   <script src="../../JS/default.js"></script>
+  
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
   <script src="../../JS/Team Sports/productAdd.js"></script>
 
 </html>

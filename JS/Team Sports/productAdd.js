@@ -1,5 +1,3 @@
-
-
 function updateCategories(sportId) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "./productDetails.php?sport_id=" + sportId, true);
@@ -27,6 +25,49 @@ document.getElementById("addSpecification").addEventListener("click", function()
     container.appendChild(div);
     specificationId++;
 });
+
+//images
+// document.querySelector('form').addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     console.log('form submitted');
+//     // this.querySelector('input[type="submit"]').disabled = true; 
+//     const formData = new FormData(e.target);
+//     fetch('./validateProductAddForm.php', {
+//         method: 'POST',
+//         body: formData
+//     })
+//     .then(response => response.text())
+//     .then(data => {
+//         console.log(data);
+//         if (data.success) {
+//             alert('Product added successfully with product ID: ' + data.productID);
+//             window.location.href = './productadd.php';
+//         } else {
+//             console.error(data.error);
+//         }
+//     })
+//     .catch(error => console.error(error));
+// });
+
+document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log('form submitted');
+    const formData = new FormData(e.target);
+    fetch('./validateProductAddForm.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+        alert('Product Added successfully'); 
+        window.location.href = './productadd.php';
+
+    })
+    .catch(error => console.error(error));
+});
+
+
 
 //form validation
 function validateForm(form){

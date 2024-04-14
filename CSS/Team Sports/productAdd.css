@@ -18,6 +18,7 @@ body {
 }
 
 #productAddForm input[type="text"],
+#productAddForm input[type="file"],
 #productAddForm input[type="number"],
 #productAddForm select,
 #productAddForm textarea {
