@@ -18,7 +18,7 @@ $sqlquery = "SELECT * FROM customer WHERE customer_id = '$username' AND password
 $result = mysqli_query($connect, $sqlquery);
 
 if (mysqli_num_rows($result) == 1) {
-    header("Location: account_page.php");
+    header("Location: ../../HTML/after_login.html");
     exit();
 } else {
     header("Location: cust_login.php?error=Invalid username and password");
