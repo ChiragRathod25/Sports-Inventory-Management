@@ -12,8 +12,8 @@ class Header extends HTMLElement {
           <li>
             <a href="#">Team Sports</a>
             <ul id="dropdown">
-              <li><a href="/PHP/Team Sports/cricket.php">Cricket</a></li>
-              <li><a href="/PHP/Team Sports/football.php">Football</a></li>
+              <li><a href="/HTML/Team Sports/cricket.php">Cricket</a></li>
+              <li><a href="/HTML/Team Sports/football.php">Football</a></li>
               <!--<li><a href="/HTML/Team Sports/vollyball.html">Vollyball</a></li>
               <li><a href="/HTML/Team Sports/basketball.html">Basketball</a></li>
               <li><a href="/HTML/Team Sports/Hawkey.html">Hawkey</a></li>-->
@@ -94,8 +94,6 @@ class Header extends HTMLElement {
         `
     }
 }
-
-
 class Footer extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -135,5 +133,6 @@ class Footer extends HTMLElement {
         `
     }
 }
+
 window.customElements.define('my-footer', Footer)
 window.customElements.define('my-header', Header)

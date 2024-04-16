@@ -1,6 +1,5 @@
 console.log('registrationValidatation.js Loaded')
 
-
 function validateForm(form) {
     if (form.fname.value === "") {
             alert("please enter First Name");

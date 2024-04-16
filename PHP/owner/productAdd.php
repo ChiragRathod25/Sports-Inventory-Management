@@ -3,21 +3,16 @@ $server="localhost";
 $username="root";
 $password="Sports@Inv2937";
 $database = "Sports-Inventory-Management";
-
 $connect=mysqli_connect($server,$username,$password,$database);
 if(!$connect){
     die("Connection failed: " . mysqli_connect_error());
 }
+require('checkuser.php');
 
-// Fetch data from the database
 $sql="SELECT * FROM sport ORDER BY sport_id";
 $sports=mysqli_query($connect,$sql);
-
-// Function to escape special characters in HTML
-// function escape($string) {
-    // return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
-// }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
