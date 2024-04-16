@@ -102,6 +102,8 @@ body {
 #sidebar {
     grid-area: sidebar;
     height: 100%;
+    position: fixed;
+    margin-right: 0px;
     background-color: bisque;
     color: #20222f;
     /*SideBar Font Color*/

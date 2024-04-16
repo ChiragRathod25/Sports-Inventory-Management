@@ -1,6 +1,6 @@
 class Header extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
         <header class="flex-row">
     <div class="logo-img">
       <!-- <img src="../CSS/logos/logo4.jpeg" alt=""> -->
@@ -92,13 +92,13 @@ class Header extends HTMLElement {
     </div>
   </header>
         `
-    }
+  }
 }
 
 
 class Footer extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
         <footer>
         <div id="main_footer_container">
           <div class="section1">
@@ -133,7 +133,76 @@ class Footer extends HTMLElement {
         </div>
       </footer>
         `
-    }
+  }
+}
+class owHeader extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <header class="flex-row">
+      <div class="header-left">
+        <input type="search" placeholder="search..." class="search"/>
+        <span class="material-symbols-outlined ">
+          search
+          </span>
+      </div>
+      <div class="header-right">
+        <span class="material-symbols-outlined">
+          account_circle
+          </span>
+          <span class="material-symbols-outlined">
+            notifications
+            </span>
+          <span class="pro-pic">
+            <img src="../../CSS/owner/pro_pic.jpeg" alt="">
+          </span>
+      </div>
+    </header>
+      `
+  }
+}
+class owSidebar extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+    <aside id="sidebar">
+    <div class="sidebar-title">
+      <div class="sidebar-logo">
+        <span class="logo">
+          <img src="../../CSS/logos/logo4.jpeg" alt="">
+        </span>Hit Inventory
+      </div>
+    </div>
+    <ul class="sidebar-list">
+      <li class="sidebar-list-item">
+        <span class="material-symbols-outlined">
+          bar_chart_4_bars
+          </span><a href="/HTML/Owner/owner_page.html">Dashboard</a>
+      </li>
+      <li class="sidebar-list-item">
+        <span class="material-symbols-outlined">
+          category
+          </span><a href="/HTML/Owner/category.html">Category</a>
+      </li>
+      <li class="sidebar-list-item">
+        <span class="material-symbols-outlined">
+          account_box
+          </span><a href="/HTML/Owner/Customer.html">Customers</a>
+      </li>
+      <li class="sidebar-list-item">
+        <span class="material-symbols-outlined">
+          add_shopping_cart
+          </span><a href="/HTML/Owner/purchase_order.html">Purchase Orders</a>
+      </li>
+      <li class="sidebar-list-item">
+        <span class="material-symbols-outlined">
+          add_shopping_cart
+          </span><a href="/HTML/Owner/Customer's_order.html">Customer's Orders</a>
+      </li>
+    </ul>
+  </aside>
+      `
+  }
 }
 window.customElements.define('my-footer', Footer)
 window.customElements.define('my-header', Header)
+window.customElements.define('my-owner-header', owHeader)
+window.customElements.define('my-sidebar', owSidebar)
