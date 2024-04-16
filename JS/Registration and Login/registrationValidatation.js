@@ -39,6 +39,5 @@ function validateForm(form) {
         form.password.focus();
         return false;
     } 
-    alert('Form Successfully Submitted');
     return true;
     }
