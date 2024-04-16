@@ -1,6 +1,6 @@
 .container{
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .container ul{
    background-color:  #ffffff;
@@ -8,6 +8,7 @@
     box-shadow: 0 10px 10px -4px rgba(0,0,0.2,0.5);
     border: 1px solid #d2d2d3;
     padding-bottom: 5px;
+    margin: 10px;
     border-radius: 5px;
 }
 .container ul:first-child{
@@ -43,15 +44,13 @@
 .btn{
     display: flex;
     align-items: center;
-    justify-content: center;
-
 }
 .add-btn{
     font-size: 25px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 300px;
     margin-top: 10px;
-    margin-right: 10px;
-    border: 2px solid rgb(174, 248, 0);
+    border: 2px solid rgb(109, 70, 70);
     border-radius: 10px;
     background-color: #fff;
     cursor: pointer;

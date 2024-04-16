@@ -5,9 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <link rel="stylesheet" href="../../CSS/owner/owner.css">
   <link rel="stylesheet" href="../../CSS/Home Page/style.css" />
-    <link rel="stylesheet" href="../../CSS/Home Page/header-footer.css" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -56,7 +54,9 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <title>Shop dashboard</title>
+        
+  <link rel="stylesheet" href="../../CSS/owner/owner.css">
+    <title>Shop dashboard</title>
 </head>
 
 <body>
@@ -173,6 +173,7 @@ $database = "Sports-Inventory-Management";
   <!--Grid-Container End-->
   <!--Script-->
   <!--ApexCharts-->
+  
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.46.0/apexcharts.min.js"></script>
 <script src="../../JS/Owner/dash_board.js"></script>

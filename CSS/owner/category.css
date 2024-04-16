@@ -1,6 +1,6 @@
 .container{
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .container ul{
    background-color:  #ffffff;
@@ -8,6 +8,7 @@
     box-shadow: 0 10px 10px -4px rgba(0,0,0.2,0.5);
     border: 1px solid #d2d2d3;
     padding-bottom: 5px;
+    margin: 10px;
     border-radius: 5px;
 }
 .container ul:first-child{
@@ -37,3 +38,4 @@
     color: #20222f;
     background-color: rgb(253, 217, 174);
 }
+;
