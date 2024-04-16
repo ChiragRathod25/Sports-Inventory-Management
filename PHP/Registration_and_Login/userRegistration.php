@@ -1,13 +1,8 @@
 <?php
 $servername = "localhost";
 $username = "root";
-<<<<<<< HEAD:PHP/Registration and Login/userRegistration.php
 $password = "Sports@Inv2937";
 $dbname = "Sports-Inventory-Management";
-=======
-$password = "";
-$dbname = "sport-inventory-management-shop";
->>>>>>> 8a15339d5d405d5e614ceee83ac8e0ee9b5f1e65:PHP/Registration_and_Login/userRegistration.php
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

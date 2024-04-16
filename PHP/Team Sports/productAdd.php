@@ -49,8 +49,6 @@ $sports=mysqli_query($connect,$sql);
         </select>
         
         <a target="_blank" onclick='window.open("./sportAdd.php")'><button>Add Sports</button></a>
-      
-
             <label for="category">Select Category : </label>
             <select name="category" id="category">
                 <?php
