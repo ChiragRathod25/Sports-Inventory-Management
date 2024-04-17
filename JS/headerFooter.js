@@ -135,91 +135,27 @@ class mySidebar extends HTMLElement {
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
             category
-            </span><a href="/HTML/Owner/category.html">Category</a>
+            </span><a href="/php/owner/sports.php">Sports</a>
         </li>
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
             account_box
-            </span><a href="/HTML/Owner/Customer.html">Customers</a>
+            </span><a href="/php/owner/Customer.php">Customers</a>
         </li>
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
             add_shopping_cart
-            </span><a href="/HTML/Owner/purchase_order.html">Purchase Orders</a>
+            </span><a href="/php/owner/purchase_order.php">Purchase Orders</a>
         </li>
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
             add_shopping_cart
-            </span><a href="/HTML/Owner/Customer's_order.html">Customer's Orders</a>
+            </span><a href="/php/owner/Customer's_order.php">Customer's Orders</a>
         </li>
-        <!-- <li class="sidebar-list-item">
-          <span class="material-symbols-outlined">
-            settings
-            </span>Setting
-        </li> -->
       </ul>
         `
   }
 }
-
-
-console.log("Hello");
-var xhr = new XMLHttpRequest();
-xhr.open("GET", '/Sports-Inventory-Management/JS/getUsername.php', true);
-xhr.onreadystatechange = function () {
-  console.log(xhr.readyState, xhr.status)
-  if (xhr.readyState == 4 && xhr.status == 200) {
-    
-    var username = xhr.responseText;
-    console.log(username);
-    // Update the DOM with the user's session data
-    const accountInfo = document.getElementById('account-info');
-    console.log(accountInfo);
-    if (username!=" " ) {
-      accountInfo.innerHTML = `
-        <ul>
-            <li>
-                <div class="flex-row">
-                    <span class="material-symbols-outlined"> account_circle </span>
-                    <span> ${username} </span>
-                </div>
-                <ul class="log-sign">
-                    <li>
-                        <a href="/Sports-Inventory-Management/HTML/user-profile.php">My Account</a>
-                    </li>
-                    <li>
-                        <a href="/Sports-Inventory-Management/PHP/viewBill.php">Orders</a>
-                    </li>
-                    <li>
-                        <a href="/Sports-Inventory-Management/PHP/Registration_and_Login/logout.php">Log out</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>`;
-
-    } else {
-        accountInfo.innerHTML = `
-        <ul>
-            <li>
-                <div class="flex-row">
-                    <span class="material-symbols-outlined"> person </span>
-                    <span> Account </span>
-                </div>
-                <ul class="log-sign">
-                    <li>
-                        <a href="/Sports-Inventory-Management/HTML/Registration and Login/cust_login.html">Log in</a>
-                    </li>
-                    <li>
-                        <a href="/Sports-Inventory-Management/HTML/Registration and Login/cust_reg.html">Sign Up</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>`;
-    }
-  }
-}
-xhr.send();
-console.log("hi");
 window.customElements.define('my-footer', Footer)
 window.customElements.define('my-header', Header)
 window.customElements.define('owner-sidebar',mySidebar)
