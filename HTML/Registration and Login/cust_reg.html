@@ -45,7 +45,11 @@
 
     <script>
         document.getElementById("registrationForm").addEventListener("submit", function(event) {
-            validateForm(this);
+            if(!validateForm(this)) {
+                event.preventDefault();
+                return;
+            }
+            
             event.preventDefault();
             var form = this;
             var formData = new FormData(form);
@@ -56,9 +60,11 @@
                     var response = xhr.responseText;
                     if (response === "success") {
                         alert("Account created successfully!");
+                        window.location.href = "./cust_login.html";
                         form.reset();
                     } else if (response === "not_available") {
                         alert("This username is not available.");
+                        form.username.focus();
                     } else {
                         alert("Error: " + response);
                     }

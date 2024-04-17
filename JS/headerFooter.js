@@ -12,8 +12,8 @@ class Header extends HTMLElement {
           <li>
             <a href="#">Team Sports</a>
             <ul id="dropdown">
-              <li><a href="/PHP/Team Sports/cricket.php">Cricket</a></li>
-              <li><a href="/PHP/Team Sports/football.php">Football</a></li>
+              <li><a href="/HTML/Team Sports/cricket.php">Cricket</a></li>
+              <li><a href="/HTML/Team Sports/football.php">Football</a></li>
               <!--<li><a href="/HTML/Team Sports/vollyball.html">Vollyball</a></li>
               <li><a href="/HTML/Team Sports/basketball.html">Basketball</a></li>
               <li><a href="/HTML/Team Sports/Hawkey.html">Hawkey</a></li>-->
@@ -56,29 +56,12 @@ class Header extends HTMLElement {
     </div>
     <div class="right-search-login flex-column">
       <div class="account-cart flex-row">
-        <div class="cart flex-row">
+        <div class="cart flex-row"  onclick="window.location.href='/Sports-Inventory-Management/PHP/view_product.php'">
           <span class="material-symbols-outlined"> shopping_bag </span>
           <span>cart</span>
         </div>
-        <div class="person flex-row">
-          <ul>
-            <li>
-              <div class="flex-row">
-                <span class="material-symbols-outlined"> person </span>
-                <span> Account </span>
-              </div>
-              <ul class="log-sign">
-                <li>
-                  <a href="/HTML/Registration and Login/cust_login.html"
-                    >Log in</a
-                  >
-                </li>
-                <li>
-                  <a href="/HTML/Registration and Login/cust_reg.html">Sign Up</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+        <div class="person flex-row" id="account-info">
+   
         </div>
       </div>
       <div class="search-website">
@@ -94,8 +77,6 @@ class Header extends HTMLElement {
         `
   }
 }
-
-
 class Footer extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
@@ -181,6 +162,64 @@ class mySidebar extends HTMLElement {
   }
 }
 
+
+console.log("Hello");
+var xhr = new XMLHttpRequest();
+xhr.open("GET", '/Sports-Inventory-Management/JS/getUsername.php', true);
+xhr.onreadystatechange = function () {
+  console.log(xhr.readyState, xhr.status)
+  if (xhr.readyState == 4 && xhr.status == 200) {
+    
+    var username = xhr.responseText;
+    console.log(username);
+    // Update the DOM with the user's session data
+    const accountInfo = document.getElementById('account-info');
+    console.log(accountInfo);
+    if (username!=" " ) {
+      accountInfo.innerHTML = `
+        <ul>
+            <li>
+                <div class="flex-row">
+                    <span class="material-symbols-outlined"> account_circle </span>
+                    <span> ${username} </span>
+                </div>
+                <ul class="log-sign">
+                    <li>
+                        <a href="/Sports-Inventory-Management/HTML/user-profile.php">My Account</a>
+                    </li>
+                    <li>
+                        <a href="/Sports-Inventory-Management/PHP/viewBill.php">Orders</a>
+                    </li>
+                    <li>
+                        <a href="/Sports-Inventory-Management/PHP/Registration_and_Login/logout.php">Log out</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>`;
+
+    } else {
+        accountInfo.innerHTML = `
+        <ul>
+            <li>
+                <div class="flex-row">
+                    <span class="material-symbols-outlined"> person </span>
+                    <span> Account </span>
+                </div>
+                <ul class="log-sign">
+                    <li>
+                        <a href="/Sports-Inventory-Management/HTML/Registration and Login/cust_login.html">Log in</a>
+                    </li>
+                    <li>
+                        <a href="/Sports-Inventory-Management/HTML/Registration and Login/cust_reg.html">Sign Up</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>`;
+    }
+  }
+}
+xhr.send();
+console.log("hi");
 window.customElements.define('my-footer', Footer)
 window.customElements.define('my-header', Header)
 window.customElements.define('owner-sidebar',mySidebar)

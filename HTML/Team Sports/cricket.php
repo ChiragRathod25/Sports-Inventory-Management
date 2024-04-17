@@ -10,7 +10,8 @@ if(!$connect){
 }
 
 // Fetch data from the database
-$query = "SELECT * FROM category WHERE category.sport_id = 2 ORDER BY category_id";
+
+$query = "SELECT * FROM category WHERE category.sport_id = 1 ORDER BY category_id";
 $category = mysqli_query($connect, $query);
 
 $query="SELECT * FROM product WHERE category_id = category_id ORDER BY product_id";
@@ -19,7 +20,7 @@ $products=mysqli_query($connect,$query);
 $query="SELECT * FROM brand ORDER BY brand_id ";     
 $brands=mysqli_query($connect,$query);
 
-$query = "SELECT * FROM product WHERE product.sport_id = 2 ORDER BY product_id";
+$query = "SELECT * FROM product WHERE product.sport_id = 1 ORDER BY product_id";
 $products = mysqli_query($connect, $query);
 
 // $sql="SELECT * FROM sport ORDER BY sport_id";
@@ -36,7 +37,7 @@ $products = mysqli_query($connect, $query);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Football</title>
+    <title>Cricket</title>
 
     <link rel="stylesheet" href="../../CSS/Home Page/style.css" />
     <link rel="stylesheet" href="../../CSS/Home Page/header-footer.css" />
@@ -155,55 +156,16 @@ $products = mysqli_query($connect, $query);
 
     <div class="result">
         <div class="breadcrumb">
-            <a href="/HTML/">Home</a> > <a href="./">Team Sports</a> > <a href="#">Football</a>
+            <a href="/HTML/">Home</a> > <a href="./">Team Sports</a> > <a href="#">Cricket</a>
           </div>
         <h2>Results</h2>
-        <div class="main-container flex-row">
-
-        <!-- <div class="item-container flex-column">
-            <img src="../../CSS/Home Page/Cricket/cricket-kit.jpg" alt="">
-            <div class="star flex-row">
-              <span class="material-symbols-outlined">
-              star_rate
-            </span><span class="material-symbols-outlined">
-              star_rate
-            </span><span class="material-symbols-outlined">
-              star_rate
-            </span>
-            <span class="material-symbols-outlined">
-              star_rate
-            </span>
-            <span class="material-symbols-outlined">
-              star_rate_half
-            </span>
-          </div>
-
-          <div class="title-price flex-column">
-            <h3>
-              Nivia X Cricket Kit pro standard...
-            </h3>
-            <div>
-              &#x20B9 7999
-              <del>&#x20B9 10999 </del>
-            </div>
-          </div>
-          <div class="cart-buy flex-column">
-            <button type="button">Add to Cart<span class="material-symbols-outlined">
-                add_shopping_cart
-              </span></button>
-            <button type="button">Buy Now</button>
-          </div>
-        </div> -->
-        
+       <div class="main-container flex-row">
 
         <?php
         
-   
-        // $query = "SELECT * FROM productimages WHERE product_id = product_id ";
-        
-        $query = "SELECT * FROM productimages WHERE product_id IN (SELECT product_id FROM product WHERE sport_id = 2)";
+        $query = "SELECT * FROM productimages WHERE product_id IN (SELECT product_id FROM product WHERE sport_id = 1)";
         $image = mysqli_query($connect, $query);
-        
+
         while ($row = mysqli_fetch_assoc($products)) {
           $row2 = mysqli_fetch_assoc($image);
           echo '<div class="item-container flex-column">';
@@ -230,10 +192,20 @@ $products = mysqli_query($connect, $query);
           echo '</div>';
           echo '</div>';
           echo '<div class="cart-buy flex-column">';
-          echo '<button type="button">Add to Cart<span class="material-symbols-outlined">';
+          echo '<form class="add-to-cart" action="../../PHP/add_to_cart.php" method="post">';
+          echo '<div>';
+          
+          echo '<button type ="submit" name="add_to_cart" data-product-id="' . $row['product_id'] . '"><span>Add to Cart</span><span class="material-symbols-outlined">';
+        
           echo 'add_shopping_cart';
           echo '</span></button>';
-          echo '<button type="button">Buy Now</button>';
+          echo '<input type="hidden" name="product_id" value="' . $row['product_id'] . '">';
+          echo '<input type="number" min="1" value="1" max="5" class="small-input" name="product-cart-quantity">';       
+          echo '</form>';
+          echo '</div>';
+          echo '<div>';
+          echo '<button type="button">View Details</button>';
+          echo '</div>';
           echo '</div>';
           echo '</div>';
         }
@@ -246,8 +218,7 @@ $products = mysqli_query($connect, $query);
 
   <my-footer></my-footer>
   </body>
-  
-
+  <script src="../../JS/product.js"></script>
   <script src="../../JS/headerFooter.js"></script>
   <script src="../../JS/default.js"></script>
   </html>

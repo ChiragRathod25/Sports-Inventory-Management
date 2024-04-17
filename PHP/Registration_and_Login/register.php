@@ -8,13 +8,29 @@ if (!$connect) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$first_name = $_REQUEST['fname'];
-$last_name = $_REQUEST['lname'];
+$first_name= stripslashes($_REQUEST['fname']);
+$first_name = mysqli_real_escape_string($connect,$first_name);
+
+$last_name = stripslashes($_REQUEST['lname']);
+$last_name = mysqli_real_escape_string($connect,$last_name);
+
 $address = $_REQUEST['address'];
-$mobileNumber = $_REQUEST['mobileNumber'];
-$username = $_REQUEST['username'];
-$email = $_REQUEST['email'];
-$password = $_REQUEST['password'];
+$address = stripslashes($address);
+$address = mysqli_real_escape_string($connect,$address);
+
+$mobileNumber = stripslashes($_REQUEST['mobileNumber']);
+$mobileNumber = mysqli_real_escape_string($connect,$mobileNumber);
+
+$username = stripslashes($_REQUEST['username']);
+$username = mysqli_real_escape_string($connect,$username);
+
+$email = stripslashes($_REQUEST['email']);
+$email = mysqli_real_escape_string($connect,$email);
+
+$password = stripslashes($_REQUEST['password']);
+$password = mysqli_real_escape_string($connect,$password);
+
+$trn_date = date("Y-m-d H:i:s");
 
 // Check if the username already exists
 $check_username_query = "SELECT * FROM customer WHERE customer_id = '$username'";
@@ -23,8 +39,8 @@ if (mysqli_num_rows($check_username_result) > 0) {
     echo "not_available";
 } else {
     // Insert new record if the username is available
-    $sqlquery = "INSERT INTO customer (customer_id, first_name, last_name, address, phone_number, email, password) VALUES 
-    ('$username','$first_name', '$last_name', '$address', '$mobileNumber', '$email', '$password')";
+    $sqlquery = "INSERT INTO customer (customer_id, first_name, last_name, address, phone_number, email, password,registration_time) VALUES 
+    ('$username','$first_name', '$last_name', '$address', '$mobileNumber', '$email', '".md5($password)."','$trn_date')";
 
     if (mysqli_query($connect, $sqlquery)) {
         echo "success";
@@ -33,5 +49,4 @@ if (mysqli_num_rows($check_username_result) > 0) {
     }
 }
 
-mysqli_close($connect);
 ?>
