@@ -56,7 +56,7 @@ class Header extends HTMLElement {
     </div>
     <div class="right-search-login flex-column">
       <div class="account-cart flex-row">
-        <div class="cart flex-row">
+        <div class="cart flex-row"  onclick="window.location.href='/Sports-Inventory-Management/PHP/view_product.php'">
           <span class="material-symbols-outlined"> shopping_bag </span>
           <span>cart</span>
         </div>

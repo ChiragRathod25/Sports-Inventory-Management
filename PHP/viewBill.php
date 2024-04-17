@@ -28,24 +28,35 @@ if (mysqli_num_rows($result) > 0) {
     $result = mysqli_query($connect, $sqlquery);
     if (mysqli_num_rows($result) > 0) {
         echo "<table border='1' >";
-        echo "<tr><th>Product ID</th><th>Quantity</th></tr>";
+        echo "<tr><th>Product ID</th><th>Quantity</th><th>Price</th></tr>";
+        $total_price=0;
+
         while($row = mysqli_fetch_assoc($result)) {
             $product_id = $row['product_id'];
 
             // Get the product name from the product table
-            $sqlquery = "SELECT name FROM `product` WHERE product_id = '$product_id'";
+            $sqlquery = "SELECT * FROM `product` WHERE product_id = '$product_id'";
             $product_result = mysqli_query($connect, $sqlquery);
             if (mysqli_num_rows($product_result) > 0) {
+                $total=true;
+                
                 $product_row = mysqli_fetch_assoc($product_result);
                 $name = $product_row['name'];
-                echo "<tr><td>" . $name . "</td><td>" . $row['quantity'] . "</td></tr>";
-            } else {
+                $price = $product_row['price'];
+                $total_price+=( $price*$row['quantity']);
+                echo "<tr><td>" . $name . "</td><td>" . $row['quantity'] . "</td><td>".$price."</td></tr>";
+            } 
+            else {
                 echo "Product not found";
             }
+            
+        }
+
+        if($total){
+            echo "<tr><td>Total Price </td><td></td><td>".$total_price."</td></tr>";
         }
         echo "</table>";
-        echo "Click here to <a href='viewBill.php'>Review Bill</a><br>";
-        echo "Click here for  <a href='/Sports-Inventory-management'>Home</a>";
+        echo "Click here for <a href='view_product.php'>Cart</a>";
     } else {
         echo "No items in cart";
     }

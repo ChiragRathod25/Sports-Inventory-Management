@@ -30,9 +30,9 @@
     </div>
   </section>
 <hr>
-  <section id="item-list" class="flex-column">
+  <!-- <section id="item-list" class="flex-column">
     <h2>
-      <!-- recommended-item-list -->
+      recommended-item-list
       Top Selling Items
     </h2>
     <div class="main-container flex-row">
@@ -136,226 +136,12 @@
     </div>
     
   </div>
-  </section>
-<hr>
-<!--
-  <section id="item-list" class="flex-column">
-    <h2>
-      Cricket
-    </h2>
-    <div class="main-container flex-row">
-      <div class="item-container flex-column">
-        <img src="../CSS/Home Page/Cricket/cricket-kit.jpg" alt="">
-        <div class="star flex-row">
-          <span class="material-symbols-outlined">
-          star_rate
-        </span><span class="material-symbols-outlined">
-          star_rate
-        </span><span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate_half
-        </span>
-      </div>
-      <div class="title-price flex-column">
-        <h3>
-          Nivia X Cricket Kit pro standard...
-        </h3>
-        <div>
-          &#x20B9 7999
-          <del>&#x20B9 10999 </del>
-        </div>
-      </div>
-      <div class="cart-buy flex-column">
-        <button type="button">Add to Cart<span class="material-symbols-outlined">
-            add_shopping_cart
-          </span></button>
-        <button type="button">Buy Now</button>
-      </div>
-    </div>
-      <div class="item-container flex-column">
-        <img src="../CSS/Home Page/Cricket/pink-Ball.jpg" alt="">
-        <div class="star flex-row">
-         <span class="material-symbols-outlined">
-          star_rate
-        </span><span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate_half
-        </span>
-      </div>
-      <div class="title-price flex-column">
-        <h3>
-         SG Pink ball (Australia) version...
-        </h3>
-        <div>
-          &#x20B9 1999
-          <del>&#x20B9 2599 </del>
-        </div>
-      </div>
-      <div class="cart-buy flex-column">
-        <button type="button">Add to Cart<span class="material-symbols-outlined">
-            add_shopping_cart
-          </span></button>
-        <button type="button">Buy Now</button>
-      </div>
-    </div>
-      <div class="item-container flex-column">
-        <img src="../CSS/Home Page/Cricket/cricket-helmet.jpg" alt="">
-        <div class="star flex-row">
-          <span class="material-symbols-outlined">
-        
-          star_rate
-        </span><span class="material-symbols-outlined">
-          star_rate
-        </span><span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate_half
-        </span>
-      </div>
-      <div class="title-price flex-column">
-        <h3>
-          AEO X Cricket Batting Helmet Metal Build standard...
-        </h3>
-        <div>
-          &#x20B9 5999
-          <del>&#x20B9 7999 </del>
-        </div>
-      </div>
-      <div class="cart-buy flex-column">
-        <button type="button">Add to Cart<span class="material-symbols-outlined">
-            add_shopping_cart
-          </span></button>
-        <button type="button">Buy Now</button>
-      </div>
-    </div>
-  </div>
-  </section>
-<hr> 
+  </section> -->
+<!-- <hr> -->
 
-
-   <section id="item-list" class="flex-column">
+ <section class="shop-category">
     <h2>
-      Badminton
-    </h2>
-    <div class="main-container flex-row">
-      <div class="item-container flex-column">
-        <img src="../CSS/Home Page/Badminton/badminton-shuttlecock.jpg" alt="">
-        <div class="star flex-row">
-         <span class="material-symbols-outlined">
-          star_rate
-        </span><span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate_half
-        </span>
-      </div>
-      <div class="title-price flex-column">
-        <h3>
-         Pink villa shuttlecock 12 pack shuttlecock...
-        </h3>
-        <div>
-          &#x20B9 799
-          <del>&#x20B9 1699 </del>
-        </div>
-      </div>
-      <div class="cart-buy flex-column">
-        <button type="button">Add to Cart<span class="material-symbols-outlined">
-            add_shopping_cart
-          </span></button>
-        <button type="button">Buy Now</button>
-      </div>
-    </div>
-      <div class="item-container flex-column">
-        <img src="../CSS/Home Page/Badminton/badminton-kit.jpg" alt="">
-        <div class="star flex-row">
-          <span class="material-symbols-outlined">
-          star_rate
-        </span><span class="material-symbols-outlined">
-          star_rate
-        </span><span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate_half
-        </span>
-      </div>
-      <div class="title-price flex-column">
-        <h3>
-          Vega Neo badminton portable kit ...
-        </h3>
-        <div>
-          &#x20B9 17999
-          <del>&#x20B9 21999 </del>
-        </div>
-      </div>
-      <div class="cart-buy flex-column">
-        <button type="button">Add to Cart<span class="material-symbols-outlined">
-            add_shopping_cart
-          </span></button>
-        <button type="button">Buy Now</button>
-      </div>
-    </div>
-      <div class="item-container flex-column">
-        <img src="../CSS/Home Page/Badminton/badminton-string.jpg" alt="">
-        <div class="star flex-row">
-          <span class="material-symbols-outlined">
-          star_rate
-        </span><span class="material-symbols-outlined">
-          star_rate
-        </span><span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate_half
-        </span>
-      </div>
-      <div class="title-price flex-column">
-        <h3>
-          Alpha star badminton string Build standard...
-        </h3>
-        <div>
-          &#x20B9 999
-          <del>&#x20B9 1299 </del>
-        </div>
-      </div>
-      <div class="cart-buy flex-column">
-        <button type="button">Add to Cart<span class="material-symbols-outlined">
-            add_shopping_cart
-          </span></button>
-        <button type="button">Buy Now</button>
-      </div>
-    </div>
-  </div>
-  </section>
-<hr> 
--->
-<section class="shop-category">
-    <h2>
-      Shop by Category
+      Shop by Sports
     </h2>
     <div class="flex-row">
       <div class=" box"><img src="./CSS/Home Page/shop-Category/cricket.jpg" alt="">
@@ -377,8 +163,9 @@
         <figcaption>Tennis</figcaption>
       </div>
     </div>
-  </section>
-<hr>
+  </section> 
+
+  <hr>
   <section id="Stories">
     <h2>
       GOAT Stories
