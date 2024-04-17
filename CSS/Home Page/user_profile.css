@@ -26,13 +26,11 @@ footer {
 
 header {
     justify-content: space-evenly !important;
-    /* align-items: center; */
-    /* border:2px solid black; */
-    background-color: white;
-    padding: 1rem 8rem;
-    padding-bottom: 0.3rem;
-    gap: 1rem;
-    top: 0;
+    background-color: white !important;
+    padding: 1rem 8rem !important;
+    padding-bottom: 0.3rem !important;
+    gap: 1rem !important; 
+    top: 0 !important;
 }
 
 h2 {
@@ -126,12 +124,12 @@ h2 {
 .logo-img {
     /* background-color: black; */
     background-image: url('/CSS/logos/logo4.jpeg');
-    width: 10%;
-    aspect-ratio: 1/1;
-    height: auto;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: center;
+    width: 10% !important;
+    aspect-ratio: 1/1 !important;
+    height: auto !important;
+    border-radius: 50% !important;
+    background-size: cover !important;
+    background-position: center !important;
 }
 
 .right-search-login {

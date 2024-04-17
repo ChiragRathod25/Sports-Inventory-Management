@@ -37,3 +37,16 @@
      border-left: 7px solid #246dec;
      border-radius: 5px;
  }
+ .add{
+    display: flex;
+ }
+ .add-btn{
+    font-size: 25px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* margin-left: 200px; */
+    margin-top: 20px;
+    border: 2px solid rgb(109, 70, 70);
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}

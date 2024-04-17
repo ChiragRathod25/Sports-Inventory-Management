@@ -1,3 +1,12 @@
+<?php
+
+include '../database_connection.php';
+$sql = "SELECT * FROM customer";
+
+$result = $conn->query($sql);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +16,7 @@
 
     <link rel="stylesheet" href="../../CSS/owner/owner.css">
     <link rel="stylesheet" href="../../CSS/owner/Customer.css">
-    
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet"
@@ -18,7 +27,7 @@
 </head>
 
 <body>
-    <!--Grid-Container Strat-->
+    <!--Grid-Container Start-->
     <div class="grid-container">
         <!--Header Start-->
         <header class="flex-row">
@@ -42,12 +51,12 @@
         </header>
         <!--Header End-->
         <!--Sidebar Start-->
-    <aside id="sidebar">
-        <owner-sidebar></owner-sidebar>
-      </aside>
-      <!--Sidebar End-->
+        <aside id="sidebar">
+            <owner-sidebar></owner-sidebar>
+        </aside>
+        <!--Sidebar End-->
 
-        <!--Main-Container Strat-->
+        <!--Main-Container Start-->
         <main class="main-container">
             <!-- MAIN CONTAINER -->
             <div class="container">
@@ -60,43 +69,27 @@
                         <th>Address</th>
                         <th>Phone Number</th>
                         <th>Email Id</th>
-                        <th>Remove</th>
                     </tr>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Himu29</td>
-                            <td>Himanshu Parmar</td>
-                            <td>A. M. Naik, Mota Bazzar, V. V. Nagar</td>
-                            <td>8160599527</td>
-                            <td>himu9333@gmail.com</td>
-                            <td class="remove"><span class="material-symbols-outlined text-blue">
-                                    delete
-                                </span></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Chiku37</td>
-                            <td>Chirag Rathod</td>
-                            <td>Opposite D-mart, V. V. Nagar</td>
-                            <td>8199790527</td>
-                            <td>Chiku37@gmail.com</td>
-                            <td class="remove"><span class="material-symbols-outlined text-blue">
-                                    delete
-                                </span></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Rushi44</td>
-                            <td>Rashiraj Dabhi</td>
-                            <td>A.V. Road, V. V. Nagar</td>
-                            <td>8168469900</td>
-                            <td>Rushi44@gmail.com</td>
-                            <td class="remove"><span class="material-symbols-outlined text-blue">
-                                    delete
-                                </span></td>
-                        </tr>
-                        
+                        <?php
+                        if ($result->num_rows > 0) {
+                            // Output data of each row
+                            $count = 1;
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<tr>";
+                                echo "<td>" . $count . "</td>";
+                                echo "<td>" . $row["customer_id"] . "</td>";
+                                echo "<td>" . $row["first_name"] . " " . $row["last_name"] . "</td>";
+                                echo "<td>" . $row["address"] . "</td>";
+                                echo "<td>" . $row["phone_number"] . "</td>";
+                                echo "<td>" . $row["email"] . "</td>";
+                                echo "</tr>";
+                                $count++;
+                            }
+                        } else {
+                            echo "<tr><td colspan='7'>0 results</td></tr>";
+                        }
+                        ?>
                     </tbody>
                 </table>
             </div>
@@ -106,8 +99,12 @@
     <!--Grid-Container End-->
 </body>
 
-
 <script src="../../JS/headerFooter.js"></script>
 <script src="../../JS/default.js"></script>
 
 </html>
+
+<?php
+// Close the connection
+$conn->close();
+?>
