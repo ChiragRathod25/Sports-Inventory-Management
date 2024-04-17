@@ -35,7 +35,7 @@ if (mysqli_num_rows($result) == 1) {
    
     echo $username;
     echo $password;
-    //header("Location: cust_login.php?error=Invalid username and password");
+    header("Location: cust_login.php?error=Invalid username and password");
     exit();
 }
 

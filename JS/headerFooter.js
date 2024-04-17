@@ -142,7 +142,7 @@ xhr.onreadystatechange = function () {
                         <a href="/Sports-Inventory-Management/HTML/user-profile.php">My Account</a>
                     </li>
                     <li>
-                        <a href="#">Cart</a>
+                        <a href="/Sports-Inventory-Management/PHP/view_product.php">Cart</a>
                     </li>
                     <li>
                         <a href="/Sports-Inventory-Management/PHP/Registration_and_Login/logout.php">Log out</a>

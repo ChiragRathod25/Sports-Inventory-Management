@@ -160,50 +160,12 @@ $products = mysqli_query($connect, $query);
         <h2>Results</h2>
         <div class="main-container flex-row">
 
-        <!-- <div class="item-container flex-column">
-            <img src="../../CSS/Home Page/Cricket/cricket-kit.jpg" alt="">
-            <div class="star flex-row">
-              <span class="material-symbols-outlined">
-              star_rate
-            </span><span class="material-symbols-outlined">
-              star_rate
-            </span><span class="material-symbols-outlined">
-              star_rate
-            </span>
-            <span class="material-symbols-outlined">
-              star_rate
-            </span>
-            <span class="material-symbols-outlined">
-              star_rate_half
-            </span>
-          </div>
-
-          <div class="title-price flex-column">
-            <h3>
-              Nivia X Cricket Kit pro standard...
-            </h3>
-            <div>
-              &#x20B9 7999
-              <del>&#x20B9 10999 </del>
-            </div>
-          </div>
-          <div class="cart-buy flex-column">
-            <button type="button">Add to Cart<span class="material-symbols-outlined">
-                add_shopping_cart
-              </span></button>
-            <button type="button">Buy Now</button>
-          </div>
-        </div> -->
-        
-
+    
         <?php
-        
-   
-        // $query = "SELECT * FROM productimages WHERE product_id = product_id ";
         
         $query = "SELECT * FROM productimages WHERE product_id IN (SELECT product_id FROM product WHERE sport_id = 2)";
         $image = mysqli_query($connect, $query);
-        
+
         while ($row = mysqli_fetch_assoc($products)) {
           $row2 = mysqli_fetch_assoc($image);
           echo '<div class="item-container flex-column">';
@@ -230,15 +192,21 @@ $products = mysqli_query($connect, $query);
           echo '</div>';
           echo '</div>';
           echo '<div class="cart-buy flex-column">';
-          echo '<button type="button">Add to Cart<span class="material-symbols-outlined">';
+          echo '<div>';
+
+          echo '<button type="button"><span>Add Cart</span><span class="material-symbols-outlined">';
+          
           echo 'add_shopping_cart';
           echo '</span></button>';
-          echo '<button type="button">Buy Now</button>';
+          echo '<input type="number" min="1" value="1" max="5" class="small-input">';       
+          echo '</div>';
+          echo '<div>';
+          echo '<button type="button">View Details</button>';
+          echo '</div>';
           echo '</div>';
           echo '</div>';
         }
-        ?>
-  </div>
+        ?>  </div>
     </div>
 
 
