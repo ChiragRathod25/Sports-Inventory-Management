@@ -57,6 +57,11 @@ if (mysqli_num_rows($result) > 0) {
         }
         echo "</table>";
         echo "Click here for <a href='view_product.php'>Cart</a>";
+        echo "<form action='create_order.php' method='post' onsubmit='return confirm(`Confirm Order ?`);'>";
+        echo "<input type='hidden' name='cart_id' value='" . $cart_id . "'>";
+        echo "<button type='submit' name='order_now'>Order Now</button>";
+        echo "</form>";
+        
     } else {
         echo "No items in cart";
     }

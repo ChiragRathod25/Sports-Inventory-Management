@@ -47,7 +47,8 @@ if (mysqli_num_rows($result) > 0) {
         echo "Click here to <a href='viewBill.php'>Review Bill</a><br>";
         echo "Click here for  <a href='/Sports-Inventory-management'>Home</a>";
     } else {
-        echo "No items in cart";
+        echo "No items in cart<br>";
+        echo "Click here for <a href='/Sports-Inventory-management'>Home Page</a>";
     }
 } else {
     echo "No cart found for user";
