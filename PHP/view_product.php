@@ -28,7 +28,7 @@ if (mysqli_num_rows($result) > 0) {
     $result = mysqli_query($connect, $sqlquery);
     if (mysqli_num_rows($result) > 0) {
         echo "<table border='1' >";
-        echo "<tr><th>Product ID</th><th>Quantity</th></tr>";
+        echo "<tr><th>Product ID</th><th>Quantity</th><th></th></tr>";
         while($row = mysqli_fetch_assoc($result)) {
             $product_id = $row['product_id'];
 
@@ -38,11 +38,17 @@ if (mysqli_num_rows($result) > 0) {
             if (mysqli_num_rows($product_result) > 0) {
                 $product_row = mysqli_fetch_assoc($product_result);
                 $name = $product_row['name'];
-                echo "<tr><td>" . $name . "</td><td>" . $row['quantity'] . "</td></tr>";
+                echo "<tr><td>" . $name . "</td><td>" . $row['quantity'] . "</td>";
+                echo "<td><form action='remove_from_cart.php' method='post'>";
+                echo "<input type='hidden' name='product_id' value='" . $product_id . "'>";
+                echo "<input type='hidden' name='cart_id' value='" . $cart_id . "'>";
+                echo "<button type='submit' name='remove'>Remove</button>";
+                echo "</form></td></tr>";
             } else {
                 echo "Product not found";
             }
         }
+        
         echo "</table>";
         echo "Click here to <a href='viewBill.php'>Review Bill</a><br>";
         echo "Click here for  <a href='/Sports-Inventory-management'>Home</a>";
