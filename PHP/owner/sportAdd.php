@@ -80,6 +80,7 @@ $sql = "SELECT * FROM sport";
      <form method="POST" id="brandForm">
         <label for="sport">Sport Name:</label>
         <input type="text" name="sportName" id="sportName" required>
+        
         <button type="submit">Submit</button>
     </form>
     <?php

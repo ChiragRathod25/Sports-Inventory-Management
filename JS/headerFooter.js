@@ -139,7 +139,7 @@ xhr.onreadystatechange = function () {
                 </div>
                 <ul class="log-sign">
                     <li>
-                        <a href="#">My Account</a>
+                        <a href="/Sports-Inventory-Management/HTML/user-profile.php">My Account</a>
                     </li>
                     <li>
                         <a href="#">Cart</a>
