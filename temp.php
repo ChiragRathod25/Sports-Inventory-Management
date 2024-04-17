@@ -1,7 +1,21 @@
-class Header extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
-        <header class="flex-row">
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/Home Page/style.css">
+  <link rel="stylesheet" href="./CSS/Home Page/header-footer.css">
+  <title>Sports Inventory Management</title>
+  </head>
+
+<body>
+<header class="flex-row">
     <div class="logo-img">
       <!-- <img src="../CSS/logos/logo4.jpeg" alt=""> -->
     </div>
@@ -60,8 +74,35 @@ class Header extends HTMLElement {
           <span class="material-symbols-outlined"> shopping_bag </span>
           <span>cart</span>
         </div>
-        <div class="person flex-row" id="account-info">
-   
+        <div class="person flex-row">
+        <?php
+session_start();
+if(!isset($_SESSION["username"])){
+    
+   echo '<ul>
+            <li>
+              <div class="flex-row">
+                <span class="material-symbols-outlined"> person </span>
+                <span> Account </span>
+              </div>
+              <ul class="log-sign">
+                <li>
+                  <a href="/HTML/Registration and Login/cust_login.html"
+                    >Log in</a
+                  >
+                </li>
+                <li>
+                  <a href="/HTML/Registration and Login/cust_reg.html">Sign Up</a>
+                </li>
+              </ul>
+            </li>
+          </ul>';
+}
+else{
+    echo $_SESSION["username"];
+}
+?>
+          
         </div>
       </div>
       <div class="search-website">
@@ -74,13 +115,11 @@ class Header extends HTMLElement {
       </div>
     </div>
   </header>
-        `
-    }
-}
-class Footer extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
-        <footer>
+  <section>
+
+  </section>
+
+  <footer>
         <div id="main_footer_container">
           <div class="section1">
             <h4>Get to know Us</h4>
@@ -113,66 +152,9 @@ class Footer extends HTMLElement {
           </div>
         </div>
       </footer>
-        `
-    }
-}
+</body>
 
-console.log("Hello");
-var xhr = new XMLHttpRequest();
-xhr.open("GET", '/Sports-Inventory-Management/JS/getUsername.php', true);
-xhr.onreadystatechange = function () {
-  console.log(xhr.readyState, xhr.status)
-  if (xhr.readyState == 4 && xhr.status == 200) {
-    
-    var username = xhr.responseText;
-    console.log(username);
-    // Update the DOM with the user's session data
-    const accountInfo = document.getElementById('account-info');
-    console.log(accountInfo);
-    if (username!=" " ) {
-      accountInfo.innerHTML = `
-        <ul>
-            <li>
-                <div class="flex-row">
-                    <span class="material-symbols-outlined"> account_circle </span>
-                    <span> ${username} </span>
-                </div>
-                <ul class="log-sign">
-                    <li>
-                        <a href="#">My Account</a>
-                    </li>
-                    <li>
-                        <a href="#">Cart</a>
-                    </li>
-                    <li>
-                        <a href="/Sports-Inventory-Management/PHP/Registration_and_Login/logout.php">Log out</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>`;
+<script src="./JS/headerFooter.js"></script>
+<script src="./JS/default.js"></script>
 
-    } else {
-        accountInfo.innerHTML = `
-        <ul>
-            <li>
-                <div class="flex-row">
-                    <span class="material-symbols-outlined"> person </span>
-                    <span> Account </span>
-                </div>
-                <ul class="log-sign">
-                    <li>
-                        <a href="/Sports-Inventory-Management/HTML/Registration and Login/cust_login.html">Log in</a>
-                    </li>
-                    <li>
-                        <a href="/Sports-Inventory-Management/HTML/Registration and Login/cust_reg.html">Sign Up</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>`;
-    }
-  }
-}
-xhr.send();
-console.log("hi");
-window.customElements.define('my-footer', Footer)
-window.customElements.define('my-header', Header)
+</html>

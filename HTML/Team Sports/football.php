@@ -246,7 +246,6 @@ $products = mysqli_query($connect, $query);
 
   <my-footer></my-footer>
   </body>
-  
 
   <script src="../../JS/headerFooter.js"></script>
   <script src="../../JS/default.js"></script>

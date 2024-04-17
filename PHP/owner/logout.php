@@ -1,7 +1,14 @@
 <?php
 session_start();
-if(session_destroy())
+
+if(isset($_SESSION['owneruser']))
 {
-header("Location: login.php");
+    unset($_SESSION['owneruser']);
+    header("Location: login.php");
+    exit();
 }
-?> 
+    else {
+        echo "<script>alert(`Logged Out Successfully !!`);
+        window.location.href='login.pp';</script>";
+    }
+?>

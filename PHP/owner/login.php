@@ -64,7 +64,7 @@ and password='".md5($password)."'";
 	$result = mysqli_query($con,$query) or die(mysql_error());
 	$rows = mysqli_num_rows($result);
         if($rows==1){
-	    $_SESSION['username'] = $username;
+	    $_SESSION['owneruser'] = $username;
 	    header("Location: ../../HTML/Owner/owner_page.php");
          }else{
 	    echo "<script>alert(`Incorrect Username/Password`);
