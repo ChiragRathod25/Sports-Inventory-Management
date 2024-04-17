@@ -150,7 +150,7 @@ $database = "Sports-Inventory-Management";
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $sportName = strtoupper($_POST["sportName"]); 
+        $sportName = $_POST["sportName"]; 
        
         $sql = "SELECT MAX(sport_id) as sport_id FROM sport";
         $result = mysqli_query($connect, $sql);

@@ -192,7 +192,7 @@ $sports=mysqli_query($connect,$sql);
             }
         
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $brandName = strtoupper($_POST["brandName"]); 
+                $brandName = $_POST["brandName"]; 
                 $selectedSport=$_POST['sport'];
                 
                 $sql="SELECT sport_id FROM sport as sport_id WHERE name = '$selectedSport'";

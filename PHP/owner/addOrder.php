@@ -172,7 +172,7 @@ $sports = mysqli_query($connect, $sql);
                     <label for="status">Status:</label>
                     <select name="status" id="status">
                         <option value="Pending">Pending</option>
-                        <option value="Processing">Completed</option>
+                        <option value="Completed">Completed</option>
                     </select>
                     <button type="submit">Submit</button>
                 </form>

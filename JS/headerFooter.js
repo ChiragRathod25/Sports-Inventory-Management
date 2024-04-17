@@ -14,28 +14,29 @@ class Header extends HTMLElement {
             <ul id="dropdown">
               <li><a href="/HTML/Team Sports/cricket.php">Cricket</a></li>
               <li><a href="/HTML/Team Sports/football.php">Football</a></li>
-              <!--<li><a href="/HTML/Team Sports/vollyball.html">Vollyball</a></li>
-              <li><a href="/HTML/Team Sports/basketball.html">Basketball</a></li>
-              <li><a href="/HTML/Team Sports/Hawkey.html">Hawkey</a></li>-->
+              <li><a href="/HTML/Team Sports/vollyball.php">Vollyball</a></li>
+              <li><a href="/HTML/Team Sports/basketball.php">Basketball</a></li>
+              <li><a href="/HTML/Team Sports/Hawkey.php">Hawkey</a></li>
+              <li><a href="/HTML/Team Sports/Kabbaddi.php">Kabbaddi</a></li>
             </ul>
           </li>
           <li>
             <a href="#">Racket Sports</a>
             <ul id="dropdown">
-              <li><a href="/HTML/Racket Sports/Badminton.html">Badminton</a></li>
-              <li><a href="/HTML/Racket Sports/Tennis.html">Tennis</a></li>
-              <li><a href="/HTML/Racket Sports/tableTennis.html">Table Tennis</a></li>
-              <li><a href="/HTML/Racket Sports/squash.html">Squash</a></li>
+              <li><a href="/HTML/Racket Sports/Badminton.php">Badminton</a></li>
+              <li><a href="/HTML/Racket Sports/Tennis.php">Tennis</a></li>
+              <li><a href="/HTML/Racket Sports/tableTennis.php">Table Tennis</a></li>
+              <li><a href="/HTML/Racket Sports/squash.php">Squash</a></li>
             </ul>
           </li>
           <li>
             <a href="#">Other Sports</a>
             <ul id="dropdown">
-              <li><a href="/HTML/Other Sports/chess.html">Chess</a></li>
-              <li><a href="/HTML/Other Sports/carrom.html">Carrom</a></li>
-              <li><a href="/HTML/Other Sports/skating.html">Skating</a></li>
-              <li><a href="/HTML/Other Sports/boxing.html">Boxing</a></li>
-              <li><a href="/HTML/Other Sports/swimming.html">Swimming</a></li>
+              <li><a href="/HTML/Other Sports/chess.php">Chess</a></li>
+              <li><a href="/HTML/Other Sports/carrom.php">Carrom</a></li>
+              <li><a href="/HTML/Other Sports/skating.php">Skating</a></li>
+              <li><a href="/HTML/Other Sports/boxing.php">Boxing</a></li>
+              <li><a href="/HTML/Other Sports/swimming.php">Swimming</a></li>
             </ul>
           </li>
 

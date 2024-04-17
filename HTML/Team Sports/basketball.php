@@ -10,15 +10,8 @@ if(!$connect){
 }
 
 // Fetch data from the database
-$sports_id =2;
-$query = "SELECT name FROM sport WHERE sport_id = $sports_id";
-$result = mysqli_query($connect, $query);
-$row = mysqli_fetch_assoc($result);
-$sport_name = $row['name'];
-// echo $sport_name;
-   
 
-$query = "SELECT * FROM category WHERE category.sport_id = $sports_id ORDER BY category_id";
+$query = "SELECT * FROM category WHERE category.sport_id = 8 ORDER BY category_id";
 $category = mysqli_query($connect, $query);
 
 $query="SELECT * FROM product WHERE category_id = category_id ORDER BY product_id";
@@ -27,7 +20,7 @@ $products=mysqli_query($connect,$query);
 $query="SELECT * FROM brand ORDER BY brand_id ";     
 $brands=mysqli_query($connect,$query);
 
-$query = "SELECT * FROM product WHERE product.sport_id = $sports_id ORDER BY product_id";
+$query = "SELECT * FROM product WHERE product.sport_id = 8 ORDER BY product_id";
 $products = mysqli_query($connect, $query);
 
 // $sql="SELECT * FROM sport ORDER BY sport_id";
@@ -44,12 +37,7 @@ $products = mysqli_query($connect, $query);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-        <?php
-        echo $sport_name;
-        ?>
-    
-    </title>
+    <title>Basketball</title>
 
     <link rel="stylesheet" href="../../CSS/Home Page/style.css" />
     <link rel="stylesheet" href="../../CSS/Home Page/header-footer.css" />
@@ -168,17 +156,14 @@ $products = mysqli_query($connect, $query);
 
     <div class="result">
         <div class="breadcrumb">
-            <a href="/HTML/">Home</a> > <a href="./">Team Sports</a> > <a href="#">
-            <?php
-            echo $sport_name;?>
-            </a>
+            <a href="/HTML/">Home</a> > <a href="./">Team Sports</a> > <a href="#">Basketball</a>
           </div>
         <h2>Results</h2>
        <div class="main-container flex-row">
 
         <?php
         
-        $query = "SELECT * FROM productimages WHERE product_id IN (SELECT product_id FROM product WHERE sport_id = $sports_id)";
+        $query = "SELECT * FROM productimages WHERE product_id IN (SELECT product_id FROM product WHERE sport_id = 8)";
         $image = mysqli_query($connect, $query);
 
         while ($row = mysqli_fetch_assoc($products)) {
