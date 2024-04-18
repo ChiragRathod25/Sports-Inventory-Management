@@ -8,7 +8,7 @@ $connect=mysqli_connect($server,$username,$password,$database);
 if(!$connect){
     die("Connection failed: " . mysqli_connect_error());
 }
-
+require('checkuser.php');
 // Fetch data from the database
 $sql = "SELECT * FROM brand ORDER BY brand_id ";
 $brands = mysqli_query($connect, $sql);

@@ -10,7 +10,7 @@ if(!$connect){
 }
 
 // Fetch data from the database
-$sports_id =2;
+$sports_id =14;
 $query = "SELECT name FROM sport WHERE sport_id = $sports_id";
 $result = mysqli_query($connect, $query);
 $row = mysqli_fetch_assoc($result);

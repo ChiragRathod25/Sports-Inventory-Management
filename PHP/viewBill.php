@@ -1,5 +1,21 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Bill</title>
+    <link rel="stylesheet" href="../CSS/Home Page/style.css" />
+    <link rel="stylesheet" href="../CSS/Home Page/header-footer.css" />
+    <link rel="stylesheet" href="../CSS/viewCart.css" />
+    <style>
 
+        
+    </style>
+</head>
+<body>
+   <my-header></my-header> 
+   <section>
+<?php
 $server = "localhost";
 $username = "root";
 $password = "Sports@Inv2937";
@@ -56,8 +72,9 @@ if (mysqli_num_rows($result) > 0) {
             echo "<tr><td>Total Price </td><td></td><td>".$total_price."</td></tr>";
         }
         echo "</table>";
-        echo "Click here for <a href='view_product.php'>Cart</a>";
-        echo "<form action='create_order.php' method='post' onsubmit='return confirm(`Confirm Order ?`);'>";
+        
+        echo "<form  action='create_order.php' method='post' onsubmit='return confirm(`Confirm Order ?`);'>";
+        echo "<button type='button' ><a href='/PHP/view_product.php'>Cart</a></button>";
         echo "<input type='hidden' name='cart_id' value='" . $cart_id . "'>";
         echo "<button type='submit' name='order_now'>Order Now</button>";
         echo "</form>";
@@ -69,3 +86,11 @@ if (mysqli_num_rows($result) > 0) {
     echo "No cart found for user";
 }
 ?>
+
+
+</section>
+<my-footer></my-footer>
+</body>
+  <script src="../JS/headerFooter.js"></script>
+  <script src="../JS/default.js"></script>
+  </html>

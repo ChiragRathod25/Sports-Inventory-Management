@@ -95,7 +95,7 @@ $database = "Sports-Inventory-Management";
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $brandName = strtoupper($_POST["brandName"]); 
+        $brandName = $_POST["brandName"]; 
        
         $sql = "SELECT MAX(brand_id) as brandID FROM brand";
         $result = mysqli_query($connect, $sql);

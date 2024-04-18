@@ -10,7 +10,7 @@ if(!$connect){
 }
 
 // Fetch data from the database
-$sports_id =2;
+$sports_id =12;
 $query = "SELECT name FROM sport WHERE sport_id = $sports_id";
 $result = mysqli_query($connect, $query);
 $row = mysqli_fetch_assoc($result);
@@ -184,7 +184,7 @@ $products = mysqli_query($connect, $query);
         while ($row = mysqli_fetch_assoc($products)) {
           $row2 = mysqli_fetch_assoc($image);
           echo '<div class="item-container flex-column">';
-          echo '<img src="./' . $row2['file_path'] . '" alt="">';
+          echo '<img src="../../PHP/owner/' . $row2['file_path'] . '" alt="">';
           echo '<div class="star flex-row">';
           echo '<span class="material-symbols-outlined">';
           echo 'star_rate';

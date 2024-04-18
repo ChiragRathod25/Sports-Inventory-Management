@@ -20,7 +20,9 @@ require('checkuser.php');
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Purchase Order</title>
 </head>
-
+<?php
+require('checkuser.php');
+?>
 <body>
     <!--Grid-Container Strat-->
     <div class="grid-container">

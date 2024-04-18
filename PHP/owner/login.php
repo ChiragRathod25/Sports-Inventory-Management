@@ -67,7 +67,7 @@ and password='".md5($password)."'";
 	    header("Location: sports.php");
          }else{
 	    echo "<script>alert(`Incorrect Username/Password`);
-        window.location.href = 'login.php';</script>";
+        window.location.href = './login.php';</script>";
 	}
 }else{
 ?>
