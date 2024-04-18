@@ -3,7 +3,7 @@ class Header extends HTMLElement {
     this.innerHTML = `
         <header class="flex-row">
     <div class="logo-img">
-      <!-- <img src="../CSS/logos/logo4.jpeg" alt=""> -->
+   <img src="/Sports-Inventory-Management/CSS/logos/logo4.jpeg" alt="">
     </div>
     <div class="navbar">
       <nav id="nav">
@@ -195,7 +195,7 @@ xhr.onreadystatechange = function () {
                         <a href="/Sports-Inventory-Management/HTML/user-profile.php">My Account</a>
                     </li>
                     <li>
-                        <a href="/Sports-Inventory-Management/PHP/viewBill.php">Orders</a>
+                        <a href="/Sports-Inventory-Management/PHP/myOrders.php">Orders</a>
                     </li>
                     <li>
                         <a href="/Sports-Inventory-Management/PHP/Registration_and_Login/logout.php">Log out</a>

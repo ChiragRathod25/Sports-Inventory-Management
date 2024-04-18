@@ -14,25 +14,26 @@
    <section>
     <?php
     $server = "localhost";
-    $username = "root";
-    $password = "Sports@Inv2937";
-    $database = "Sports-Inventory-Management";
+$username = "root";
+$password = "Sports@Inv2937";
+$database = "Sports-Inventory-Management";
     
     // Create connection
     $connect = new mysqli($server, $username, $password, $database);
-    
+    echo "<h2>My Orders</h2>";
     // Check connection
     if ($connect->connect_error) {
         die("Connection failed: " . $connect->connect_error);
     }
-
-    // Get all orders
-    $sqlquery = "SELECT orders.order_id, orders.order_date, product.name, product.price, cart_items.quantity 
-                 FROM orders 
-                 INNER JOIN cart_items ON orders.cart_id = cart_items.cart_id 
-                 INNER JOIN product ON cart_items.product_id = product.product_id";
     
-    $result = $connect->query($sqlquery);
+    // Get all orders
+    
+    $sqlquery = "SELECT `orders`.order_id, `orders`.order_date, product.name, product.price, order_items.quantity 
+                 FROM `orders` 
+                 INNER JOIN order_items ON `orders`.order_id = order_items.order_id 
+                 INNER JOIN product ON order_items.product_id = product.product_id";
+                 
+    $result = mysqli_query($connect, $sqlquery);
     
     if ($result->num_rows > 0) {
         echo "<table border='1' >";

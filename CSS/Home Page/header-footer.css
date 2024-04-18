@@ -131,6 +131,7 @@ h2 {
 
 
 .logo-img {
+    width: 100px;
     /* background-color: black; */
     background-image: url('/CSS/logos/logo4.jpeg');
     width: 10%;
@@ -140,7 +141,10 @@ h2 {
     background-size: cover;
     background-position: center;
 }
-
+.logo-img>img{
+    width: 100%;
+    border-radius: 50%;
+}
 .right-search-login {
     padding: 5px;
     gap: 0.3rem;
