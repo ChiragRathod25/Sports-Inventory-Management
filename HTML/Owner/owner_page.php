@@ -1,8 +1,6 @@
 <?php
-session_start();
-if(!isset($_SESSION["username"])){
-header("Location: login.php");
-exit(); }
+require('../../PHP/owner/db.php');
+require('../../PHP/owner/checkuser.php');
 ?>
 
 <!DOCTYPE html>

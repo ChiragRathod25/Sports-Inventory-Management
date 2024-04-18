@@ -1,3 +1,5 @@
+
+<link rel="stylesheet" href="../CSS/viewCart.css" />
 <?php
 session_start();
 
@@ -12,6 +14,7 @@ if (!$connect) {
 }
 
 if(isset($_POST['order_now'])) {
+    
     $cart_id = $_POST['cart_id'];
     $customer_id = $_SESSION['username'];
 
@@ -36,8 +39,12 @@ if(isset($_POST['order_now'])) {
         $sqlquery = "DELETE FROM `cart_items` WHERE cart_id = '$cart_id'";
         mysqli_query($connect, $sqlquery);
 
-        echo "Order created successfully<br>";
-        echo "Click here for <a href='/Sports-Inventory-management'>Home Page</a>";
+        
+        echo "<script>alert('Order created successfully');</script>";
+        echo "<div class='button-container'>";
+        echo "<a class='button' href='/Sports-Inventory-management'>Home Page</a>";
+        echo "</div>";
+        
 
     } else {
         die("Error: " . mysqli_error($connect));
