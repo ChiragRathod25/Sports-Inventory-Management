@@ -104,8 +104,9 @@ require('checkuser.php');
             $conn->close();
             ?>
             <div class="btn">
-            <a  onclick='window.open("../Team Sports/sportAdd.php")'><button  class="add-btn" >Add Sports</button></a>
-            <a  onclick='window.open("../Team Sports/categoryAdd.php")'><button  class="add-btn" >Add Category</button></a> 
+            <a  onclick='window.open("./sportAdd.php")'><button  class="add-btn" >Add Sports</button></a>
+            <a  onclick='window.open("./categoryAdd.php")'><button  class="add-btn" >Add Category</button></a> 
+            <a  onclick='window.open("./productAdd.php")'><button  class="add-btn" >Add Product</button></a> 
             </div>
         </main>
         <!--Main-Container End-->

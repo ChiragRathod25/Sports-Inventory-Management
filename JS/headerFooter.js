@@ -132,27 +132,32 @@ class mySidebar extends HTMLElement {
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
             bar_chart_4_bars
-            </span><a href="/HTML/Owner/owner_page.html">Dashboard</a>
+            </span><a href="/PHP/Owner/owner_page.php">Dashboard</a>
         </li>
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
             category
-            </span><a href="/HTML/Owner/category.html">Category</a>
+            </span><a href="/php/Owner/sports.php">Category</a>
         </li>
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
             account_box
-            </span><a href="/HTML/Owner/Customer.html">Customers</a>
+            </span><a href="/php/Owner/Customer.php">Customers</a>
         </li>
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
             add_shopping_cart
-            </span><a href="/HTML/Owner/purchase_order.html">Purchase Orders</a>
+            </span><a href="/php/Owner/purchase_order.php">Purchase Orders</a>
         </li>
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
             add_shopping_cart
-            </span><a href="/HTML/Owner/Customer's_order.html">Customer's Orders</a>
+            </span><a href="/php/Owner/Customer's_order.php">Customer's Orders</a>
+        </li>
+        <li class="sidebar-list-item">
+          <span class="material-symbols-outlined">
+           home
+            </span><a href="/">Visit Site</a>
         </li>
         <!-- <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
