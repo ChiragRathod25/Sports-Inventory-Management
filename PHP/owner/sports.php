@@ -1,3 +1,7 @@
+<?php
+require('db.php');
+require('checkuser.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
