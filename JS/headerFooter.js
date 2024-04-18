@@ -130,7 +130,7 @@ class mySidebar extends HTMLElement {
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
             bar_chart_4_bars
-            </span><a href="/HTML/Owner/owner_page.html">Dashboard</a>
+            </span><a href="/php/owner/owner_page.php">Dashboard</a>
         </li>
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">

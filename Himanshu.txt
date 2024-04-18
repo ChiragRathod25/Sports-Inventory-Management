@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+  <book>
+    <title>Harry Potter and the Philosopher's Stone</title>
+    <author>J.K. Rowling</author>
+    <genre>Fantasy</genre>
+    <year>1997</year>
+  </book>
+  <book>
+    <title>The Great Gatsby</title>
+    <author>F. Scott Fitzgerald</author>
+    <genre>Classic</genre>
+    <year>1925</year>
+  </book>
+</library>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+  <html>
+    <head>
+      <title>Book Library</title>
+    </head>
+    <body>
+      <h1>Book Library</h1>
+      <table border="1">
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>Year</th>
+        </tr>
+        <xsl:for-each select="library/book">
+          <tr>
+            <td><xsl:value-of select="title"/></td>
+            <td><xsl:value-of select="author"/></td>
+            <td><xsl:value-of select="genre"/></td>
+            <td><xsl:value-of select="year"/></td>
+          </tr>
+        </xsl:for-each>
+      </table>
+    </body>
+  </html>
+</xsl:template>
+
+</xsl:stylesheet>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display XML using XSL</title>
+  <script>
+    function displayXML() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var xml = this.responseXML;
+          var xsl = new XMLHttpRequest();
+          xsl.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              var xsltProcessor = new XSLTProcessor();
+              xsltProcessor.importStylesheet(this.responseXML);
+              var resultDocument = xsltProcessor.transformToDocument(xml);
+              document.getElementById("content").innerHTML = new XMLSerializer().serializeToString(resultDocument);
+            }
+          };
+          xsl.open("GET", "style.xsl", true);
+          xsl.send();
+        }
+      };
+      xhttp.open("GET", "data.xml", true);
+      xhttp.send();
+    }
+  </script>
+</head>
+<body onload="displayXML()">
+  <div id="content"></div>
+</body>
+</html>
+
