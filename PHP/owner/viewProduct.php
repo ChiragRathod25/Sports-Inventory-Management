@@ -80,12 +80,24 @@ if (isset($_GET['product_id'])) {
                 <th>Quantity</th>
                 <th>Update</th>
               </tr>
-              <tr>
-                <td><?php echo $row['sizes']; ?></td>
-                <td><?php echo $row['colors']; ?></td>
-                <td><?php echo $row['quantity']; ?></td>
-                <td class="remove"><a href="/php/owner/updateProduct.php?product_id=<?php echo $product_id; ?>"><span class="material-symbols-outlined">upgrade</span></a></td>
-              </tr>
+            <?php
+            $query = "SELECT product_variants.quantity, product_sizes.size, product_colors.color 
+                      FROM product_variants 
+                      INNER JOIN product_sizes ON product_variants.size_id = product_sizes.size_id 
+                      INNER JOIN product_colors ON product_variants.color_id = product_colors.color_id 
+                      WHERE product_variants.product_id = $product_id";
+
+            $result = mysqli_query($conn, $query);
+
+            while($row = mysqli_fetch_assoc($result)) {
+                echo '<tr>';
+                echo '<td>' . $row['size'] . '</td>';
+                echo '<td>' . $row['color'] . '</td>';
+                echo '<td>' . $row['quantity'] . '</td>';
+                echo '<td class="remove"><a href="/php/owner/updateProduct.php?product_id=' . $product_id . '"><span class="material-symbols-outlined">upgrade</span></a></td>';
+                echo '</tr>';
+            }
+            ?>
             </table>
           </div>
         </main>
