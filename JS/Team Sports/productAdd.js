@@ -58,3 +58,45 @@ function validateForm(form){
     }
     return true;
 }
+
+var variantId = 0;
+document.getElementById("addVariant").addEventListener("click", function() {
+    var container = document.getElementById("variantsContainer");
+    var div = document.createElement("div");
+    div.innerHTML = '<div>' +
+                    '<label for="size' + variantId + '">Size:</label>' +
+                    '<input type="text" id="size' + variantId + '" name="variants[' + variantId + '][size]">' +
+                    '</div>' +
+                    '<div>' +
+                    '<label for="color' + variantId + '">Color:</label>' +
+                    '<input type="text" id="color' + variantId + '" name="variants[' + variantId + '][color]">' +
+                    '</div>' +
+                    '<div>' +
+                    '<label for="quantity' + variantId + '">Quantity:</label>' +
+                    '<input type="number" id="quantity' + variantId + '" name="variants[' + variantId + '][quantity]">' +
+                    '</div>';
+    div.setAttribute('class', 'flex-row');
+    container.appendChild(div);
+    variantId++;
+});
+
+var variantId = 0;
+document.getElementById("addVariant").addEventListener("click", function() {
+    var container = document.getElementById("variantsContainer");
+    var div = document.createElement("div");
+    div.innerHTML = '<div>' +
+                    '<label for="size' + variantId + '">Size:</label>' +
+                    '<input type="text" id="size' + variantId + '" name="variants[' + variantId + '][size]">' +
+                    '</div>' +
+                    '<div>' +
+                    '<label for="color' + variantId + '">Color:</label>' +
+                    '<input type="text" id="color' + variantId + '" name="variants[' + variantId + '][color]">' +
+                    '</div>' +
+                    '<div>' +
+                    '<label for="quantity' + variantId + '">Quantity:</label>' +
+                    '<input type="number" id="quantity' + variantId + '" name="variants[' + variantId + '][quantity]">' +
+                    '</div>';
+    div.setAttribute('class', 'flex-row');
+    container.appendChild(div);
+    variantId++;
+});

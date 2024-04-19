@@ -24,8 +24,6 @@ $address = $_POST['address']; // Added this line
 // Prepare an insert statement
 // $sql = "INSERT INTO user (First_name, Last_name, Address, Mobile_number, Username, Email, Password) VALUES (fname, lname, address, mobileNumber, username, email, password)";
 
-<<<<<<< HEAD:PHP/Registration and Login/userRegistration.php
-=======
         // Taking all 5 values from the form data(input)
         $first_name =  $_REQUEST['fname'];
         $last_name = $_REQUEST['lname'];
@@ -39,7 +37,6 @@ $address = $_POST['address']; // Added this line
 
 $sqlquery ="INSERT INTO customer (customer_id, first_name, last_name, address, phone_number, username, email, password) VALUES 
 ('$first_name', '$last_name', '$address', '$mobileNumber', '$username', '$email', '$password')";
->>>>>>> 8a15339d5d405d5e614ceee83ac8e0ee9b5f1e65:PHP/Registration_and_Login/userRegistration.php
 
 
 $sql = "INSERT INTO user (First_name, Last_name, Address, Username, Email, Password) VALUES (?, ?, ?, ?, ?, ?)";
