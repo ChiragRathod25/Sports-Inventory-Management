@@ -29,9 +29,10 @@ if(isset($_POST['order_now'])) {
         while($row = mysqli_fetch_assoc($result)) {
             $product_id = $row['product_id'];
             $quantity = $row['quantity'];
+            $variant_id = $row['variant_id']; // Fetch the variant_id
 
             // Add each item to the order
-            $sqlquery = "INSERT INTO `order_items` (order_id, product_id, quantity) VALUES ('$order_id', '$product_id', '$quantity')";
+            $sqlquery = "INSERT INTO `order_items` (order_id, product_id, quantity, variant_id) VALUES ('$order_id', '$product_id', '$quantity', '$variant_id')"; // Include the variant_id
             mysqli_query($connect, $sqlquery);
         }
 
@@ -39,15 +40,14 @@ if(isset($_POST['order_now'])) {
         $sqlquery = "DELETE FROM `cart_items` WHERE cart_id = '$cart_id'";
         mysqli_query($connect, $sqlquery);
 
-        
         echo "<script>alert('Order created successfully');</script>";
         echo "<div class='button-container'>";
         echo "<a class='button' href='/Sports-Inventory-management'>Home Page</a>";
         echo "</div>";
-        
 
     } else {
         die("Error: " . mysqli_error($connect));
     }
 }
+
 ?>

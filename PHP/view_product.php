@@ -39,21 +39,28 @@ if (mysqli_num_rows($result) > 0) {
     // echo "<br>"; 
        
     // Get all items in the cart
-    $sqlquery = "SELECT * FROM `cart_items` WHERE cart_id = '$cart_id'";
+    $sqlquery = "SELECT cart_items.*, product_sizes.size, product_colors.color 
+                 FROM `cart_items` 
+                 INNER JOIN product_variants ON cart_items.variant_id = product_variants.variant_id 
+                 INNER JOIN product_sizes ON product_variants.size_id = product_sizes.size_id 
+                 INNER JOIN product_colors ON product_variants.color_id = product_colors.color_id 
+                 WHERE cart_id = '$cart_id'";
     $result = mysqli_query($connect, $sqlquery);
     if (mysqli_num_rows($result) > 0) {
         echo "<table border='1' >";
-        echo "<tr><th>Product ID</th><th>Quantity</th><th></th></tr>";
+        echo "<tr><th>Product ID</th><th>Size</th><th>Color</th><th>Quantity</th><th></th></tr>";
         while($row = mysqli_fetch_assoc($result)) {
             $product_id = $row['product_id'];
-            
+            $size = $row['size'];
+            $color = $row['color'];
+
             // Get the product name from the product table
             $sqlquery = "SELECT name FROM `product` WHERE product_id = '$product_id'";
             $product_result = mysqli_query($connect, $sqlquery);
             if (mysqli_num_rows($product_result) > 0) {
                 $product_row = mysqli_fetch_assoc($product_result);
                 $name = $product_row['name'];
-                echo "<tr><td>" . $name . "</td><td>" . $row['quantity'] . "</td>";
+                echo "<tr><td>" . $name . "</td><td>" . $size . "</td><td>" . $color . "</td><td>" . $row['quantity'] . "</td>";
                 echo "<td><form action='remove_from_cart.php' method='post'>";
                 echo "<input type='hidden' name='product_id' value='" . $product_id . "'>";
                 echo "<input type='hidden' name='cart_id' value='" . $cart_id . "'>";
@@ -64,19 +71,18 @@ if (mysqli_num_rows($result) > 0) {
             }
         }
         
-      
         echo "</table>";
         
         echo "<div class='button-container'>";
         echo "<a class='button' href='/'>Home</a>";
         echo "<a class='button' href='/PHP/viewBill.php'>Review Bill</a>";
         echo "</div>";
- 
-        } else {
-            echo "No items in cart<br>";
-            echo "<a class='button' href='/'>Home Page</a>";
-       
+     
+    } else {
+        echo "No items in cart<br>";
+        echo "<a class='button' href='/'>Home Page</a>";
     }
+    
 } else {
     echo "No cart found for user";
 }

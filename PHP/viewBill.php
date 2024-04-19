@@ -39,16 +39,25 @@ if (mysqli_num_rows($result) > 0) {
     $customer_id = $_SESSION['username'];
     echo "Username : " .$customer_id;
     echo "<br>";    
+    
+    
     // Get all items in the cart
-    $sqlquery = "SELECT * FROM `cart_items` WHERE cart_id = '$cart_id'";
+    $sqlquery = "SELECT cart_items.*, product_sizes.size, product_colors.color 
+                 FROM `cart_items` 
+                 INNER JOIN product_variants ON cart_items.variant_id = product_variants.variant_id 
+                 INNER JOIN product_sizes ON product_variants.size_id = product_sizes.size_id 
+                 INNER JOIN product_colors ON product_variants.color_id = product_colors.color_id 
+                 WHERE cart_id = '$cart_id'";
     $result = mysqli_query($connect, $sqlquery);
     if (mysqli_num_rows($result) > 0) {
         echo "<table border='1' >";
-        echo "<tr><th>Product ID</th><th>Quantity</th><th>Price</th></tr>";
+        echo "<tr><th>Product</th><th>Size</th><th>Color</th><th>Quantity</th><th>Price</th></tr>";
         $total_price=0;
 
         while($row = mysqli_fetch_assoc($result)) {
             $product_id = $row['product_id'];
+            $size = $row['size'];
+            $color = $row['color'];
 
             // Get the product name from the product table
             $sqlquery = "SELECT * FROM `product` WHERE product_id = '$product_id'";
@@ -60,7 +69,7 @@ if (mysqli_num_rows($result) > 0) {
                 $name = $product_row['name'];
                 $price = $product_row['price'];
                 $total_price+=( $price*$row['quantity']);
-                echo "<tr><td>" . $name . "</td><td>" . $row['quantity'] . "</td><td>".$price."</td></tr>";
+                echo "<tr><td>" . $name . "</td><td>" . $size . "</td><td>" . $color . "</td><td>" . $row['quantity'] . "</td><td>".$price."</td></tr>";
             } 
             else {
                 echo "Product not found";
@@ -69,7 +78,7 @@ if (mysqli_num_rows($result) > 0) {
         }
 
         if($total){
-            echo "<tr><td>Total Price </td><td></td><td>".$total_price."</td></tr>";
+            echo "<tr><td>Total Price </td><td></td><td></td><td></td><td>".$total_price."</td></tr>";
         }
         echo "</table>";
         
@@ -82,6 +91,8 @@ if (mysqli_num_rows($result) > 0) {
     } else {
         echo "No items in cart";
     }
+    
+
 } else {
     echo "No cart found for user";
 }

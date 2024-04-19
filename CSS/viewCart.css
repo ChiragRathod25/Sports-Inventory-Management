@@ -83,7 +83,11 @@ button>a:hover{
     margin: 20px auto;
     gap:10px;
 }
-
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 form>button{
-    margin: 0 50px;
+    margin:5px;
 }
