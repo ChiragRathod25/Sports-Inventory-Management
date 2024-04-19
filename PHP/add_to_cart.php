@@ -26,18 +26,24 @@ if(isset($_POST['add_to_cart'])) {
     INNER JOIN product_colors ON product_variants.color_id = product_colors.color_id 
     WHERE product_sizes.size = '$size' AND product_colors.color = '$color' AND product_variants.product_id = '$product_id'";
 
-     // Fetch the cart_id for the current user
-     $cart_query = "SELECT cart_id FROM cart WHERE customer_id = '$customer_id'";
-     $cart_result = mysqli_query($connect, $cart_query);
-     if (mysqli_num_rows($cart_result) > 0) {
-         $cart = mysqli_fetch_assoc($cart_result);
-         $cart_id = $cart['cart_id'];
- 
-         // Rest of your code...
-     } else {
-         // No cart found for the current user
-         echo "No cart found for the current user.";
-     }
+    
+    // Fetch the cart_id for the current user
+    $cart_query = "SELECT cart_id FROM cart WHERE customer_id = '$customer_id'";
+    $cart_result = mysqli_query($connect, $cart_query);
+    if (mysqli_num_rows($cart_result) > 0) {
+        $cart = mysqli_fetch_assoc($cart_result);
+        $cart_id = $cart['cart_id'];
+    } else {
+        // No cart found for the current user, create a new one
+        $create_cart_query = "INSERT INTO `cart` (customer_id) VALUES ('$customer_id')";
+        if (mysqli_query($connect, $create_cart_query)) {
+            $cart_id = mysqli_insert_id($connect);
+        } else {
+            die("Error creating cart: " . mysqli_error($connect));
+        }
+    }
+    
+
     $variant_result = mysqli_query($connect, $variant_query);
     if (mysqli_num_rows($variant_result) > 0) {
         $variant = mysqli_fetch_assoc($variant_result);
@@ -46,6 +52,7 @@ if(isset($_POST['add_to_cart'])) {
         // Add item to cart
         $sqlquery = "SELECT * FROM `cart_items` WHERE cart_id = '$cart_id' AND product_id = '$product_id' AND variant_id = '$variant_id'";
         $result = mysqli_query($connect, $sqlquery);
+
         if (mysqli_num_rows($result) > 0) {
             // Product variant already exists, update the quantity
             $row = mysqli_fetch_assoc($result);
@@ -59,10 +66,9 @@ if(isset($_POST['add_to_cart'])) {
         // mysqli_query($connect, $sqlquery);
     } else {
         // No variant found for the selected size and color
-        echo "<script>alert('No variant found for the selected size and color.');
+        echo "<script>alert('No variant is available for the selected size and color.');
         window.location.href = document.referrer;
-        </script>";
-    
+        </script>";    
     }
 
     // // Check if cart already exists for the user

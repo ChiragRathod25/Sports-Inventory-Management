@@ -71,7 +71,18 @@ $sports = mysqli_query($connect, $sql);
         <input type="file" id="image" name="image[]" accept="image/*" multiple>
         
         <!-- Add fields for selecting sizes, colors, and quantities -->
-        <div id="variantsContainer" class="flex-column"></div>
+        <div id="variantsContainer" class="flex-column">
+       
+        <div id="variantsContainer" class="flex-column">
+        <div class="flex-row" style="gap:5px;">
+        <div><label for="size0">Size:</label><input type="text" id="size0" name="variants[0][size]" required></div>
+        <div><label for="color0">Color:</label><input type="text" id="color0" name="variants[0][color]" required></div>
+        <div><label for="quantity0">Quantity:</label><input type="number" id="quantity0" name="variants[0][quantity]" required>
+        </div>
+        </div>
+        </div>
+
+        </div>
         <button type="button" id="addVariant">Add Variant</button>
         
         <div id="specificationsContainer" class="flex-column"></div>

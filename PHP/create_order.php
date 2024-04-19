@@ -33,6 +33,7 @@ if(isset($_POST['order_now'])) {
 
             // Add each item to the order
             $sqlquery = "INSERT INTO `order_items` (order_id, product_id, quantity, variant_id) VALUES ('$order_id', '$product_id', '$quantity', '$variant_id')"; // Include the variant_id
+            
             mysqli_query($connect, $sqlquery);
         }
 
@@ -40,7 +41,14 @@ if(isset($_POST['order_now'])) {
         $sqlquery = "DELETE FROM `cart_items` WHERE cart_id = '$cart_id'";
         mysqli_query($connect, $sqlquery);
 
-        echo "<script>alert('Order created successfully');</script>";
+       
+        echo "<script>
+        alert('Order created successfully');
+        window.open('./create_order_pdf.php?order_id=$order_id', '_blank');
+            window.location.href = 'myOrders.php';
+        </script>";
+        
+        
         echo "<div class='button-container'>";
         echo "<a class='button' href='/Sports-Inventory-management'>Home Page</a>";
         echo "</div>";
