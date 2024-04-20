@@ -137,7 +137,7 @@ class mySidebar extends HTMLElement {
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
             category
-            </span><a href="/php/Owner/sports.php">Category</a>
+            </span><a href="/php/Owner/sports.php">Sports</a>
         </li>
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">

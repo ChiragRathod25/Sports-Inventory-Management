@@ -70,7 +70,7 @@
             while($row = $result->fetch_assoc()) {
                 if ($currentOrderId != $row['order_id']) {
                     if ($orderCount > 0) {
-                        echo "<tr><td colspan='5'>Total Price</td><td>" . $totalPrice . "</td></tr>"; 
+                        // echo "<tr><td colspan='5'>Total Price</td><td>" . $totalPrice . "</td></tr>"; 
                         echo "</table>"; 
                         echo "</div>"; 
                         echo "</form>"; 

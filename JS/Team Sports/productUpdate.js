@@ -79,23 +79,50 @@ document.getElementById("addVariant").addEventListener("click", function() {
     variantId++;
 });
 
-var variantId = 0;
-document.getElementById("addVariant").addEventListener("click", function() {
-    var container = document.getElementById("variantsContainer");
-    var div = document.createElement("div");
-    div.innerHTML = '<div>' +
-                    '<label for="size' + variantId + '">Size:</label>' +
-                    '<input type="text" id="size' + variantId + '" name="variants[' + variantId + '][size]">' +
-                    '</div>' +
-                    '<div>' +
-                    '<label for="color' + variantId + '">Color:</label>' +
-                    '<input type="text" id="color' + variantId + '" name="variants[' + variantId + '][color]">' +
-                    '</div>' +
-                    '<div>' +
-                    '<label for="quantity' + variantId + '">Quantity:</label>' +
-                    '<input type="number" id="quantity' + variantId + '" name="variants[' + variantId + '][quantity]">' +
-                    '</div>';
-    div.setAttribute('class', 'flex-row');
-    container.appendChild(div);
-    variantId++;
-});
+// var variantId = 0;
+// document.getElementById("addVariant").addEventListener("click", function() {
+//     var container = document.getElementById("variantsContainer");
+//     var div = document.createElement("div");
+//     div.innerHTML = '<div>' +
+//                     '<label for="size' + variantId + '">Size:</label>' +
+//                     '<input type="text" id="size' + variantId + '" name="variants[' + variantId + '][size]">' +
+//                     '</div>' +
+//                     '<div>' +
+//                     '<label for="color' + variantId + '">Color:</label>' +
+//                     '<input type="text" id="color' + variantId + '" name="variants[' + variantId + '][color]">' +
+//                     '</div>' +
+//                     '<div>' +
+//                     '<label for="quantity' + variantId + '">Quantity:</label>' +
+//                     '<input type="number" id="quantity' + variantId + '" name="variants[' + variantId + '][quantity]">' +
+//                     '</div>';
+//     div.setAttribute('class', 'flex-row');
+//     container.appendChild(div);
+//     variantId++;
+// });
+
+// document.getElementById('addVariant').addEventListener('click', function() {
+//     // Create new input fields
+//     var sizeInput = document.createElement('input');
+//     sizeInput.type = 'text';
+//     sizeInput.name = 'size[]';
+
+//     var colorInput = document.createElement('input');
+//     colorInput.type = 'text';
+//     colorInput.name = 'color[]';
+
+//     var quantityInput = document.createElement('input');
+//     quantityInput.type = 'number';
+//     quantityInput.name = 'quantity[]';
+
+//     // Create a new div to hold the input fields
+//     var variantDiv = document.createElement('div');
+//     variantDiv.className = 'variant';
+
+//     // Add the input fields to the div
+//     variantDiv.appendChild(sizeInput);
+//     variantDiv.appendChild(colorInput);
+//     variantDiv.appendChild(quantityInput);
+
+//     // Add the new div to the variants container
+//     document.getElementById('variantsContainer').appendChild(variantDiv);
+// });

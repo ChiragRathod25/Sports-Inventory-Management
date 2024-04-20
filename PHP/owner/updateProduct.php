@@ -103,6 +103,7 @@ if (isset($_GET['product_id'])) {
                                     echo '</div>';
                                 }
                                 ?>
+                                
                             </div> -->
                                 <?php
                                 // Fetch product variants
@@ -179,6 +180,7 @@ if (isset($_GET['product_id'])) {
             <script src="../../JS/headerFooter.js"></script>
             <script src="../../JS/default.js"></script>
             <script src="../../JS/Team Sports/productUpdate.js"></script>
+            <script src="../../JS/Team Sports/productAdd.js"></script>
         </body>
 
         </html>
