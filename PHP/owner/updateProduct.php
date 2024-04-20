@@ -68,13 +68,13 @@ if (isset($_GET['product_id'])) {
                 <main class="main-container">
                     <section>
                         <form method="POST" id="productAddForm" onsubmit="return validateForm(this)"
-                            action="./updateProduct.php" enctype="multipart/form-data">
+                            action="./validateProductUpdateForm.php" enctype="multipart/form-data">
                             <label for="price">Price:</label>
                             <input type="number" id="price" name="price" step="0.01" value="<?php echo $row['price']; ?>">
 
                             <label for="description">Description:</label>
                             <textarea id="description" name="description"><?php echo $row['description']; ?></textarea>
-
+                            <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
                             <label for="image">Images of Product:</label>
                             <input type="file" id="image" name="image[]" accept="image/*" multiple>
 
@@ -96,7 +96,6 @@ if (isset($_GET['product_id'])) {
 
                                     echo '<label for="quantity">Quantity:</label>';
                                     echo '<input type="number" name="quantity[]" value="' . $quantities[$index] . '">';
-
                                     // Hidden inputs to store variant IDs, size IDs, and color IDs
                                     echo '<input type="hidden" name="variant_id[]" value="' . $row['variant_id'] . '">';
                                     echo '<input type="hidden" name="size_id[]" value="' . $row['size_id'] . '">';
@@ -164,16 +163,12 @@ if (isset($_GET['product_id'])) {
 
 
                                 ?>
-                            <!-- Add Variant button -->
                             <button type="button" id="addVariant">Add Variant</button>
 
-                            <!-- Specifications -->
                             <div id="specificationsContainer" class="flex-column"></div>
 
-                            <!-- Add Specification button -->
                             <button type="button" id="addSpecification">Add Specification</button>
 
-                            <!-- Update button -->
                             <button type="submit" id="update">Update</button>
                         </form>
 
@@ -183,7 +178,7 @@ if (isset($_GET['product_id'])) {
             </div>
             <script src="../../JS/headerFooter.js"></script>
             <script src="../../JS/default.js"></script>
-            <script src="../../JS/Team Sports/productAdd.js"></script>
+            <script src="../../JS/Team Sports/productUpdate.js"></script>
         </body>
 
         </html>

@@ -24,23 +24,22 @@ document.getElementById("addSpecification").addEventListener("click", function()
     specificationId++;
 });
 
-document.querySelector('form').addEventListener('submit', (e) => {
+document.getElementById("productUpdateForm").addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log('form submitted');
-    const formData = new FormData(e.target);
-    fetch('./validateProductAddForm.php', {
+    const formData = new FormData(e.target); // Collect form data
+    fetch('/php/owner/validateProductUpdateForm.php', {
         method: 'POST',
         body: formData
     })
     .then(response => response.text())
     .then(data => {
         console.log(data);
-        alert('Product Added successfully'); 
-        window.location.href = './productadd.php';
-
+        alert('Product Updated successfully'); 
+        window.location.href = './viewProduct.php';
     })
     .catch(error => console.error(error));
 });
+
 
 
 

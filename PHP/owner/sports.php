@@ -1,6 +1,6 @@
 <?php
-require('db.php');
-require('checkuser.php');
+require ('db.php');
+require ('checkuser.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,6 +56,8 @@ require('checkuser.php');
         <main class="main-container">
             <!-- MAIN CONTAINER -->
             <?php
+            require ('db.php'); // Include the file containing the database connection code
+            
             // Database connection
             $servername = "localhost";
             $username = "root";
@@ -70,19 +72,21 @@ require('checkuser.php');
             }
 
             // Fetch sports and their categories
-            $sql = "SELECT s.name AS sport_name, c.name AS category_name
-                    FROM sport s
-                    INNER JOIN category c ON s.sport_id = c.sport_id
-                    ORDER BY s.name, c.name";
+            $sql = "SELECT s.sport_id, s.name AS sport_name, c.category_id, c.name AS category_name
+        FROM sport s
+        INNER JOIN category c ON s.sport_id = c.sport_id
+        ORDER BY s.name, c.name";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
                 $current_sport = "";
                 echo "<div class='container'>";
-                while($row = $result->fetch_assoc()) {
+                while ($row = $result->fetch_assoc()) {
                     $sport_name = ucfirst(strtolower($row["sport_name"])); // Capitalize first letter of each word
                     $category_name = ucfirst(strtolower($row["category_name"])); // Capitalize first letter of each word
-                    
+                    $sport_id = $row["sport_id"];
+                    $category_id = $row["category_id"];
+
                     // If it's a new sport, display its name
                     if ($sport_name != $current_sport) {
                         if ($current_sport != "") {
@@ -91,22 +95,22 @@ require('checkuser.php');
                         echo "<ul><h1>$sport_name</h1>"; // Start a new sport's category list
                         $current_sport = $sport_name;
                     }
-                    
-                    // Display category under the current sport
-                    echo "<li><a href='/HTML/product/$sport_name/$category_name.html'>$category_name</a></li>";
+
+                    // Display category under the current sport with a link to view products related to that category
+                    echo "<li><a href='/PHP/owner/myProducts.php?category_id=$category_id'>$category_name</a></li>";
                 }
                 echo "</ul>"; // Close the last sport's category list
                 echo "</div>"; // Close the container
             } else {
                 echo "0 results";
             }
-            
+
             $conn->close();
             ?>
             <div class="btn">
-            <a  onclick='window.open("./sportAdd.php")'><button  class="add-btn" >Add Sports</button></a>
-            <a  onclick='window.open("./categoryAdd.php")'><button  class="add-btn" >Add Category</button></a> 
-            <a  onclick='window.open("./productAdd.php")'><button  class="add-btn" >Add Product</button></a> 
+                <a onclick='window.open("./sportAdd.php")'><button class="add-btn">Add Sports</button></a>
+                <a onclick='window.open("./categoryAdd.php")'><button class="add-btn">Add Category</button></a>
+                <a onclick='window.open("./productAdd.php")'><button class="add-btn">Add Product</button></a>
             </div>
         </main>
         <!--Main-Container End-->
