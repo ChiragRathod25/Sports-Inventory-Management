@@ -177,53 +177,77 @@ $products = mysqli_query($connect, $query);
        <div class="main-container flex-row">
 
         <?php
+          $query = "SELECT * FROM productimages WHERE product_id IN (SELECT product_id FROM product WHERE sport_id = $sports_id)";
+          $image = mysqli_query($connect, $query);
         
-        $query = "SELECT * FROM productimages WHERE product_id IN (SELECT product_id FROM product WHERE sport_id = $sports_id)";
-        $image = mysqli_query($connect, $query);
+          while ($row = mysqli_fetch_assoc($products)) {
+            $row2 = mysqli_fetch_assoc($image);
+            echo '<div class="item-container flex-column">';
+            echo '<img src="../../PHP/owner/' . $row2['file_path'] . '" alt="">';
+            echo '<div class="star flex-row">';
+            echo '<span class="material-symbols-outlined">';
+            echo 'star_rate';
+            echo '</span><span class="material-symbols-outlined">';
+            echo 'star_rate';
+            echo '</span><span class="material-symbols-outlined">';
+            echo 'star_rate';
+            echo '</span>';
+            echo '<span class="material-symbols-outlined">';
+            echo 'star_rate_half';
+            echo '</span>';
+            echo '</div>';
+            echo '<div class="title-price flex-column">';
+            echo '<h3>';
+            echo $row['name'];
+            echo '</h3>';
+            echo '<div>';
+            echo '&#x20B9 ' . $row['price'];
+            echo '<del>&#x20B9 10000</del>';
+            echo '</div>';
+            echo '</div>';
+            echo '<div class="cart-buy flex-column">';
+            echo '<form class="add-to-cart" action="../../PHP/add_to_cart.php" method="post">';
+            echo '<div>';
+        
+            // Fetch sizes and colors for the product
+            $sizes = mysqli_query($connect, "SELECT size FROM product_sizes WHERE product_id = " . $row['product_id']);
+            $colors = mysqli_query($connect, "SELECT color FROM product_colors WHERE product_id = " . $row['product_id']);
+           
+            // Add size select field
+            echo '<div class="flex-column" style="width:100%;">';
+            echo '<div class="flex-row" style="gap:5px">';
+            echo '<select name="size" style="width:50%;
+            color: black;" >';
+            while ($size = mysqli_fetch_assoc($sizes)) {
+              echo '<option value="' . $size['size'] . '" style="color: black;">' . $size['size'] . '</option>';
+            }
+            echo '</select>';
+            echo '<select name="color" style="width:50%;
+            color: black;">';
+            while ($color = mysqli_fetch_assoc($colors)) {
+              echo '<option value="' . $color['color'] . '" style="color: black;;">' . $color['color'] . '</option>';
+            }
+            echo '</select>';
+            echo '</div>';
+            
+            echo '<div id="cart-button" class="flex-row">';
+            echo '<button type ="submit" name="add_to_cart" data-product-id="' . $row['product_id'] . '"><span>Add to Cart</span><span class="material-symbols-outlined">';
+            echo 'add_shopping_cart';
+            echo '</span></button>';
+            echo '<input type="hidden" name="product_id" value="' . $row['product_id'] . '">';
+            echo '<input type="number" min="1" value="1" max="5" class="small-input" name="product-cart-quantity">';       
+            echo '</form>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
 
-        while ($row = mysqli_fetch_assoc($products)) {
-          $row2 = mysqli_fetch_assoc($image);
-          echo '<div class="item-container flex-column">';
-          echo '<img src="./' . $row2['file_path'] . '" alt="">';
-          echo '<div class="star flex-row">';
-          echo '<span class="material-symbols-outlined">';
-          echo 'star_rate';
-          echo '</span><span class="material-symbols-outlined">';
-          echo 'star_rate';
-          echo '</span><span class="material-symbols-outlined">';
-          echo 'star_rate';
-          echo '</span>';
-          echo '<span class="material-symbols-outlined">';
-          echo 'star_rate_half';
-          echo '</span>';
-          echo '</div>';
-          echo '<div class="title-price flex-column">';
-          echo '<h3>';
-          echo $row['name'];
-          echo '</h3>';
-          echo '<div>';
-          echo '&#x20B9 ' . $row['price'];
-          echo '<del>&#x20B9 10000</del>';
-          echo '</div>';
-          echo '</div>';
-          echo '<div class="cart-buy flex-column">';
-          echo '<form class="add-to-cart" action="../../PHP/add_to_cart.php" method="post">';
-          echo '<div>';
-          
-          echo '<button type ="submit" name="add_to_cart" data-product-id="' . $row['product_id'] . '"><span>Add to Cart</span><span class="material-symbols-outlined">';
-        
-          echo 'add_shopping_cart';
-          echo '</span></button>';
-          echo '<input type="hidden" name="product_id" value="' . $row['product_id'] . '">';
-          echo '<input type="number" min="1" value="1" max="5" class="small-input" name="product-cart-quantity">';       
-          echo '</form>';
-          echo '</div>';
-          echo '<div>';
-          echo '<button type="button">View Details</button>';
-          echo '</div>';
-          echo '</div>';
-          echo '</div>';
-        }
+
+            echo '<div>';
+            echo '<button type="button">View Details</button>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+          }
         ?>
   </div>
     </div>
@@ -232,6 +256,10 @@ $products = mysqli_query($connect, $query);
 </section>
 
   <my-footer></my-footer>
+  <style>
+    
+    
+  </style>
   </body>
   <script src="../../JS/product.js"></script>
   <script src="../../JS/headerFooter.js"></script>
