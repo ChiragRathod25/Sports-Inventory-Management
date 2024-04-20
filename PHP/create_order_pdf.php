@@ -17,7 +17,14 @@ $result = mysqli_query($connect, $sqlquery);
 $order = mysqli_fetch_assoc($result);
 
 // Fetch the order items
-$sqlquery = "SELECT * FROM `order_items` JOIN `product` ON order_items.product_id = product.product_id WHERE order_id = '$order_id'";
+// Fetch the order items
+$sqlquery = "SELECT order_items.*, product.name, product.price, product_sizes.size, product_colors.color 
+             FROM `order_items` 
+             INNER JOIN product ON order_items.product_id = product.product_id 
+             INNER JOIN product_variants ON order_items.variant_id = product_variants.variant_id 
+             INNER JOIN product_sizes ON product_variants.size_id = product_sizes.size_id 
+             INNER JOIN product_colors ON product_variants.color_id = product_colors.color_id 
+             WHERE order_id = '$order_id'";
 $result = mysqli_query($connect, $sqlquery);
 
 $html = '
@@ -50,10 +57,11 @@ div>p{
 
 $total = 0;
 $serial_number = 1;
+
 while($row = mysqli_fetch_assoc($result)) {
     $html .= '<tr>
     <td>' . $serial_number . '</td>
-    <td>' . $row['name'] . '</td>
+    <td>' . $row['name'] . '<br>Size: ' . $row['size'] . ', Color: ' . $row['color'] . '</td>
     <td>' . $row['quantity'] . '</td>
     <td>' . $row['price'] . '</td>
     </tr>
@@ -61,6 +69,7 @@ while($row = mysqli_fetch_assoc($result)) {
     $total += $row['price'] * $row['quantity'];
     $serial_number++;
 }
+
 
 $html .= '<tr>
 <td colspan="3">Total</td>
@@ -98,7 +107,10 @@ $header_title = 'HT Sports';
 // Your header string
 $header_string = 'www.htsports.com';
 
-$pdf->SetHeaderData($logo, $logo_width, $header_title . ' ' . $order_id, $header_string);
+$pdf->SetHeaderData($logo, $logo_width, $header_title . ' Order ID: ' . $order_id, $header_string);
+
+// $header_content = $header_title . "\n" . 'Order ID: ' . $order_id . "\n" . $header_string;
+// $pdf->SetHeaderData($logo, $logo_width, $header_content);
 
 // Set header and footer fonts
 $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
