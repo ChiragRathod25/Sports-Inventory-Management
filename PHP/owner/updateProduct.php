@@ -74,7 +74,7 @@ if (isset($_GET['product_id'])) {
 
                             <label for="description">Description:</label>
                             <textarea id="description" name="description"><?php echo $row['description']; ?></textarea>
-
+                            <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
                             <label for="image">Images of Product:</label>
                             <input type="file" id="image" name="image[]" accept="image/*" multiple>
 
@@ -96,7 +96,6 @@ if (isset($_GET['product_id'])) {
 
                                     echo '<label for="quantity">Quantity:</label>';
                                     echo '<input type="number" name="quantity[]" value="' . $quantities[$index] . '">';
-
                                     // Hidden inputs to store variant IDs, size IDs, and color IDs
                                     echo '<input type="hidden" name="variant_id[]" value="' . $row['variant_id'] . '">';
                                     echo '<input type="hidden" name="size_id[]" value="' . $row['size_id'] . '">';
