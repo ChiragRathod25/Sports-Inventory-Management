@@ -26,7 +26,7 @@ if (isset($_GET['product_id'])) {
 
       <link rel="stylesheet" href="../../CSS/owner/owner.css">
       <link rel="stylesheet" href="../../CSS/owner/Customer.css">
-
+      <link rel="stylesheet" href="../../CSS/owner/purchase_order.css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet"
@@ -78,7 +78,6 @@ if (isset($_GET['product_id'])) {
                 <th>Sizes</th>
                 <th>Colors</th>
                 <th>Quantity</th>
-                <th>Update</th>
               </tr>
             <?php
             $query = "SELECT product_variants.quantity, product_sizes.size, product_colors.color 
@@ -94,11 +93,13 @@ if (isset($_GET['product_id'])) {
                 echo '<td>' . $row['size'] . '</td>';
                 echo '<td>' . $row['color'] . '</td>';
                 echo '<td>' . $row['quantity'] . '</td>';
-                echo '<td class="remove"><a href="/php/owner/updateProduct.php?product_id=' . $product_id . '"><span class="material-symbols-outlined">upgrade</span></a></td>';
                 echo '</tr>';
             }
             ?>
             </table>
+            <?php 
+              echo '<a href="/php/owner/updateProduct.php?product_id=' . $product_id . '"><button class="add-btn">Update</button></a>';
+            ?>
           </div>
         </main>
       </div>
@@ -114,4 +115,4 @@ if (isset($_GET['product_id'])) {
 } else {
   echo "Product ID not provided.";
 }
-?>
+?><a href="/php/owner/updateProduct.php?product_id=' . $product_id . '">

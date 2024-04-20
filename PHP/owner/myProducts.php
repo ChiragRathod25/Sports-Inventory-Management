@@ -69,7 +69,7 @@
           $category_name_row = mysqli_fetch_assoc($category_name_result);
           $category_name = $category_name_row['name'];
           echo '<h1 class="table-title">' . $category_name . '</h1>';
-          $sql = "SELECT p.product_id, s.name AS sport_name, c.name AS category_name, b.name AS brand_name, p.name, p.description
+          $sql = "SELECT p.product_id,p.price AS price ,s.name AS sport_name, c.name AS category_name, b.name AS brand_name, p.name, p.description
             FROM product p
             INNER JOIN sport s ON p.sport_id = s.sport_id
             INNER JOIN category c ON p.category_id = c.category_id
@@ -83,6 +83,7 @@
                       <th>Brand</th>
                       <th>Product ID</th>
                       <th>Name</th>
+                      <th>Price</th>
                       <th>Description</th>
                       <th>View</th>
                       <th>Remove</th>
@@ -95,13 +96,13 @@
                     <td>' . $row['brand_name'] . '</td>
                     <td>' . $row['product_id'] . '</td>
                     <td>' . $row['name'] . '</td>
+                    <td>' . $row['price'] . '</td>
                     <td>' . $row['description'] . '</td>
                     <td class="remove"><a href="/php/owner/viewProduct.php?product_id=' . $row['product_id'] . '"><span class="material-symbols-outlined">
                     more
                     </span></td>
-                    <td class="remove"><a href="#"><span class="material-symbols-outlined text-blue">
-                    delete
-                  </span></a></td>
+                    <td class="remove"><a href="/php/owner/removeProduct.php?product_id=' . $row['product_id'] . '?>"><span class="material-symbols-outlined text-blue">delete</span></a></td>
+
                   </tr>';
               $row_number++;
             }
