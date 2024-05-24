@@ -1,13 +1,8 @@
 <?php
-$server="localhost";
-$username="root";
-$password="Sports@Inv2937";
-$database = "Sports-Inventory-Management";
+require('../dbconnect.php');
+?>
 
-$connect=mysqli_connect($server,$username,$password,$database);
-if(!$connect){
-    die("Connection failed: " . mysqli_connect_error());
-}
+<?php
 
 // Fetch data from the database
 $sports_id =9;

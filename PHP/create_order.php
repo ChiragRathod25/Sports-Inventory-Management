@@ -1,17 +1,9 @@
-
+<?php
+require('dbconnect.php');
+?>
 <link rel="stylesheet" href="../CSS/viewCart.css" />
 <?php
 session_start();
-
-$server = "localhost";
-$username = "root";
-$password = "Sports@Inv2937";
-$database = "Sports-Inventory-Management";
-
-$connect = mysqli_connect($server, $username, $password, $database);
-if (!$connect) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 
 if(isset($_POST['order_now'])) {
     

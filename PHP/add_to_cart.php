@@ -1,13 +1,8 @@
+<?php
+require('dbconnect.php');
+?>
 <?php 
-$server = "localhost";
-$username = "root";
-$password = "Sports@Inv2937";
-$database = "Sports-Inventory-Management";
 
-$connect = mysqli_connect($server, $username, $password, $database);
-if (!$connect) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 require('Registration_and_Login/checkuser.php');
 
 if(isset($_POST['add_to_cart'])) {

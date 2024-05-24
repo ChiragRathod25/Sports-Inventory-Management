@@ -1,12 +1,8 @@
 <?php
-$server = "localhost";
-$username = "root";
-$password = "Sports@Inv2937";
-$database = "Sports-Inventory-Management";
-$connect = mysqli_connect($server, $username, $password, $database);
-if (!$connect) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+require('../dbconnect.php');
+?>
+<?php
+
 require ('checkuser.php');
 
 $sql = "SELECT * FROM sport ORDER BY sport_id";

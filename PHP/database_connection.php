@@ -1,12 +1,10 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "Sports@Inv2937";
-$dbname = "Sports-Inventory-Management";
+$server="localhost";
+$username="jxeymueq_Sports-Inventory-Management";
+$password="Sports@Inv2937";
+$database = "Sports-Inventory-Management";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+$connect=mysqli_connect($server,$username,$password,$database);
+if(!$connect){
+    die("Connection failed: " . mysqli_connect_error());
 }
-
-?>

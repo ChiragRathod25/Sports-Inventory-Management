@@ -1,3 +1,6 @@
+<?php
+require('dbconnect.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,17 +24,7 @@
     <my-header></my-header> 
     <section>
         <?php
-        $server = "localhost";
-        $username = "root";
-        $password = "Sports@Inv2937";
-        $database = "Sports-Inventory-Management";
         
-        $connect = new mysqli($server, $username, $password, $database);
-        
-        
-        if ($connect->connect_error) {
-            die("Connection failed: " . $connect->connect_error);
-        }
         
         require('Registration_and_Login/checkuser.php');
         

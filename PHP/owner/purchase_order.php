@@ -72,16 +72,9 @@ require('checkuser.php');
                         <th>Remove</th>
                     </tr>
                     <tbody>
+
                         <?php
-                        $servername = "localhost";
-                        $username = "root";
-                        $password = "Sports@Inv2937";
-                        $dbname = "Sports-Inventory-Management";
-                        
-                        $conn = new mysqli($servername, $username, $password, $dbname);
-                        if ($conn->connect_error) {
-                            die("Connection failed: " . $conn->connect_error);
-                        }
+
                         $sql = "SELECT * FROM purchase_order WHERE status = 'Pending'";
                         $result = mysqli_query($conn, $sql);
                         if (mysqli_num_rows($result) > 0) {
@@ -125,15 +118,7 @@ require('checkuser.php');
                     </tr>
                     <tbody>
                         <?php
-                        $servername = "localhost";
-                        $username = "root";
-                        $password = "Sports@Inv2937";
-                        $dbname = "Sports-Inventory-Management";
-                        
-                        $conn = new mysqli($servername, $username, $password, $dbname);
-                        if ($conn->connect_error) {
-                            die("Connection failed: " . $conn->connect_error);
-                        }
+                    
                         $sql = "SELECT * FROM purchase_order WHERE status = 'Completed'";
                         $result = mysqli_query($conn, $sql);
                         if (mysqli_num_rows($result) > 0) {

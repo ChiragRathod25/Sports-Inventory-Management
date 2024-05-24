@@ -1,12 +1,12 @@
 <?php
 $server="localhost";
-$username="root";
+$username="jxeymueq_Sports-Inventory-Management";
 $password="Sports@Inv2937";
 $database = "Sports-Inventory-Management";
 
-$con=mysqli_connect($server,$username,$password,$database);
-if(!$con){
+$connect=mysqli_connect($server,$username,$password,$database);
+$conn=$connect;
+if(!$connect){
     die("Connection failed: " . mysqli_connect_error());
 }
-
 ?>

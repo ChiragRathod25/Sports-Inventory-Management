@@ -1,3 +1,6 @@
+<?php
+require('../dbconnect.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -101,15 +104,6 @@
         <button type="submit">Submit</button>
     </form>
     <?php
-$server="localhost";
-$username="root";
-$password="Sports@Inv2937";
-$database = "Sports-Inventory-Management";
-
-    $connect=mysqli_connect($server,$username,$password,$database);
-    if(!$connect){
-        die("Connection failed: " . mysqli_connect_error());
-    }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sportName = $_POST["sportName"]; 

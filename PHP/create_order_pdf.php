@@ -1,13 +1,8 @@
 <?php
-$server = "localhost";
-$username = "root";
-$password = "Sports@Inv2937";
-$database = "Sports-Inventory-Management";
+require('dbconnect.php');
+?>
+<?php
 
-$connect = mysqli_connect($server, $username, $password, $database);
-if (!$connect) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 session_start();
 require_once('vendor/tecnickcom/tcpdf/tcpdf.php');
 $order_id = $_GET['order_id'];

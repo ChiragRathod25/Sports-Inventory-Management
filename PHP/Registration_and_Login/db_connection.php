@@ -1,15 +1,10 @@
 <?php
-// Database credentials
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "sport-inventory-management-shop";
+$server="localhost";
+$username="jxeymueq_Sports-Inventory-Management";
+$password="a6]1yM5:t3wQXF";
+$database = "jxeymueq_Sports-Inventory-Management";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $database);
-
-// Check connection
-if (!$conn) {
+$connect=mysqli_connect($server,$username,$password,$database);
+if(!$connect){
     die("Connection failed: " . mysqli_connect_error());
 }
-?>

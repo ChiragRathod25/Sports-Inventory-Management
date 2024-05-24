@@ -1,3 +1,6 @@
+<?php
+require('../dbconnect.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,14 +55,7 @@
       <!-- MAIN CONTAINER -->
       <div class="container">
         <?php
-        $server = "localhost";
-        $username = "root";
-        $password = "Sports@Inv2937";
-        $database = "Sports-Inventory-Management";
-        $connect = mysqli_connect($server, $username, $password, $database);
-        if (!$connect) {
-          die("Connection failed: " . mysqli_connect_error());
-        }
+
         if (isset($_GET['category_id'])) {
           $category_id = $_GET['category_id'];
 

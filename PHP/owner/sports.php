@@ -57,19 +57,6 @@ require ('checkuser.php');
             <!-- MAIN CONTAINER -->
             <?php
             require ('db.php'); // Include the file containing the database connection code
-            
-            // Database connection
-            $servername = "localhost";
-            $username = "root";
-            $password = "Sports@Inv2937";
-            $dbname = "Sports-Inventory-Management";
-
-            $conn = new mysqli($servername, $username, $password, $dbname);
-
-            // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
 
             // Fetch sports and their categories
             $sql = "SELECT s.sport_id, s.name AS sport_name, c.category_id, c.name AS category_name

@@ -1,12 +1,7 @@
 <?php
-$server = "localhost";
-$username = "root";
-$password = "Sports@Inv2937";
-$database="Sports-Inventory-Management";
-$connect = mysqli_connect($server, $username, $password, $database);
-if (!$connect) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+require('../dbconnect.php');
+?>
+<?php
 
 $first_name= stripslashes($_REQUEST['fname']);
 $first_name = mysqli_real_escape_string($connect,$first_name);
