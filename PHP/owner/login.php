@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
 <title>Login</title>
 <style>
@@ -24,13 +25,12 @@
         color: #333;
     }
     
-    .form input[type="text"], .form input[type="email"], .form input[type="password"] {
+    .form input[type="text"], .form input[type="password"] {
         width: 90%;
         padding: 10px;
-        margin: 10px;
+        margin: 10px 0;
         border: 1px solid #ddd;
         border-radius: 5px;
-        /* position: absolute; */
     }
     
     .form input[type="submit"] {
@@ -53,34 +53,42 @@
 <?php
 require('db.php');
 session_start();
-if (isset($_POST['username'])){
-	$username = stripslashes($_REQUEST['username']);
-	$username = mysqli_real_escape_string($con,$username);
-	$password = stripslashes($_REQUEST['password']);
-	$password = mysqli_real_escape_string($con,$password);
-        $query = "SELECT * FROM `users` WHERE username='$username'
-and password='".md5($password)."'";
-	$result = mysqli_query($con,$query) or die(mysql_error());
-	$rows = mysqli_num_rows($result);
-        if($rows==1){
-	    $_SESSION['owneruser'] = $username;
-	    header("Location: sports.php");
-         }else{
-	    echo "<script>alert(`Incorrect Username/Password`);
+if (isset($_POST['username'])) {
+    //echo "yse";
+    $username = stripslashes($_REQUEST['username']);
+    
+    $username = mysqli_real_escape_string($con, $username);
+    
+    $password = stripslashes($_REQUEST['password']);
+   
+    $password = mysqli_real_escape_string($con, $password);
+    
+    $query = "SELECT * FROM users WHERE username='$username' AND password='" . md5($password) . "'";
+ 
+    $result = mysqli_query($con, $query) or die(mysqli_error($con));
+ 
+    $rows = mysqli_num_rows($result);
+   
+    if ($rows == 1) {
+
+        $_SESSION['owneruser'] = $username;
+        header("Location: sports.php");
+    } else {
+        echo "<script>alert('Incorrect Username/Password');
         window.location.href = './login.php';</script>";
-	}
-}else{
+   
+    }
+} else {
 ?>
-<!-- <h1>hi</h1> -->
 <div class="form">
 <h1>Log In</h1>
-<form action="" method="post" name="login">
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="login">
 <input type="text" name="username" placeholder="Username" required />
 <input type="password" name="password" placeholder="Password" required />
 <br>
 <input name="submit" type="submit" value="Login" />
 </form>
-<p>Not registered User?<a href='registration.php'>Register Here</a></p>
+<p>Not registered User? <a href='registration.php'>Register Here</a></p>
 <p>Visit Website <a href='../../'>HT Sports</a></p>
 </div>
 <?php } ?>

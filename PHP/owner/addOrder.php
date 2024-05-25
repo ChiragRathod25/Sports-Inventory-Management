@@ -132,13 +132,10 @@ $sports = mysqli_query($connect, $sql);
                         <option value="Completed">Completed</option>
                     </select>
                     <button type="submit">Submit</button>
+                
                 </form>
                 <?php
-                $server = "localhost";
-                $username = "root";
-                $password = "Sports@Inv2937";
-                $database = "Sports-Inventory-Management";
-
+              
                 $connect = mysqli_connect($server, $username, $password, $database);
                 if (!$connect) {
                     die("Connection failed: " . mysqli_connect_error());
@@ -176,11 +173,12 @@ $sports = mysqli_query($connect, $sql);
     <!--Grid-Container End-->
     <!--Script-->
     <!--ApexCharts-->
+    <h2>HI</h2>
 </body>
-<script src="../../JS/Owner/orderValidation.js"></script>
+<script src="/JS/Owner/orderValidation.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.46.0/apexcharts.min.js"></script>
-<script src="../../JS/Owner/dash_board.js"></script>
-<script src="../../JS/headerFooter.js"></script>
-<script src="../../JS/default.js"></script>
+<script src="/JS/owner/dash_board.js"></script>
+<script src="/JS/headerFooter.js"></script>
+<script src="/JS/default.js"></script>
 
 </html>

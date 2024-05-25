@@ -1,6 +1,6 @@
 <?php
 
-include '../database_connection.php';
+require('db.php');
 $sql = "SELECT * FROM customer";
 
 $result = $conn->query($sql);
@@ -105,6 +105,5 @@ $result = $conn->query($sql);
 </html>
 
 <?php
-// Close the connection
 $conn->close();
 ?>

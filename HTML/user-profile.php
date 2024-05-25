@@ -1,3 +1,14 @@
+<?php
+require('dbconnect.php');
+session_start();
+if(!isset($_SESSION["username"])){
+    echo "<script>;
+    window.location.href = '/';
+    </script>";
+
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

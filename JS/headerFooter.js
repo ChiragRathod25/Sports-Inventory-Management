@@ -3,7 +3,7 @@ class Header extends HTMLElement {
     this.innerHTML = `
         <header class="flex-row">
     <div class="logo-img">
-   <img src="/Sports-Inventory-Management/CSS/logos/logo4.jpeg" alt="">
+   <img src="/CSS/logos/logo4.jpeg" alt="">
     </div>
     <div class="navbar">
       <nav id="nav">
@@ -58,7 +58,7 @@ class Header extends HTMLElement {
     </div>
     <div class="right-search-login flex-column">
       <div class="account-cart flex-row">
-        <div class="cart flex-row"  onclick="window.location.href='/Sports-Inventory-Management/PHP/view_product.php'">
+        <div class="cart flex-row"  onclick="window.location.href='/PHP/view_product.php'">
           <span class="material-symbols-outlined"> shopping_bag </span>
           <span>cart</span>
         </div>
@@ -132,27 +132,27 @@ class mySidebar extends HTMLElement {
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
             bar_chart_4_bars
-            </span><a href="/PHP/Owner/owner_page.php">Dashboard</a>
+            </span><a href="/PHP/owner/owner_page.php">Dashboard</a>
         </li>
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
             category
-            </span><a href="/php/Owner/sports.php">Sports</a>
+            </span><a href="/PHP/owner/sports.php">Sports</a>
         </li>
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
             account_box
-            </span><a href="/php/Owner/Customer.php">Customers</a>
+            </span><a href="/PHP/owner/Customer.php">Customers</a>
         </li>
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
             add_shopping_cart
-            </span><a href="/php/Owner/purchase_order.php">Purchase Orders</a>
+            </span><a href="/PHP/owner/purchase_order.php">Purchase Orders</a>
         </li>
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
             add_shopping_cart
-            </span><a href="/php/Owner/Customer's_order.php">Customer's Orders</a>
+            </span><a href="/PHP/owner/Customers_order.php">Customer's Orders</a>
         </li>
         <li class="sidebar-list-item">
           <span class="material-symbols-outlined">
@@ -172,17 +172,17 @@ class mySidebar extends HTMLElement {
 
 console.log("Hello");
 var xhr = new XMLHttpRequest();
-xhr.open("GET", '/Sports-Inventory-Management/JS/getUsername.php', true);
+xhr.open("GET", '/JS/getUsername.php', true);
 xhr.onreadystatechange = function () {
   console.log(xhr.readyState, xhr.status)
   if (xhr.readyState == 4 && xhr.status == 200) {
-    
+
     var username = xhr.responseText;
     console.log(username);
     // Update the DOM with the user's session data
     const accountInfo = document.getElementById('account-info');
     console.log(accountInfo);
-    if (username!=" " ) {
+    if (username != " ") {
       accountInfo.innerHTML = `
         <ul>
             <li>
@@ -192,20 +192,20 @@ xhr.onreadystatechange = function () {
                 </div>
                 <ul class="log-sign">
                     <li>
-                        <a href="/Sports-Inventory-Management/HTML/user-profile.php">My Account</a>
+                        <a href="/HTML/user-profile.php">My Account</a>
                     </li>
                     <li>
-                        <a href="/Sports-Inventory-Management/PHP/myOrders.php">Orders</a>
+                        <a href="/PHP/myOrders.php">Orders</a>
                     </li>
                     <li>
-                        <a href="/Sports-Inventory-Management/PHP/Registration_and_Login/logout.php">Log out</a>
+                        <a href="/PHP/Registration_and_Login/logout.php">Log out</a>
                     </li>
                 </ul>
             </li>
         </ul>`;
 
     } else {
-        accountInfo.innerHTML = `
+      accountInfo.innerHTML = `
         <ul>
             <li>
                 <div class="flex-row">
@@ -214,10 +214,10 @@ xhr.onreadystatechange = function () {
                 </div>
                 <ul class="log-sign">
                     <li>
-                        <a href="/Sports-Inventory-Management/HTML/Registration and Login/cust_login.html">Log in</a>
+                        <a href="/HTML/Registration and Login/cust_login.html">Log in</a>
                     </li>
                     <li>
-                        <a href="/Sports-Inventory-Management/HTML/Registration and Login/cust_reg.html">Sign Up</a>
+                        <a href="/HTML/Registration and Login/cust_reg.html">Sign Up</a>
                     </li>
                 </ul>
             </li>
@@ -229,4 +229,4 @@ xhr.send();
 console.log("hi");
 window.customElements.define('my-footer', Footer)
 window.customElements.define('my-header', Header)
-window.customElements.define('owner-sidebar',mySidebar)
+window.customElements.define('owner-sidebar', mySidebar)
