@@ -35,8 +35,15 @@ document.querySelector('form').addEventListener('submit', (e) => {
     .then(response => response.text())
     .then(data => {
         console.log(data);
-        alert('Product Added successfully'); 
-        window.location.href = './productadd.php';
+        let response = JSON.parse(data);
+
+if (response.success) { // Check if the product was added successfully
+    console.log(response.success)
+    alert(`Product Added successfully `); 
+    window.location.href = './productadd.php';
+} else {
+    alert(`Failed to add product ${response.error}` ); // Show the error message
+}
 
     })
     .catch(error => console.error(error));
@@ -44,8 +51,17 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
 
 
+
 //form validation
 function validateForm(form){
+    var variantsContainer = document.getElementById('variantsContainer');
+    console.log(variantsContainer.length)
+    // Count the number of variant blocks
+    var variantCount = variantsContainer.children.length;
+
+    // Check if the variantCount is within the desired range
+   
+
     if(form.sport.value==""){
         alert(`Please Select Sport `);
         form.sport.focus();
@@ -54,6 +70,13 @@ function validateForm(form){
     if(form.category.value==""){
         alert(`Please Select Category `);
         form.category.focus();
+        return false;
+    }
+     if (variantCount < 1) {
+        alert('At least one variant is required.'); // Display error message
+        return false;
+    } else if (variantCount > 5) {
+        alert('No more than 5 variants are allowed.'); // Display error message
         return false;
     }
     return true;

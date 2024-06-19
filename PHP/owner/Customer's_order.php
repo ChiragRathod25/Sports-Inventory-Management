@@ -69,15 +69,6 @@ require('checkuser.php');
                     </tr>
                     <tbody>
                         <?php
-                        $server = "localhost";
-                        $username = "root";
-                        $password = "Sports@Inv2937";
-                        $database = "Sports-Inventory-Management";
-                        $connect = mysqli_connect($server, $username, $password, $database);
-                        if (!$connect) {
-                            die("Connection failed: " . mysqli_connect_error());
-                        }
-
                         // Fetching pending orders
                         $sql = "SELECT c.customer_id, CONCAT(c.first_name, ' ', c.last_name) AS name, o.order_id, SUM(p.price * oi.quantity) AS order_amount, o.order_date, c.address, c.phone_number, c.email
                                 FROM customer c
