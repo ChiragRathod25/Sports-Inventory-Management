@@ -1,8 +1,0 @@
-shop registration -> shop login -> shop owner
-shop owner -> shop details,shop photos and content, shop address, shop selling iteams
-           ->item dropdown - add item , update , delete and view listed iteam
-           ->separate menu for add , update , delete item
-           ->category wise view item
-           ->customer dropdown - add, remove , view
-           ->transaction page
-           ->view customer - information about customer, purchased, transaction

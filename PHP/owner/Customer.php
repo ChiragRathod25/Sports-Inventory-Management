@@ -1,6 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 require('db.php');
+=======
+require('db.php'); 
+>>>>>>> 8445a1f (delete-add-validation fix)
 $sql = "SELECT * FROM customer";
 
 $result = $conn->query($sql);

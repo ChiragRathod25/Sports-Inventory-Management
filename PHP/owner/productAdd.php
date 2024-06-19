@@ -56,7 +56,7 @@ $sports = mysqli_query($connect, $sql);
         <!--Sidebar Start-->
         <aside id="sidebar">
             <owner-sidebar></owner-sidebar>
-        </aside>
+        </aside>    
         <!--Sidebar End-->
         <!--Main-Container Strat-->
         <main class="main-container">

@@ -135,12 +135,16 @@ $sports = mysqli_query($connect, $sql);
                 
                 </form>
                 <?php
+<<<<<<< HEAD
               
                 $connect = mysqli_connect($server, $username, $password, $database);
                 if (!$connect) {
                     die("Connection failed: " . mysqli_connect_error());
                 }
 
+=======
+      
+>>>>>>> 8445a1f (delete-add-validation fix)
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $gstin = $_POST["gstin"];
                     $name = $_POST["name"];

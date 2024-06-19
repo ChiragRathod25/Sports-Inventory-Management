@@ -9,7 +9,26 @@
   <link rel="stylesheet" href="./CSS/Home Page/header-footer.css">
   <title>Sports Inventory Management</title>
   </head>
-
+<style>
+  button[type="submit"] {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove border */
+    color: white; /* White text color */
+    padding: 15px 32px; /* Padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; /* Cursor on hover */
+    transition-duration: 0.4s; /* Transition */
+  }
+  
+  button[type="submit"]:hover {
+    border-radius: 10px;
+    background-color: #45a049; /* Darker green on hover */
+}
+</style>
 <body>
     <my-header></my-header>
   <section id="intro" class="flex-row">
@@ -30,114 +49,6 @@
     </div>
   </section>
 <hr>
-  <!-- <section id="item-list" class="flex-column">
-    <h2>
-      recommended-item-list
-      Top Selling Items
-    </h2>
-    <div class="main-container flex-row">
-      <div class="item-container flex-column">
-        <img src="./CSS/Home Page/Recommended Item/cricket-gloves.jpg" alt="">
-        <div class="star flex-row">
-          <span class="material-symbols-outlined">   
-          star_rate
-        </span><span class="material-symbols-outlined">
-          star_rate
-        </span><span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate_half
-        </span>
-      </div>
-      <div class="title-price flex-column">
-        <h3>
-          Aello X Cricket Batting Gloves pro standard...
-        </h3>
-        <div>
-          &#x20B9 420
-          <del>&#x20B9 669 </del>
-        </div>
-      </div>
-      <div class="cart-buy flex-column">
-        <button type="button">Add to Cart<span class="material-symbols-outlined">
-            add_shopping_cart
-          </span></button>
-        <button type="button">Buy Now</button>
-      </div>
-    </div>
-      <div class="item-container flex-column">
-        <img src="./CSS/Home Page/Recommended Item/shoes.jpg" alt="">
-        <div class="star flex-row">
-         <span class="material-symbols-outlined">
-          star_rate
-        </span><span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate_half
-        </span>
-      </div>
-      <div class="title-price flex-column">
-        <h3>
-         Adidas R(XTHRAX) series Rapid shoes...
-        </h3>
-        <div>
-          &#x20B9 1999
-          <del>&#x20B9 3999 </del>
-        </div>
-      </div>
-      <div class="cart-buy flex-column">
-        <button type="button">Add to Cart<span class="material-symbols-outlined">
-            add_shopping_cart
-          </span></button>
-        <button type="button">Buy Now</button>
-      </div>
-    </div>
-      <div class="item-container flex-column">
-        <img src="./CSS/Home Page/Recommended Item/shutter.avif" alt="">
-        <div class="star flex-row">
-          <span class="material-symbols-outlined">
-        
-          star_rate
-        </span><span class="material-symbols-outlined">
-          star_rate
-        </span><span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate
-        </span>
-        <span class="material-symbols-outlined">
-          star_rate_half
-        </span>
-      </div>
-      <div class="title-price flex-column">
-        <h3>
-          Aello X Cricket Batting Gloves pro standard...
-        </h3>
-        <div>
-          &#x20B9 420
-          <del>&#x20B9 669 </del>
-        </div>
-      </div>
-      <div class="cart-buy flex-column">
-        <button type="button">Add to Cart<span class="material-symbols-outlined">
-            add_shopping_cart
-          </span></button>
-        <button type="button">Buy Now</button>
-      </div>
-    </div>
-    
-  </div>
-  </section> -->
-<!-- <hr> -->
 
  <section class="shop-category">
     <h2>
@@ -230,15 +141,14 @@
     <div class="contact-form flex-column">
       
     <h2>Send Message</h2>
-    <form class="flex-column">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
+    <form class="flex-column" action="./PHP/messages.php" method="POST">
+        <input type="text" name="fname" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" name="msg" required></textarea>
         <button type="submit">Send</button>
       </form>
     </div>
   </section>
-
 
  <my-footer></my-footer>
 </body>

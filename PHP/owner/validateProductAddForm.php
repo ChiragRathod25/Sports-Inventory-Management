@@ -2,14 +2,23 @@
 require('../dbconnect.php');
 ?>
 <?php
+$response = ['success' => false, 'error' => ''];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if (!isset($_POST['variants']) || count($_POST['variants']) < 1) {
+        $response['error'] = "At least one variant is required.";
+        echo json_encode($response);
+        return;
+    }
+
     $sport_id = $_POST['sport'];
     $category_id = $_POST['category'];
     $brand_id = $_POST['brand'];
     $name = $_POST['name'];
     $price = $_POST['price'];
     $description = $_POST['description'];
+
 
     // Generate a unique product ID
     $sql = "SELECT MAX(product_id) as productID FROM product";
@@ -19,11 +28,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Insert product into the database
     $sql = "INSERT INTO product (product_id, sport_id, category_id, brand_id, name, price, description) VALUES ('$productID', '$sport_id', '$category_id', '$brand_id', '$name', '$price', '$description')";
-
     if (mysqli_query($connect, $sql)) {
-        echo "<script>alert('Product added successfully with product ID: " . $productID . "');window.location.href='./productadd.php';</script>";
+        $response['success'] = true;
     } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($connect);
+        $response['error'] = "Error: " . $sql . "<br>" . mysqli_error($connect);
     }
 
     // Insert specifications
@@ -93,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
         if (empty($errors)) {
-            echo "Success";
+            echo  json_encode($response);;
         }
     }
 }

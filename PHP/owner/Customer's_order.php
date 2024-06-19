@@ -53,39 +53,28 @@ require('checkuser.php');
         <main class="main-container">
             <!-- MAIN CONTAINER -->
             <div class="container">
-                <h1 class="table-title">Pending Orders</h1>
+                <h1 class="table-title">Customer Orders</h1>
                 <table class="tbl">
                     <tr class="header">
                         <th>No</th>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Order Id</th>
+                        <th>username</th>
+                        <th>Email Id</th>
+                        <th>Phone Number</th>
                         <th>Order Amount</th>
                         <th>Order Date</th>
                         <th>Address</th>
-                        <th>Phone Number</th>
-                        <th>Email Id</th>
-                        <th>Remove</th>
+                        <th>Order Id</th>
+                        <th>Status</th>
                     </tr>
                     <tbody>
                         <?php
-                        $server = "localhost";
-                        $username = "root";
-                        $password = "Sports@Inv2937";
-                        $database = "Sports-Inventory-Management";
-                        $connect = mysqli_connect($server, $username, $password, $database);
-                        if (!$connect) {
-                            die("Connection failed: " . mysqli_connect_error());
-                        }
-
                         // Fetching pending orders
-                        $sql = "SELECT c.customer_id, CONCAT(c.first_name, ' ', c.last_name) AS name, o.order_id, SUM(p.price * oi.quantity) AS order_amount, o.order_date, c.address, c.phone_number, c.email
-                                FROM customer c
-                                JOIN orders o ON c.customer_id = o.customer_id
-                                JOIN order_items oi ON o.order_id = oi.order_id
-                                JOIN product p ON oi.product_id = p.product_id
-                                WHERE o.status = 'Pending'
-                                GROUP BY o.order_id";
+                        $sql = "SELECT c.customer_id, o.order_id, SUM(p.price * oi.quantity) AS order_amount, o.order_date, c.address, c.phone_number, c.email, o.status
+                        FROM customer c
+                        JOIN orders o ON c.customer_id = o.customer_id
+                        JOIN order_items oi ON o.order_id = oi.order_id
+                        JOIN product p ON oi.product_id = p.product_id
+                        GROUP BY o.order_id";
                         $result = mysqli_query($connect, $sql);
                         if (mysqli_num_rows($result) > 0) {
                             $count = 1;
@@ -93,19 +82,22 @@ require('checkuser.php');
                                 echo "<tr>";
                                 echo "<td>" . $count . "</td>";
                                 echo "<td>" . $row['customer_id'] . "</td>";
-                                echo "<td>" . $row['name'] . "</td>";
-                                echo "<td>" . $row['order_id'] . "</td>";
+                                echo "<td>" . $row['email'] . "</td>";
+                                echo "<td>" . $row['phone_number'] . "</td>";
                                 echo "<td>" . $row['order_amount'] . "</td>";
                                 echo "<td>" . $row['order_date'] . "</td>";
                                 echo "<td>" . $row['address'] . "</td>";
-                                echo "<td>" . $row['phone_number'] . "</td>";
-                                echo "<td>" . $row['email'] . "</td>";
-                                echo "<td class='remove'><span class='material-symbols-outlined text-blue'>delete</span></td>";
+    
+                                echo "<td>" .$row['order_id']."</td>";
+                                echo "<td>" .$row['status']."</td>";
+        
+
                                 echo "</tr>";
                                 $count++;
                             }
                         }
                         ?>
+
                     </tbody>
                 </table>
                 <!-- Completed Orders Table -->
@@ -119,4 +111,21 @@ require('checkuser.php');
 
 <script src="../../JS/headerFooter.js"></script>
 <script src="../../JS/default.js"></script>
+<script>
+document.querySelectorAll('.order-status').forEach(function(select) {
+    select.addEventListener('change', function() {
+        var orderId = this.dataset.orderId;
+        var status = this.value;
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'update_order_status.php', true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.onload = function() {
+            if (this.status == 200 && this.responseText == 'success') {
+                location.reload();
+            }
+        };
+        xhr.send('order_id=' + orderId + '&status=' + status);
+    });
+});
+</script>
 </html>

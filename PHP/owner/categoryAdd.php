@@ -136,10 +136,6 @@ $sports=mysqli_query($connect,$sql);
                 <button type="submit">Submit</button>
             </form>
             <?php
-        $server="localhost";
-        $username="root";
-        $password="Sports@Inv2937";
-        $database = "Sports-Inventory-Management";
         
             $connect=mysqli_connect($server,$username,$password,$database);
             if(!$connect){

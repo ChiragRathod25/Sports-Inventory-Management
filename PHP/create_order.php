@@ -22,7 +22,6 @@ if(isset($_POST['order_now'])) {
             $product_id = $row['product_id'];
             $quantity = $row['quantity'];
             $variant_id = $row['variant_id']; // Fetch the variant_id
-
             // Add each item to the order
             $sqlquery = "INSERT INTO `order_items` (order_id, product_id, quantity, variant_id) VALUES ('$order_id', '$product_id', '$quantity', '$variant_id')"; // Include the variant_id
             
