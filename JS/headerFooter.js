@@ -63,7 +63,9 @@ class Header extends HTMLElement {
           <span>cart</span>
         </div>
         <div class="person flex-row" id="account-info">
-   
+           <span class="material-symbols-outlined">
+            account_box
+            </span>
         </div>
       </div>
       <div class="search-website">

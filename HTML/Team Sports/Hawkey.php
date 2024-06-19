@@ -1,6 +1,6 @@
 <?php
 require('../dbconnect.php');
-?>
+
 // Fetch data from the database
 $sports_id =7;
 $query = "SELECT name FROM sport WHERE sport_id = $sports_id";

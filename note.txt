@@ -1,2 +1,0 @@
-In user profile i inserted header and footer without js
-This is update2
