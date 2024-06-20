@@ -136,12 +136,6 @@ $sports=mysqli_query($connect,$sql);
                 <button type="submit">Submit</button>
             </form>
             <?php
-        
-            $connect=mysqli_connect($server,$username,$password,$database);
-            if(!$connect){
-                die("Connection failed: " . mysqli_connect_error());
-            }
-        
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $brandName = $_POST["brandName"]; 
                 $selectedSport=$_POST['sport'];

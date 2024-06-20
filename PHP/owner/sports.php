@@ -56,8 +56,6 @@ require ('checkuser.php');
         <main class="main-container">
             <!-- MAIN CONTAINER -->
             <?php
-            require ('db.php'); // Include the file containing the database connection code
-
             // Fetch sports and their categories
             $sql = "SELECT s.sport_id, s.name AS sport_name, c.category_id, c.name AS category_name
         FROM sport s
