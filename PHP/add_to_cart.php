@@ -66,40 +66,6 @@ if(isset($_POST['add_to_cart'])) {
         </script>";    
     }
 
-    // // Check if cart already exists for the user
-    // $sqlquery = "SELECT cart_id FROM `cart` WHERE customer_id = '$customer_id'";
-    // $result = mysqli_query($connect, $sqlquery);
-    // if (mysqli_num_rows($result) > 0) {
-    //     // Cart exists, get the cart_id
-    //     $row = mysqli_fetch_assoc($result);
-    //     $cart_id = $row['cart_id'];
-    // } else {
-    //     // Cart does not exist, create a new cart
-    //     $sqlquery = "INSERT INTO `cart` (customer_id) VALUES ('$customer_id')";
-    //     if (mysqli_query($connect, $sqlquery)) {
-    //         $cart_id = mysqli_insert_id($connect);
-    //     } else {
-    //         die("Error: " . mysqli_error($connect));
-    //     }
-    // }
-
-    // // Add item to cart
-    // // Check if the product already exists in the cart
-    // $sqlquery = "SELECT * FROM `cart_items` WHERE cart_id = '$cart_id' AND product_id = '$product_id'";
-    // $result = mysqli_query($connect, $sqlquery);
-    // if (mysqli_num_rows($result) > 0) {
-    //     // Product already exists, update the quantity
-    //     $row = mysqli_fetch_assoc($result);
-    //     $existing_quantity = $row['quantity'];
-    //     $new_quantity = $existing_quantity + $quantity;
-    //     $sqlquery = "UPDATE `cart_items` SET quantity = '$new_quantity' WHERE cart_id = '$cart_id' AND product_id = '$product_id'";
-    // } else {
-    //     // Product does not exist, insert a new record
-    //     $sqlquery = "INSERT INTO `cart_items` (cart_id, product_id, quantity) VALUES ('$cart_id', '$product_id', '$quantity')";
-    // }
-   
-    // //$sqlquery = "INSERT INTO `cart_items` (cart_id, product_id, quantity) VALUES ('$cart_id', '$product_id', '$quantity')";
-   
     if (mysqli_query($connect, $sqlquery)) {
         echo "<script>alert(`Item added to cart successfully !!`);
         window.location.href = document.referrer;
